@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo中添加本地图片</title>
+    <url>/post/bb3a2cdb/</url>
+    <content><![CDATA[<h3 id="First"><a href="#First" class="headerlink" title="First"></a>First</h3><ol>
+<li><p>把主页配置文件_config.yml 里的post_asset_folder:这个选项设置为true</p>
+</li>
+<li><p>在你的hexo目录下执行这样一句话<code>npm install hexo-asset-image --save</code>，这是下载安装一个可以上传本地图片的插件，来自dalao：dalao的git</p>
+</li>
+<li><p>等待一小段时间后，再运行<code>hexo n &quot;xxxx&quot;</code>来生成md博文时，/source/_posts文件夹内除了xxxx.md文件还有一个同名的文件夹</p>
+</li>
+<li><p>最后在xxxx.md中想引入图片时，先把图片复制到xxxx这个文件夹中，然后只需要在xxxx.md中按照markdown的格式引入图片：</p>
+</li>
+</ol>
+<p><code>![你想输入的替代文字](xxxx/图片名.jpg)</code></p>
+<p>注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</p>
+<ol start="5">
+<li>最后检查一下，hexo g生成页面后，进入public\2017\02\26\index.html文件中查看相关字段，可以发现，html标签内的语句是<img src="/lhyxcqc/blog.git/post/bb3a2cdb/02/26/xxxx/图片名.jpg">，而不是&lt;img src=”xxxx/图片名.jpg&gt;。这很重要，关乎你的网页是否可以真正加载你想插入的图片。</li>
+</ol>
+<p>注意：<font color="red">一定要注意路径问题,自己运行后f12看浏览器报错的路劲，进行适当的调整。。。</font></p>
+<h3 id="Second"><a href="#Second" class="headerlink" title="Second"></a>Second</h3><p>本地source中建立img文件夹<br><code>&lt;img src=&quot;img/图片名.jpg&quot;&gt;</code><br>这个比较方便</p>
+<p>注意： <font color="red">这种方式只适用于本地运行</font></p>
+]]></content>
+      <categories>
+        <category>hexo学习</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/post/4a17b156/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>C++环境配置</title>
+    <url>/post/21965769/</url>
+    <content><![CDATA[<h1 id="C-环境配置"><a href="#C-环境配置" class="headerlink" title="C++环境配置"></a>C++环境配置</h1><hr>
+<h2 id="本地环境设置"><a href="#本地环境设置" class="headerlink" title="本地环境设置"></a>本地环境设置</h2><p>如果您想要设置 C++ 语言环境，您需要确保电脑上有以下两款可用的软件，文本编辑器和 C++ 编译器。</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h2><p>这将用于输入您的程序。文本编辑器包括 Windows Notepad、OS Edit command、Brief、Epsilon、EMACS 和 vim/vi。</p>
+<p>文本编辑器的名称和版本在不同的操作系统上可能会有所不同。例如，Notepad 通常用于 Windows 操作系统上，vim/vi 可用于 Windows 和 Linux/UNIX 操作系统上。</p>
+<p>通过编辑器创建的文件通常称为源文件，源文件包含程序源代码。C++ 程序的源文件通常使用扩展名 .cpp、.cp 或 .c。</p>
+<p>在开始编程之前，请确保您有一个文本编辑器，且有足够的经验来编写一个计算机程序，然后把它保存在一个文件中，编译并执行它。  </p>
+<hr>
+<h2 id="C-编译器"><a href="#C-编译器" class="headerlink" title="C++ 编译器"></a>C++ 编译器</h2><p>写在源文件中的源代码是人类可读的源。它需要”编译”，转为机器语言，这样 CPU 可以按给定指令执行程序。</p>
+<p>C++ 编译器用于把源代码编译成最终的可执行程序。</p>
+<p>大多数的 C++ 编译器并不在乎源文件的扩展名，但是如果您未指定扩展名，则默认使用 .cpp。</p>
+<p>最常用的免费可用的编译器是 GNU 的 C/C++ 编译器，如果您使用的是 HP 或 Solaris，则可以使用各自操作系统上的编译器。</p>
+<p>以下部分将指导您如何在不同的操作系统上安装 GNU 的 C/C++ 编译器。这里同时提到 C/C++，主要是因为 GNU 的 gcc 编译器适合于 C 和 C++ 编程语言。</p>
+<h2 id="安装-GNU-的-C-C-编译器"><a href="#安装-GNU-的-C-C-编译器" class="headerlink" title="安装 GNU 的 C/C++ 编译器"></a>安装 GNU 的 C/C++ 编译器</h2><h3 id="UNIX-Linux-上的安装"><a href="#UNIX-Linux-上的安装" class="headerlink" title="UNIX/Linux 上的安装"></a>UNIX/Linux 上的安装</h3><p>如果您使用的是 Linux 或 UNIX，请在命令行使用下面的命令来检查您的系统上是否安装了 GCC：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ -v</span><br></pre></td></tr></table></figure>
+
+<p>如果您的计算机上已经安装了 GNU 编译器，则会显示如下消息：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Using built-in specs.</span><br><span class="line">Target: i386-redhat-linux</span><br><span class="line">Configured with: ..&#x2F;configure --prefix&#x3D;&#x2F;usr .......</span><br><span class="line">Thread model: posix</span><br><span class="line">gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)</span><br></pre></td></tr></table></figure>
+
+<p>如果未安装 GCC，那么请按照 <a href="http://gcc.gnu.org/install/">http://gcc.gnu.org/install/</a> 上的详细说明安装 GCC。</p>
+<h3 id="Mac-OS-X-上的安装"><a href="#Mac-OS-X-上的安装" class="headerlink" title="Mac OS X 上的安装"></a>Mac OS X 上的安装</h3><p>如果您使用的是 Mac OS X，最快捷的获取 GCC 的方法是从苹果的网站上下载 Xcode 开发环境，并按照安装说明进行安装。一旦安装上 Xcode，您就能使用 GNU 编译器。</p>
+<p>Xcode 目前可从 <a href="https://developer.apple.com/download">https://developer.apple.com/download</a> 上下载，需要使用 apple ID 登录 。</p>
+<h3 id="Windows-上的安装"><a href="#Windows-上的安装" class="headerlink" title="Windows 上的安装"></a>Windows 上的安装</h3><p>为了在 Windows 上安装 GCC，您需要安装 MinGW。为了安装 MinGW，请访问 MinGW 的主页 <a href="http://www.mingw.org/">www.mingw.org</a>，进入 MinGW 下载页面，下载最新版本的 MinGW 安装程序，命名格式为 MinGW-<version>.exe。</version></p>
+<p>当安装 MinGW 时，您至少要安装 gcc-core、gcc-g++、binutils 和 MinGW runtime，但是一般情况下都会安装更多其他的项。</p>
+<p>添加您安装的 MinGW 的 bin 子目录到您的 PATH 环境变量中，这样您就可以在命令行中通过简单的名称来指定这些工具。</p>
+<p>当完成安装时，您可以从 Windows 命令行上运行 gcc、g++、ar、ranlib、dlltool 和其他一些 GNU 工具。</p>
+<hr>
+<h2 id="使用-Visual-Studio-Graphical-Interface-编译"><a href="#使用-Visual-Studio-Graphical-Interface-编译" class="headerlink" title="使用 Visual Studio (Graphical Interface) 编译"></a>使用 Visual Studio (Graphical Interface) 编译</h2><p>1、下载及安装 <a href="https://www.visualstudio.com/">Visual Studio Community 2015</a>。<br>2、打开 Visual Studio Community<br>3、点击 File -&gt; New -&gt; Project<br><img src="/images/CPlusPlus/vsAddNewProject.png"><br>4、左侧列表选择 Templates -&gt; Visual C++ -&gt; Win32 Console Application，并设置项目名为 MyFirstProgram。<br><img src="../../images/CPlusPlus/ChooseVC++Template.png"><br>5、点击 OK。<br>6、在以下窗口中点击 Next<br><img src="../../images/CPlusPlus/Win32ApplicationNext.png"><br>7、在弹出的窗口中选择 Empty project 选项后，点击 Finish 按钮：<br>8、右击文件夹 Source File 并点击 Add –&gt; New Item… :<br><img src="../../images/CPlusPlus/AddNewItem.png"><br>9、选择 C++ File 然后设置文件名为 main.cpp，然后点击 Add：<br><img src="../../images/CPlusPlus/ChooseVC++File.png"><br>10、拷贝以下代码到 main.cpp 中：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    std::cout &lt;&lt; &quot;Hello World!\n&quot;;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>界面如下所示：<br><img src="../../images/CPlusPlus/10%E7%95%8C%E9%9D%A2.png"><br>11、点击菜单上的 Debug -&gt; Start Without Debugging (或按下 ctrl + F5) :<br><img src="../../images/CPlusPlus/11%E8%BF%90%E8%A1%8C.png"><br>12、完成以上操作后，你可以看到以下输出：<br><img src="../../images/CPlusPlus/12%E8%BE%93%E5%87%BA%E7%AA%97%E5%8F%A3.png"></p>
+<hr>
+<h2 id="g-应用说明"><a href="#g-应用说明" class="headerlink" title="g++ 应用说明"></a>g++ 应用说明</h2><p>程序 g++ 是将 gcc 默认语言设为 C++ 的一个特殊的版本，链接时它自动使用 C++ 标准库而不用 C 标准库。通过遵循源码的命名规范并指定对应库的名字，用 gcc 来编译链接 C++ 程序是可行的，如下例所示：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ gcc main.cpp -lstdc++ -o main</span><br></pre></td></tr></table></figure>
+<p>下面是一个保存在文件 helloworld.cpp 中一个简单的 C++ 程序的代码：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最简单的编译方式：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ helloworld.cpp</span><br></pre></td></tr></table></figure>
+<p>由于命令行中未指定可执行程序的文件名，编译器采用默认的 a.out。程序可以这样来运行：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;a.out</span><br><span class="line">Hello, world!</span><br></pre></td></tr></table></figure>
+<p>通常我们使用 -o 选项指定可执行程序的文件名，以下实例生成一个 helloworld 的可执行文件：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ helloworld.cpp -o helloworld</span><br></pre></td></tr></table></figure>
+<p>执行 helloworld:  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;helloworld</span><br><span class="line">Hello, world!</span><br></pre></td></tr></table></figure>
+<p>如果是多个 C++ 代码文件，如 runoob1.cpp、runoob2.cpp，编译命令如下：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ runoob1.cpp runoob2.cpp -o runoob</span><br></pre></td></tr></table></figure>
+<p>生成一个 runoob 可执行文件。<br>g++ 有些系统默认是使用 C++98，我们可以指定使用 C++11 来编译 main.cpp 文件：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">g++ -g -Wall -std&#x3D;c++11 main.cpp</span><br></pre></td></tr></table></figure>
+<h2 id="g-常用命令选项"><a href="#g-常用命令选项" class="headerlink" title="g++ 常用命令选项"></a>g++ 常用命令选项</h2><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-ansi</td>
+<td>只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>只编译并生成目标文件。</td>
+</tr>
+<tr>
+<td>-DMACRO</td>
+<td>以字符串”1”定义 MACRO 宏。</td>
+</tr>
+<tr>
+<td>-DMACRO=DEFN</td>
+<td>以字符串”DEFN”定义 MACRO 宏。</td>
+</tr>
+<tr>
+<td>-E</td>
+<td>只运行 C 预编译器。</td>
+</tr>
+<tr>
+<td>-g</td>
+<td>生成调试信息。GNU 调试器可利用该信息。</td>
+</tr>
+<tr>
+<td>-IDIRECTORY</td>
+<td>指定额外的头文件搜索路径DIRECTORY。</td>
+</tr>
+<tr>
+<td>-LDIRECTORY</td>
+<td>指定额外的函数库搜索路径DIRECTORY。</td>
+</tr>
+<tr>
+<td>-lLIBRARY</td>
+<td>连接时搜索指定的函数库LIBRARY。</td>
+</tr>
+<tr>
+<td>-m486</td>
+<td>针对 486 进行代码优化。</td>
+</tr>
+<tr>
+<td>-o    FILE</td>
+<td>生成指定的输出文件。用在生成可执行文件时。</td>
+</tr>
+<tr>
+<td>-O0</td>
+<td>不进行优化处理。</td>
+</tr>
+<tr>
+<td>-O</td>
+<td>或 -O1 优化生成代码。</td>
+</tr>
+<tr>
+<td>-O2</td>
+<td>进一步优化。</td>
+</tr>
+<tr>
+<td>-O3</td>
+<td>比 -O2 更进一步优化，包括 inline 函数。</td>
+</tr>
+<tr>
+<td>-shared</td>
+<td>生成共享目标文件。通常用在建立共享库时。</td>
+</tr>
+<tr>
+<td>-static</td>
+<td>禁止使用共享连接。</td>
+</tr>
+<tr>
+<td>-UMACRO</td>
+<td>取消对 MACRO 宏的定义。</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>不生成任何警告信息。</td>
+</tr>
+<tr>
+<td>-Wall</td>
+<td>生成所有警告信息。</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>C++学习</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++基本语法</title>
+    <url>/post/3d38490d/</url>
+    <content><![CDATA[<h3 id="C-基本语法"><a href="#C-基本语法" class="headerlink" title="C++ 基本语法"></a>C++ 基本语法</h3><p>C++ 程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。现在让我们简要地看一下什么是类、对象，方法、即时变量。  </p>
+<a id="more"></a>
+
+<ul>
+<li><strong>对象</strong> - 对象具有状态和行为。例如：一只狗的状态 - 颜色、名称、品种，行为 - 摇动、叫唤、吃。对象是类的实例。</li>
+<li><strong>类</strong> - 类可以定义为描述对象行为/状态的模板/蓝图。</li>
+<li><strong>方法</strong> - 从基本上说，一个方法表示一种行为。一个类可以包含多个方法。可以在方法中写入逻辑、操作数据以及执行所有的动作。</li>
+<li>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</li>
+</ul>
+<h3 id="C-程序结构"><a href="#C-程序结构" class="headerlink" title="C++ 程序结构"></a>C++ 程序结构</h3><p>让我们看一段简单的代码，可以输出单词 Hello World。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">// main() 是程序开始执行的地方</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Hello World&quot;</span>; <span class="comment">// 输出 Hello World</span></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>接下来我们讲解一下上面这段程序：</p>
+<ul>
+<li>C++ 语言定义了一些头文件，这些头文件包含了程序中必需的或有用的信息。上面这段程序中，包含了头文件 <iostream>。</iostream></li>
+<li>下一行 using namespace std; 告诉编译器使用 std 命名空间。命名空间是 C++ 中一个相对新的概念。</li>
+<li>下一行 // main() 是程序开始执行的地方 是一个单行注释。单行注释以 // 开头，在行末结束。</li>
+<li>下一行 int main() 是主函数，程序从这里开始执行。</li>
+<li>下一行 cout &lt;&lt; “Hello World”; 会在屏幕上显示消息 “Hello World”。</li>
+<li>下一行 return 0; 终止 main( )函数，并向调用进程返回值 0。</li>
+</ul>
+<h3 id="编译-amp-执行-C-程序"><a href="#编译-amp-执行-C-程序" class="headerlink" title="编译 &amp; 执行 C++ 程序"></a>编译 &amp; 执行 C++ 程序</h3><p>接下来让我们看看如何把源代码保存在一个文件中，以及如何编译并运行它。下面是简单的步骤：   </p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">$ g++ hello.cpp</span><br><span class="line">$ ./a.out</span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure>
+<hr>
+<p>请确保您的路径中已包含 g++ 编译器，并确保在包含源文件 hello.cpp 的目录中运行它。</p>
+<p>您也可以使用 makefile 来编译 C/C++ 程序。</p>
+<p>在 C++ 中，分号是语句结束符。也就是说，每个语句必须以分号结束。它表明一个逻辑实体的结束。</p>
+<p>例如，下面是三个不同的语句  ：    </p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">x = y;</span><br><span class="line">y = y+<span class="number">1</span>;</span><br><span class="line">add(x, y);</span><br></pre></td></tr></table></figure>
+<p>等同于<br><code>x = y; y = y+1; add(x, y);</code></p>
+<h3 id="C-标识符"><a href="#C-标识符" class="headerlink" title="C++ 标识符"></a>C++ 标识符</h3><p>C++ 标识符是用来标识变量、函数、类、模块，或任何其他用户自定义项目的名称。一个标识符以字母 A-Z 或 a-z 或下划线 _ 开始，后跟零个或多个字母、下划线和数字（0-9）。<br>C++ 标识符内不允许出现标点字符，比如 @、&amp; 和 %。C++ 是区分大小写的编程语言。因此，在 C++ 中，Manpower 和 manpower 是两个不同的标识符。<br>下面列出几个有效的标识符：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">mohd       zara    abc   move_name  a_123</span><br><span class="line">myname50   _temp   j     a23b9      retVal  </span><br></pre></td></tr></table></figure>
+<h3 id="C-关键字"><a href="#C-关键字" class="headerlink" title="C++ 关键字"></a>C++ 关键字</h3><p>下表列出了 C++ 中的保留字。这些保留字不能作为常量名、变量名或其他标识符名称。</p>
+]]></content>
+      <categories>
+        <category>C++学习</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++简介</title>
+    <url>/post/920fd15b/</url>
+    <content><![CDATA[<p>C++ 是一种静态类型的、编译式的、通用的、大小写敏感的、不规则的编程语言，支持过程化编程、面向对象编程和泛型编程。  </p>
+<p>C++ 被认为是一种中级语言，它综合了高级语言和低级语言的特点。  </p>
+<a id="more"></a>
+
+<p>C++ 是由 Bjarne Stroustrup 于 1979 年在新泽西州美利山贝尔实验室开始设计开发的。C++ 进一步扩充和完善了 C 语言，最初命名为带类的C，后来在 1983 年更名为 C++。  </p>
+<p>C++ 是 C 的一个超集，事实上，任何合法的 C 程序都是合法的 C++ 程序。<br>注意：使用静态类型的编程语言是在编译时执行类型检查，而不是在运行时执行类型检查。</p>
+<h1 id="面向对象程序设计"><a href="#面向对象程序设计" class="headerlink" title="面向对象程序设计"></a>面向对象程序设计</h1><p>C++ 完全支持面向对象的程序设计，包括面向对象开发的四大特性：  </p>
+<ul>
+<li>封装</li>
+<li>抽象</li>
+<li>继承</li>
+<li>多态</li>
+</ul>
+<h1 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h1><p>标准的 C++ 由三个重要部分组成：  </p>
+<ul>
+<li>核心语言，提供了所有构件块，包括变量、数据类型和常量，等等。</li>
+<li>C++ 标准库，提供了大量的函数，用于操作文件、字符串等。</li>
+<li>标准模板库（STL），提供了大量的方法，用于操作数据结构等。</li>
+</ul>
+<h1 id="ANSI-标准"><a href="#ANSI-标准" class="headerlink" title="ANSI 标准"></a>ANSI 标准</h1><p>ANSI 标准是为了确保 C++ 的便携性 —— 您所编写的代码在 Mac、UNIX、Windows、Alpha 计算机上都能通过编译。</p>
+<p>由于 ANSI 标准已稳定使用了很长的时间，所有主要的 C++ 编译器的制造商都支持 ANSI 标准。</p>
+<h1 id="学习-C"><a href="#学习-C" class="headerlink" title="学习 C++"></a>学习 C++</h1><p>学习 C++，关键是要理解概念，而不应过于深究语言的技术细节。</p>
+<p>学习程序设计语言的目的是为了成为一个更好的程序员，也就是说，是为了能更有效率地设计和实现新系统，以及维护旧系统。</p>
+<p>C++ 支持多种编程风格。您可以使用 Fortran、C、Smalltalk 等任意一种语言的编程风格来编写代码。每种风格都能有效地保证运行时间效率和空间效率。</p>
+<h1 id="C-的使用"><a href="#C-的使用" class="headerlink" title="C++ 的使用"></a>C++ 的使用</h1><p>基本上每个应用程序领域的程序员都有使用 C++。</p>
+<p>C++ 通常用于编写设备驱动程序和其他要求实时性的直接操作硬件的软件。</p>
+<p>C++ 广泛用于教学和研究。</p>
+<p>任何一个使用苹果电脑或 Windows PC 机的用户都在间接地使用 C++，因为这些系统的主要用户接口是使用 C++ 编写的。</p>
+<h1 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h1><table>
+<thead>
+<tr>
+<th>发布时间</th>
+<th>通称</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2017</td>
+<td>C++17</td>
+<td>第五个C++标准</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>coroutines TS</td>
+<td>协程库扩展</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>ranges TS</td>
+<td>提供范围机制</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>library fundamentals TS</td>
+<td>标准库扩展</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>concurrency TS</td>
+<td>用于并发计算的扩展</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>concepts TS</td>
+<td>概念库，用于优化编译期信息</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>TM TS</td>
+<td>事务性内存操作</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>parallelism TS</td>
+<td>用于并行计算的扩展</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>filesystem TS</td>
+<td>文件系统</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>C++14</td>
+<td>第四个C++标准</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>-</td>
+<td>十进制浮点数扩展</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>C++11</td>
+<td>第三个C++标准</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>-</td>
+<td>数学函数扩展</td>
+</tr>
+<tr>
+<td>2007</td>
+<td>C++TR1</td>
+<td>C++技术报告：库扩展</td>
+</tr>
+<tr>
+<td>2006</td>
+<td>-</td>
+<td>C++性能技术报告</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>C++03</td>
+<td>第二个C++标准</td>
+</tr>
+<tr>
+<td>1998</td>
+<td>C++98</td>
+<td>第一个C++标准</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>C++学习</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C#中Math.Round()实现中国式四舍五入</title>
+    <url>/post/fe4f126f/</url>
+    <content><![CDATA[<h2 id="C-中Math-Round-实现中国式四舍五入"><a href="#C-中Math-Round-实现中国式四舍五入" class="headerlink" title="C#中Math.Round()实现中国式四舍五入"></a>C#中Math.Round()实现中国式四舍五入</h2><p><img src="../../images/CSharp/CSharpMath.Round.png"></p>
+<p>C#中的Math.Round()并不是使用的”四舍五入”法。其实在VB、VBScript、C#、J#、T-SQL中Round函数都是采用Banker’s rounding（银行家算法），即：四舍六入五取偶。事实上这也是IEEE的规范，因此所有符合IEEE标准的语言都应该采用这样的算法。<br>.NET 2.0 开始，Math.Round 方法提供了一个枚举选项 MidpointRounding.AwayFromZero 可以用来实现传统意义上的”四舍五入”。即： Math.Round(4.5, MidpointRounding.AwayFromZero) = 5。  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Round(Decimal)</span><br><span class="line">Round(Double)</span><br><span class="line">Round(Decimal, Int32)</span><br><span class="line">Round(Decimal, MidpointRounding)</span><br><span class="line">Round(Double, Int32)</span><br><span class="line">Round(Double, MidpointRounding)</span><br><span class="line">Round(Decimal, Int32, MidpointRounding)</span><br><span class="line">Round(Double, Int32, MidpointRounding)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>如：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(0.6) &#x2F;&#x2F;result:1</span><br><span class="line">Math.Round(0.5) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(1.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(2.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(3.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(4.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(5.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(6.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(7.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(8.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(9.5) &#x2F;&#x2F;result:10</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>使用MidpointRounding.AwayFromZero重载后对比：</strong>    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:0</span><br><span class="line"></span><br><span class="line">Math.Round(0.6, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(0.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(1.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:2</span><br><span class="line"></span><br><span class="line">Math.Round(2.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:3</span><br><span class="line"></span><br><span class="line">Math.Round(3.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:4</span><br><span class="line"></span><br><span class="line">Math.Round(4.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:5</span><br><span class="line"></span><br><span class="line">Math.Round(5.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:6</span><br><span class="line"></span><br><span class="line">Math.Round(6.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:7</span><br><span class="line"></span><br><span class="line">Math.Round(7.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:8</span><br><span class="line"></span><br><span class="line">Math.Round(8.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:9</span><br><span class="line"></span><br><span class="line">Math.Round(9.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:10</span><br></pre></td></tr></table></figure>
+
+
+
+<p>但是悲剧的是，如果用这个计算小数的话，就不灵了！！！<br>必须用第七个重载方法，  </p>
+<p><code>decimal Round(decimal d, int decimals, MidpointRounding mode)</code></p>
+<p>这样计算出来的小数才是真正的中国式四舍五入！！  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?Math.Round(526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round(526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.93</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="../../images/CSharp/CSharpMath.Round2.png">  </p>
+<p>原文:<br><a href="https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html">https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html</a></p>
+]]></content>
+      <categories>
+        <category>csharp学习</category>
+      </categories>
+      <tags>
+        <tag>csharp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C#特性学习之一</title>
+    <url>/post/b26f4754/</url>
+    <content><![CDATA[<blockquote>
+<h3 id="C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"><a href="#C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber" class="headerlink" title="C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"></a><strong>C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber</strong></h3></blockquote>
+<p>在开发中经常会写个公有静态类记录日志，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;      </span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes the error.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message)  </span><br><span class="line">&#123;                                </span><br><span class="line">    _log4Net.Error(message);     </span><br><span class="line">&#125; </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<p>如果想区分调用来源就比较麻烦了。在.Net 4.5中引入了三个Attribute：CallerMemberName、CallerFilePath和CallerLineNumber 。在编译器的配合下，分别可以获取到调用函数（准确讲应该是成员）名称，调用文件及调用行号。这时可以把方法改成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes an error level logging message.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message,</span><br><span class="line">[CallerMemberName] string memberName &#x3D; &quot;&quot;,</span><br><span class="line">[CallerFilePath] string sourceFilePath &#x3D; &quot;&quot;,</span><br><span class="line">[CallerLineNumber] int sourceLineNumber &#x3D; 0)</span><br><span class="line">&#123;</span><br><span class="line">    _log4Net.ErrorFormat(&quot;文件:&#123;0&#125; 行号:&#123;1&#125; 方法名:&#123;2&#125;,消息:&#123;3&#125;&quot;, sourceFilePath, sourceLineNumber, memberName, message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样就可以区分调用来源了。另外，在构造函数，析构函数、属性等特殊的地方调用CallerMemberName属性所标记的函数时，获取的值有所不同，其取值如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>调用的地方</th>
+<th>CallerMemberName获取的结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方法、属性或事件</td>
+<td>方法，属性或事件的名称</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>字符串 “.ctor”</td>
+</tr>
+<tr>
+<td>静态构造函数</td>
+<td>字符串 “.cctor”</td>
+</tr>
+<tr>
+<td>析构函数</td>
+<td>该字符串 “Finalize”</td>
+</tr>
+<tr>
+<td>用户定义的运算符或转换</td>
+<td>生成的名称成员，例如， “op_Addition”。</td>
+</tr>
+<tr>
+<td>特性构造函数</td>
+<td>特性所应用的成员的名称</td>
+</tr>
+</tbody></table>
+<p>参考链接：<br><a href="https://www.cnblogs.com/TianFang/p/3381484.html">使用CallerMemberName简化InotifyPropertyChanged的实现</a><br><a href="https://www.cnblogs.com/TianFang/archive/2012/08/19/2646146.html">C# 5.0中新增特性</a></p>
+<p>原文：<br><a href="https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&utm_medium=referral">https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
+]]></content>
+      <categories>
+        <category>csharp学习</category>
+      </categories>
+      <tags>
+        <tag>csharp</tag>
+        <tag>csharp特性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML转义字符</title>
+    <url>/post/c14b29da/</url>
+    <content><![CDATA[<p> HTML转义字符</p>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th><font color="\#006cbf">字符</font></th>
+<th><font color="\#006cbf">十进制</font></th>
+<th><font color="\#006cbf">转义字符</font></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>“</td>
+<td>&amp;#34;</td>
+<td>&amp;quot;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>&amp;#38;</td>
+<td>&amp;amp;</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>&amp;#60;</td>
+<td>&amp;lt;</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>&amp;#62;</td>
+<td>&amp;gt;</td>
+</tr>
+<tr>
+<td>不断开空格(non-breaking space)</td>
+<td>&amp;#160;</td>
+<td>&amp;nbsp;</td>
+</tr>
+</tbody></table>
+<h3 id="HTML特殊转义字符对照表"><a href="#HTML特殊转义字符对照表" class="headerlink" title="HTML特殊转义字符对照表"></a>HTML特殊转义字符对照表</h3><table>
+<thead>
+<tr>
+<th><font color="\#006cbf">字符</font></th>
+<th><font color="\#006cbf">十进制</font></th>
+<th><font color="\#006cbf">转义字符</font></th>
+<th><font color="\#006cbf">字符</font></th>
+<th><font color="\#006cbf">十进制</font></th>
+<th><font color="\#006cbf">转义字符</font></th>
+<th><font color="\#006cbf">字符</font></th>
+<th><font color="\#006cbf">十进制</font></th>
+<th><font color="\#006cbf">转义字符</font></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>?</td>
+<td>&amp;#161;</td>
+<td>&amp;iexcl;</td>
+<td>Á</td>
+<td>&amp;#193;</td>
+<td>&amp;Aacute;</td>
+<td>á</td>
+<td>&amp;#225;</td>
+<td>&amp;aacute;</td>
+</tr>
+<tr>
+<td>￠</td>
+<td>&amp;#162;</td>
+<td>&amp;cent;</td>
+<td>Â</td>
+<td>&amp;#194;</td>
+<td>&amp;circ;</td>
+<td>â</td>
+<td>&amp;#226;</td>
+<td>&amp;acirc;</td>
+</tr>
+<tr>
+<td>￡</td>
+<td>&amp;#163;</td>
+<td>&amp;pound;</td>
+<td>Ã</td>
+<td>&amp;#195;</td>
+<td>&amp;Atilde;</td>
+<td>ã</td>
+<td>&amp;#227;</td>
+<td>&amp;atilde;</td>
+</tr>
+<tr>
+<td>¤</td>
+<td>&amp;#164;</td>
+<td>&amp;curren;</td>
+<td>Ä</td>
+<td>&amp;#196;</td>
+<td>&amp;Auml;</td>
+<td>ä</td>
+<td>&amp;#228;</td>
+<td>&amp;auml;</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>常用对照表</category>
+      </categories>
+      <tags>
+        <tag>HTML</tag>
+        <tag>转义字符</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTTP Content-Type</title>
+    <url>/post/ff39e5e7/</url>
+    <content><![CDATA[<p>HTTP Content-Type</p>
+<a id="more"></a>
+
+<table>
+<thead>
+<tr>
+<th><font color="\#006cbf">文件扩展名</font></th>
+<th><font color="\#006cbf">Content-Type(Mime-Type)</font></th>
+<th><font color="\#006cbf">文件扩展名</font></th>
+<th><font color="\#006cbf">Content-Type(Mime-Type)</font></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.*（ 二进制流，不知道下载文件类型）</td>
+<td>application/octet-stream</td>
+<td>.tif</td>
+<td>image/tiff</td>
+</tr>
+<tr>
+<td>.001</td>
+<td>application/x-001</td>
+<td>.301</td>
+<td>application/x-301</td>
+</tr>
+<tr>
+<td>.323</td>
+<td>text/h323</td>
+<td>.906</td>
+<td>application/x-906</td>
+</tr>
+<tr>
+<td>.907</td>
+<td>drawing/907</td>
+<td>.a11</td>
+<td>application/x-a11</td>
+</tr>
+<tr>
+<td>.acp</td>
+<td>audio/x-mei-aac</td>
+<td>.ai</td>
+<td>application/postscript</td>
+</tr>
+<tr>
+<td>.aif</td>
+<td>audio/aiff</td>
+<td>.aifc</td>
+<td>audio/aiff</td>
+</tr>
+<tr>
+<td>.aiff</td>
+<td>audio/aiff</td>
+<td>.anv</td>
+<td>application/x-anv</td>
+</tr>
+<tr>
+<td>.asa</td>
+<td>text/asa</td>
+<td>.asf</td>
+<td>video/x-ms-asf</td>
+</tr>
+<tr>
+<td>.asp</td>
+<td>text/asp</td>
+<td>.asx</td>
+<td>video/x-ms-asf</td>
+</tr>
+<tr>
+<td>.au</td>
+<td>audio/basic</td>
+<td>.avi</td>
+<td>video/avi</td>
+</tr>
+<tr>
+<td>.awf</td>
+<td>application/vnd.adobe.workflow</td>
+<td>.biz</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.bmp</td>
+<td>application/x-bmp</td>
+<td>.bot</td>
+<td>application/x-bot</td>
+</tr>
+<tr>
+<td>.c4t</td>
+<td>application/x-c4t</td>
+<td>.c90</td>
+<td>application/x-c90</td>
+</tr>
+<tr>
+<td>.cal</td>
+<td>application/x-cals</td>
+<td>.cat</td>
+<td>application/vnd.ms-pki.seccat</td>
+</tr>
+<tr>
+<td>.cdf</td>
+<td>application/x-netcdf</td>
+<td>.cdr</td>
+<td>application/x-cdr</td>
+</tr>
+<tr>
+<td>.cel</td>
+<td>application/x-cel</td>
+<td>.cer</td>
+<td>application/x-x509-ca-cert</td>
+</tr>
+<tr>
+<td>.cg4</td>
+<td>application/x-g4</td>
+<td>.cgm</td>
+<td>application/x-cgm</td>
+</tr>
+<tr>
+<td>.cit</td>
+<td>application/x-cit</td>
+<td>.class</td>
+<td>java/*</td>
+</tr>
+<tr>
+<td>.cml</td>
+<td>text/xml</td>
+<td>.cmp</td>
+<td>application/x-cmp</td>
+</tr>
+<tr>
+<td>.cmx</td>
+<td>application/x-cmx</td>
+<td>.cot</td>
+<td>application/x-cot</td>
+</tr>
+<tr>
+<td>.crl</td>
+<td>application/pkix-crl</td>
+<td>.crt</td>
+<td>application/x-x509-ca-cert</td>
+</tr>
+<tr>
+<td>.csi</td>
+<td>application/x-csi</td>
+<td>.css</td>
+<td>text/css</td>
+</tr>
+<tr>
+<td>.cut</td>
+<td>application/x-cut</td>
+<td>.dbf</td>
+<td>application/x-dbf</td>
+</tr>
+<tr>
+<td>.dbm</td>
+<td>application/x-dbm</td>
+<td>.dbx</td>
+<td>application/x-dbx</td>
+</tr>
+<tr>
+<td>.dcd</td>
+<td>text/xml</td>
+<td>.dcx</td>
+<td>application/x-dcx</td>
+</tr>
+<tr>
+<td>.der</td>
+<td>application/x-x509-ca-cert</td>
+<td>.dgn</td>
+<td>application/x-dgn</td>
+</tr>
+<tr>
+<td>.dib</td>
+<td>application/x-dib</td>
+<td>.dll</td>
+<td>application/x-msdownload</td>
+</tr>
+<tr>
+<td>.doc</td>
+<td>application/msword</td>
+<td>.dot</td>
+<td>application/msword</td>
+</tr>
+<tr>
+<td>.drw</td>
+<td>application/x-drw</td>
+<td>.dtd</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.dwf</td>
+<td>Model/vnd.dwf</td>
+<td>.dwf</td>
+<td>application/x-dwf</td>
+</tr>
+<tr>
+<td>.dwg</td>
+<td>application/x-dwg</td>
+<td>.dxb</td>
+<td>application/x-dxb</td>
+</tr>
+<tr>
+<td>.dxf</td>
+<td>application/x-dxf</td>
+<td>.edn</td>
+<td>application/vnd.adobe.edn</td>
+</tr>
+<tr>
+<td>.emf</td>
+<td>application/x-emf</td>
+<td>.eml</td>
+<td>message/rfc822</td>
+</tr>
+<tr>
+<td>.ent</td>
+<td>text/xml</td>
+<td>.epi</td>
+<td>application/x-epi</td>
+</tr>
+<tr>
+<td>.eps</td>
+<td>application/x-ps</td>
+<td>.eps</td>
+<td>application/postscript</td>
+</tr>
+<tr>
+<td>.etd</td>
+<td>application/x-ebx</td>
+<td>.exe</td>
+<td>application/x-msdownload</td>
+</tr>
+<tr>
+<td>.fax</td>
+<td>image/fax</td>
+<td>.fdf</td>
+<td>application/vnd.fdf</td>
+</tr>
+<tr>
+<td>.fif</td>
+<td>application/fractals</td>
+<td>.fo</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.frm</td>
+<td>application/x-frm</td>
+<td>.g4</td>
+<td>application/x-g4</td>
+</tr>
+<tr>
+<td>.gbr</td>
+<td>application/x-gbr</td>
+<td>.</td>
+<td>application/x-</td>
+</tr>
+<tr>
+<td>.gif</td>
+<td>image/gif</td>
+<td>.gl2</td>
+<td>application/x-gl2</td>
+</tr>
+<tr>
+<td>.gp4</td>
+<td>application/x-gp4</td>
+<td>.hgl</td>
+<td>application/x-hgl</td>
+</tr>
+<tr>
+<td>.hmr</td>
+<td>application/x-hmr</td>
+<td>.hpg</td>
+<td>application/x-hpgl</td>
+</tr>
+<tr>
+<td>.hpl</td>
+<td>application/x-hpl</td>
+<td>.hqx</td>
+<td>application/mac-binhex40</td>
+</tr>
+<tr>
+<td>.hrf</td>
+<td>application/x-hrf</td>
+<td>.hta</td>
+<td>application/hta</td>
+</tr>
+<tr>
+<td>.htc</td>
+<td>text/x-component</td>
+<td>.htm</td>
+<td>text/html</td>
+</tr>
+<tr>
+<td>.html</td>
+<td>text/html</td>
+<td>.htt</td>
+<td>text/webviewhtml</td>
+</tr>
+<tr>
+<td>.htx</td>
+<td>text/html</td>
+<td>.icb</td>
+<td>application/x-icb</td>
+</tr>
+<tr>
+<td>.ico</td>
+<td>image/x-icon</td>
+<td>.ico</td>
+<td>application/x-ico</td>
+</tr>
+<tr>
+<td>.iff</td>
+<td>application/x-iff</td>
+<td>.ig4</td>
+<td>application/x-g4</td>
+</tr>
+<tr>
+<td>.igs</td>
+<td>application/x-igs</td>
+<td>.iii</td>
+<td>application/x-iphone</td>
+</tr>
+<tr>
+<td>.img</td>
+<td>application/x-img</td>
+<td>.ins</td>
+<td>application/x-internet-signup</td>
+</tr>
+<tr>
+<td>.isp</td>
+<td>application/x-internet-signup</td>
+<td>.IVF</td>
+<td>video/x-ivf</td>
+</tr>
+<tr>
+<td>.java</td>
+<td>java/*</td>
+<td>.jfif</td>
+<td>image/jpeg</td>
+</tr>
+<tr>
+<td>.jpe</td>
+<td>image/jpeg</td>
+<td>.jpe</td>
+<td>application/x-jpe</td>
+</tr>
+<tr>
+<td>.jpeg</td>
+<td>image/jpeg</td>
+<td>.jpg</td>
+<td>image/jpeg</td>
+</tr>
+<tr>
+<td>.jpg</td>
+<td>application/x-jpg</td>
+<td>.js</td>
+<td>application/x-javascript</td>
+</tr>
+<tr>
+<td>.jsp</td>
+<td>text/html</td>
+<td>.la1</td>
+<td>audio/x-liquid-file</td>
+</tr>
+<tr>
+<td>.lar</td>
+<td>application/x-laplayer-reg</td>
+<td>.latex</td>
+<td>application/x-latex</td>
+</tr>
+<tr>
+<td>.lavs</td>
+<td>audio/x-liquid-secure</td>
+<td>.lbm</td>
+<td>application/x-lbm</td>
+</tr>
+<tr>
+<td>.lmsff</td>
+<td>audio/x-la-lms</td>
+<td>.ls</td>
+<td>application/x-javascript</td>
+</tr>
+<tr>
+<td>.ltr</td>
+<td>application/x-ltr</td>
+<td>.m1v</td>
+<td>video/x-mpeg</td>
+</tr>
+<tr>
+<td>.m2v</td>
+<td>video/x-mpeg</td>
+<td>.m3u</td>
+<td>audio/mpegurl</td>
+</tr>
+<tr>
+<td>.m4e</td>
+<td>video/mpeg4</td>
+<td>.mac</td>
+<td>application/x-mac</td>
+</tr>
+<tr>
+<td>.man</td>
+<td>application/x-troff-man</td>
+<td>.math</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.mdb</td>
+<td>application/msaccess</td>
+<td>.mdb</td>
+<td>application/x-mdb</td>
+</tr>
+<tr>
+<td>.mfp</td>
+<td>application/x-shockwave-flash</td>
+<td>.mht</td>
+<td>message/rfc822</td>
+</tr>
+<tr>
+<td>.mhtml</td>
+<td>message/rfc822</td>
+<td>.mi</td>
+<td>application/x-mi</td>
+</tr>
+<tr>
+<td>.mid</td>
+<td>audio/mid</td>
+<td>.midi</td>
+<td>audio/mid</td>
+</tr>
+<tr>
+<td>.mil</td>
+<td>application/x-mil</td>
+<td>.mml</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.mnd</td>
+<td>audio/x-musicnet-download</td>
+<td>.mns</td>
+<td>audio/x-musicnet-stream</td>
+</tr>
+<tr>
+<td>.mocha</td>
+<td>application/x-javascript</td>
+<td>.movie</td>
+<td>video/x-sgi-movie</td>
+</tr>
+<tr>
+<td>.mp1</td>
+<td>audio/mp1</td>
+<td>.mp2</td>
+<td>audio/mp2</td>
+</tr>
+<tr>
+<td>.mp2v</td>
+<td>video/mpeg</td>
+<td>.mp3</td>
+<td>audio/mp3</td>
+</tr>
+<tr>
+<td>.mp4</td>
+<td>video/mpeg4</td>
+<td>.mpa</td>
+<td>video/x-mpg</td>
+</tr>
+<tr>
+<td>.mpd</td>
+<td>application/vnd.ms-project</td>
+<td>.mpe</td>
+<td>video/x-mpeg</td>
+</tr>
+<tr>
+<td>.mpeg</td>
+<td>video/mpg</td>
+<td>.mpg</td>
+<td>video/mpg</td>
+</tr>
+<tr>
+<td>.mpga</td>
+<td>audio/rn-mpeg</td>
+<td>.mpp</td>
+<td>application/vnd.ms-project</td>
+</tr>
+<tr>
+<td>.mps</td>
+<td>video/x-mpeg</td>
+<td>.mpt</td>
+<td>application/vnd.ms-project</td>
+</tr>
+<tr>
+<td>.mpv</td>
+<td>video/mpg</td>
+<td>.mpv2</td>
+<td>video/mpeg</td>
+</tr>
+<tr>
+<td>.mpw</td>
+<td>application/vnd.ms-project</td>
+<td>.mpx</td>
+<td>application/vnd.ms-project</td>
+</tr>
+<tr>
+<td>.mtx</td>
+<td>text/xml</td>
+<td>.mxp</td>
+<td>application/x-mmxp</td>
+</tr>
+<tr>
+<td>.net</td>
+<td>image/pnetvue</td>
+<td>.nrf</td>
+<td>application/x-nrf</td>
+</tr>
+<tr>
+<td>.nws</td>
+<td>message/rfc822</td>
+<td>.odc</td>
+<td>text/x-ms-odc</td>
+</tr>
+<tr>
+<td>.out</td>
+<td>application/x-out</td>
+<td>.p10</td>
+<td>application/pkcs10</td>
+</tr>
+<tr>
+<td>.p12</td>
+<td>application/x-pkcs12</td>
+<td>.p7b</td>
+<td>application/x-pkcs7-certificates</td>
+</tr>
+<tr>
+<td>.p7c</td>
+<td>application/pkcs7-mime</td>
+<td>.p7m</td>
+<td>application/pkcs7-mime</td>
+</tr>
+<tr>
+<td>.p7r</td>
+<td>application/x-pkcs7-certreqresp</td>
+<td>.p7s</td>
+<td>application/pkcs7-signature</td>
+</tr>
+<tr>
+<td>.pc5</td>
+<td>application/x-pc5</td>
+<td>.pci</td>
+<td>application/x-pci</td>
+</tr>
+<tr>
+<td>.pcl</td>
+<td>application/x-pcl</td>
+<td>.pcx</td>
+<td>application/x-pcx</td>
+</tr>
+<tr>
+<td>.pdf</td>
+<td>application/pdf</td>
+<td>.pdf</td>
+<td>application/pdf</td>
+</tr>
+<tr>
+<td>.pdx</td>
+<td>application/vnd.adobe.pdx</td>
+<td>.pfx</td>
+<td>application/x-pkcs12</td>
+</tr>
+<tr>
+<td>.pgl</td>
+<td>application/x-pgl</td>
+<td>.pic</td>
+<td>application/x-pic</td>
+</tr>
+<tr>
+<td>.pko</td>
+<td>application/vnd.ms-pki.pko</td>
+<td>.pl</td>
+<td>application/x-perl</td>
+</tr>
+<tr>
+<td>.plg</td>
+<td>text/html</td>
+<td>.pls</td>
+<td>audio/scpls</td>
+</tr>
+<tr>
+<td>.plt</td>
+<td>application/x-plt</td>
+<td>.png</td>
+<td>image/png</td>
+</tr>
+<tr>
+<td>.png</td>
+<td>application/x-png</td>
+<td>.pot</td>
+<td>application/vnd.ms-powerpoint</td>
+</tr>
+<tr>
+<td>.ppa</td>
+<td>application/vnd.ms-powerpoint</td>
+<td>.ppm</td>
+<td>application/x-ppm</td>
+</tr>
+<tr>
+<td>.pps</td>
+<td>application/vnd.ms-powerpoint</td>
+<td>.ppt</td>
+<td>application/vnd.ms-powerpoint</td>
+</tr>
+<tr>
+<td>.ppt</td>
+<td>application/x-ppt</td>
+<td>.pr</td>
+<td>application/x-pr</td>
+</tr>
+<tr>
+<td>.prf</td>
+<td>application/pics-rules</td>
+<td>.prn</td>
+<td>application/x-prn</td>
+</tr>
+<tr>
+<td>.prt</td>
+<td>application/x-prt</td>
+<td>.ps</td>
+<td>application/x-ps</td>
+</tr>
+<tr>
+<td>.ps</td>
+<td>application/postscript</td>
+<td>.ptn</td>
+<td>application/x-ptn</td>
+</tr>
+<tr>
+<td>.pwz</td>
+<td>application/vnd.ms-powerpoint</td>
+<td>.r3t</td>
+<td>text/vnd.rn-realtext3d</td>
+</tr>
+<tr>
+<td>.ra</td>
+<td>audio/vnd.rn-realaudio</td>
+<td>.ram</td>
+<td>audio/x-pn-realaudio</td>
+</tr>
+<tr>
+<td>.ras</td>
+<td>application/x-ras</td>
+<td>.rat</td>
+<td>application/rat-file</td>
+</tr>
+<tr>
+<td>.rdf</td>
+<td>text/xml</td>
+<td>.rec</td>
+<td>application/vnd.rn-recording</td>
+</tr>
+<tr>
+<td>.red</td>
+<td>application/x-red</td>
+<td>.rgb</td>
+<td>application/x-rgb</td>
+</tr>
+<tr>
+<td>.rjs</td>
+<td>application/vnd.rn-realsystem-rjs</td>
+<td>.rjt</td>
+<td>application/vnd.rn-realsystem-rjt</td>
+</tr>
+<tr>
+<td>.rlc</td>
+<td>application/x-rlc</td>
+<td>.rle</td>
+<td>application/x-rle</td>
+</tr>
+<tr>
+<td>.rm</td>
+<td>application/vnd.rn-realmedia</td>
+<td>.rmf</td>
+<td>application/vnd.adobe.rmf</td>
+</tr>
+<tr>
+<td>.rmi</td>
+<td>audio/mid</td>
+<td>.rmj</td>
+<td>application/vnd.rn-realsystem-rmj</td>
+</tr>
+<tr>
+<td>.rmm</td>
+<td>audio/x-pn-realaudio</td>
+<td>.rmp</td>
+<td>application/vnd.rn-rn_music_package</td>
+</tr>
+<tr>
+<td>.rms</td>
+<td>application/vnd.rn-realmedia-secure</td>
+<td>.rmvb</td>
+<td>application/vnd.rn-realmedia-vbr</td>
+</tr>
+<tr>
+<td>.rmx</td>
+<td>application/vnd.rn-realsystem-rmx</td>
+<td>.rnx</td>
+<td>application/vnd.rn-realplayer</td>
+</tr>
+<tr>
+<td>.rp</td>
+<td>image/vnd.rn-realpix</td>
+<td>.rpm</td>
+<td>audio/x-pn-realaudio-plugin</td>
+</tr>
+<tr>
+<td>.rsml</td>
+<td>application/vnd.rn-rsml</td>
+<td>.rt</td>
+<td>text/vnd.rn-realtext</td>
+</tr>
+<tr>
+<td>.rtf</td>
+<td>application/msword</td>
+<td>.rtf</td>
+<td>application/x-rtf</td>
+</tr>
+<tr>
+<td>.rv</td>
+<td>video/vnd.rn-realvideo</td>
+<td>.sam</td>
+<td>application/x-sam</td>
+</tr>
+<tr>
+<td>.sat</td>
+<td>application/x-sat</td>
+<td>.sdp</td>
+<td>application/sdp</td>
+</tr>
+<tr>
+<td>.sdw</td>
+<td>application/x-sdw</td>
+<td>.sit</td>
+<td>application/x-stuffit</td>
+</tr>
+<tr>
+<td>.slb</td>
+<td>application/x-slb</td>
+<td>.sld</td>
+<td>application/x-sld</td>
+</tr>
+<tr>
+<td>.slk</td>
+<td>drawing/x-slk</td>
+<td>.smi</td>
+<td>application/smil</td>
+</tr>
+<tr>
+<td>.smil</td>
+<td>application/smil</td>
+<td>.smk</td>
+<td>application/x-smk</td>
+</tr>
+<tr>
+<td>.snd</td>
+<td>audio/basic</td>
+<td>.sol</td>
+<td>text/plain</td>
+</tr>
+<tr>
+<td>.sor</td>
+<td>text/plain</td>
+<td>.spc</td>
+<td>application/x-pkcs7-certificates</td>
+</tr>
+<tr>
+<td>.spl</td>
+<td>application/futuresplash</td>
+<td>.spp</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.ssm</td>
+<td>application/streamingmedia</td>
+<td>.sst</td>
+<td>application/vnd.ms-pki.certstore</td>
+</tr>
+<tr>
+<td>.stl</td>
+<td>application/vnd.ms-pki.stl</td>
+<td>.stm</td>
+<td>text/html</td>
+</tr>
+<tr>
+<td>.sty</td>
+<td>application/x-sty</td>
+<td>.svg</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.swf</td>
+<td>application/x-shockwave-flash</td>
+<td>.tdf</td>
+<td>application/x-tdf</td>
+</tr>
+<tr>
+<td>.tg4</td>
+<td>application/x-tg4</td>
+<td>.tga</td>
+<td>application/x-tga</td>
+</tr>
+<tr>
+<td>.tif</td>
+<td>image/tiff</td>
+<td>.tif</td>
+<td>application/x-tif</td>
+</tr>
+<tr>
+<td>.tiff</td>
+<td>image/tiff</td>
+<td>.tld</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.top</td>
+<td>drawing/x-top</td>
+<td>.torrent</td>
+<td>application/x-bittorrent</td>
+</tr>
+<tr>
+<td>.tsd</td>
+<td>text/xml</td>
+<td>.txt</td>
+<td>text/plain</td>
+</tr>
+<tr>
+<td>.uin</td>
+<td>application/x-icq</td>
+<td>.uls</td>
+<td>text/iuls</td>
+</tr>
+<tr>
+<td>.vcf</td>
+<td>text/x-vcard</td>
+<td>.vda</td>
+<td>application/x-vda</td>
+</tr>
+<tr>
+<td>.vdx</td>
+<td>application/vnd.visio</td>
+<td>.vml</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.vpg</td>
+<td>application/x-vpeg005</td>
+<td>.vsd</td>
+<td>application/vnd.visio</td>
+</tr>
+<tr>
+<td>.vsd</td>
+<td>application/x-vsd</td>
+<td>.vss</td>
+<td>application/vnd.visio</td>
+</tr>
+<tr>
+<td>.vst</td>
+<td>application/vnd.visio</td>
+<td>.vst</td>
+<td>application/x-vst</td>
+</tr>
+<tr>
+<td>.vsw</td>
+<td>application/vnd.visio</td>
+<td>.vsx</td>
+<td>application/vnd.visio</td>
+</tr>
+<tr>
+<td>.vtx</td>
+<td>application/vnd.visio</td>
+<td>.vxml</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.wav</td>
+<td>audio/wav</td>
+<td>.wax</td>
+<td>audio/x-ms-wax</td>
+</tr>
+<tr>
+<td>.wb1</td>
+<td>application/x-wb1</td>
+<td>.wb2</td>
+<td>application/x-wb2</td>
+</tr>
+<tr>
+<td>.wb3</td>
+<td>application/x-wb3</td>
+<td>.wbmp</td>
+<td>image/vnd.wap.wbmp</td>
+</tr>
+<tr>
+<td>.wiz</td>
+<td>application/msword</td>
+<td>.wk3</td>
+<td>application/x-wk3</td>
+</tr>
+<tr>
+<td>.wk4</td>
+<td>application/x-wk4</td>
+<td>.wkq</td>
+<td>application/x-wkq</td>
+</tr>
+<tr>
+<td>.wks</td>
+<td>application/x-wks</td>
+<td>.wm</td>
+<td>video/x-ms-wm</td>
+</tr>
+<tr>
+<td>.wma</td>
+<td>audio/x-ms-wma</td>
+<td>.wmd</td>
+<td>application/x-ms-wmd</td>
+</tr>
+<tr>
+<td>.wmf</td>
+<td>application/x-wmf</td>
+<td>.wml</td>
+<td>text/vnd.wap.wml</td>
+</tr>
+<tr>
+<td>.wmv</td>
+<td>video/x-ms-wmv</td>
+<td>.wmx</td>
+<td>video/x-ms-wmx</td>
+</tr>
+<tr>
+<td>.wmz</td>
+<td>application/x-ms-wmz</td>
+<td>.wp6</td>
+<td>application/x-wp6</td>
+</tr>
+<tr>
+<td>.wpd</td>
+<td>application/x-wpd</td>
+<td>.wpg</td>
+<td>application/x-wpg</td>
+</tr>
+<tr>
+<td>.wpl</td>
+<td>application/vnd.ms-wpl</td>
+<td>.wq1</td>
+<td>application/x-wq1</td>
+</tr>
+<tr>
+<td>.wr1</td>
+<td>application/x-wr1</td>
+<td>.wri</td>
+<td>application/x-wri</td>
+</tr>
+<tr>
+<td>.wrk</td>
+<td>application/x-wrk</td>
+<td>.ws</td>
+<td>application/x-ws</td>
+</tr>
+<tr>
+<td>.ws2</td>
+<td>application/x-ws</td>
+<td>.wsc</td>
+<td>text/scriptlet</td>
+</tr>
+<tr>
+<td>.wsdl</td>
+<td>text/xml</td>
+<td>.wvx</td>
+<td>video/x-ms-wvx</td>
+</tr>
+<tr>
+<td>.xdp</td>
+<td>application/vnd.adobe.xdp</td>
+<td>.xdr</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.xfd</td>
+<td>application/vnd.adobe.xfd</td>
+<td>.xfdf</td>
+<td>application/vnd.adobe.xfdf</td>
+</tr>
+<tr>
+<td>.xhtml</td>
+<td>text/html</td>
+<td>.xls</td>
+<td>application/vnd.ms-excel</td>
+</tr>
+<tr>
+<td>.xls</td>
+<td>application/x-xls</td>
+<td>.xlw</td>
+<td>application/x-xlw</td>
+</tr>
+<tr>
+<td>.xml</td>
+<td>text/xml</td>
+<td>.xpl</td>
+<td>audio/scpls</td>
+</tr>
+<tr>
+<td>.xq</td>
+<td>text/xml</td>
+<td>.xql</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.xquery</td>
+<td>text/xml</td>
+<td>.xsd</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.xsl</td>
+<td>text/xml</td>
+<td>.xslt</td>
+<td>text/xml</td>
+</tr>
+<tr>
+<td>.xwd</td>
+<td>application/x-xwd</td>
+<td>.x_b</td>
+<td>application/x-x_b</td>
+</tr>
+<tr>
+<td>.sis</td>
+<td>application/vnd.symbian.install</td>
+<td>.sisx</td>
+<td>application/vnd.symbian.install</td>
+</tr>
+<tr>
+<td>.x_t</td>
+<td>application/x-x_t</td>
+<td>.ipa</td>
+<td>application/vnd.iphone</td>
+</tr>
+<tr>
+<td>.apk</td>
+<td>application/vnd.android.package-archive</td>
+<td>.xap</td>
+<td>application/x-silverlight-app</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>常用对照表</category>
+      </categories>
+      <tags>
+        <tag>HTTP</tag>
+        <tag>Content-Type</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown Pad2使用教程详细版</title>
+    <url>/post/5e08edd2/</url>
+    <content><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>一级标题一个#号，二级标题两个#号，依次类推…直到六级标题，没有七级标题！</p>
+<h2 id="有序列表-amp-无序列表"><a href="#有序列表-amp-无序列表" class="headerlink" title="有序列表&amp;无序列表"></a>有序列表&amp;无序列表</h2><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>“1.”加空格再输入内容，英文输入状态，同时注意每一点后加上两个空格再换行否则列表不自动换行  </p>
+<ol>
+<li>第一条</li>
+<li>第二条</li>
+<li>第三条</li>
+</ol>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>减号“-”或者星号“*”加上空格输入内容即为无序列表  </p>
+<ul>
+<li>减号第一条</li>
+<li>减号第二条</li>
+<li>减号第三条</li>
+</ul>
+<ul>
+<li>星号第一条 </li>
+<li>星号第二条 </li>
+<li>星号第三条</li>
+</ul>
+<h2 id="引用文章等"><a href="#引用文章等" class="headerlink" title="引用文章等"></a>引用文章等</h2><p>在每一行前面加上大于号“&gt;”英文状态下输入  </p>
+<blockquote>
+<p>有些人活着<br>但他已经死了<br>有些人死了<br>但他依旧活着</p>
+</blockquote>
+<p>其实只需要输入一个“&gt;”即可，换行的时候会自动添加。也就是说只要中间不跳行，换行时会自动给你加上大于号，但一旦隔行了就跳出引用模式了，即引用的中间不允许有空行</p>
+<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><p>文本的前后各加上两个星号“<strong>”且与文本之间不能有空格<br>预览效果如下：<br>**加粗</strong></p>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p>文本的前后各加上一个星号<br>预览效果：<br><em>斜体</em></p>
+<h2 id="添加图片和链接"><a href="#添加图片和链接" class="headerlink" title="添加图片和链接"></a>添加图片和链接</h2><p>如果是图片的话就要将图片的本地文件放到与该md文件相同的路径下，且填写文件的相对路径<br>如果是网页链接就直接贴上网页链接，http一定要有</p>
+<h3 id="图片："><a href="#图片：" class="headerlink" title="图片："></a>图片：</h3><p>感叹号+方括号+圆括号。方括号里随便填啥不会显示出来，圆括号里填写图片文件的相对路径或者如果是网页连接的话可以填写网页链接，因为存为本地文件较为方便，本人选择采用前者。注意文件名最好不要带中文，好像不行。还有，如果创作的文章需要发布到网上，需要将图片上传才可以！</p>
+<p><img src="../../images/Markdown/markdownImageLinks.jpg">  </p>
+<p>本地文件  </p>
+<p><img src="../../images/Markdown/%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6.png"></p>
+<p>网页提取</p>
+<p><img src="../../images/Markdown/%E7%BD%91%E9%A1%B5%E6%8F%90%E5%8F%96.png"></p>
+<h3 id="网页："><a href="#网页：" class="headerlink" title="网页："></a>网页：</h3><p>方括号+圆括号。方括号里填写的会呈灰色的显示出来，链接就粘贴在圆括号里。<br>预览效果：</p>
+<h4 id="文件相对路径法："><a href="#文件相对路径法：" class="headerlink" title="文件相对路径法："></a>文件相对路径法：</h4><p><img src="../../images/Markdown/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E6%B3%95.png"></p>
+<p>前面是英文输入状态下的“./”后面加上属性里面复制过来的文件名包括后缀名<br>同时刚刚get获取网页图片地址的方法，右键网页图片属性复制全部地址</p>
+<h4 id="网页地址法："><a href="#网页地址法：" class="headerlink" title="网页地址法："></a>网页地址法：</h4><p><img src="../../images/Markdown/%E7%BD%91%E9%A1%B5%E5%9C%B0%E5%9D%80%E6%B3%95.png"></p>
+<h4 id="添加网页链接："><a href="#添加网页链接：" class="headerlink" title="添加网页链接："></a>添加网页链接：</h4><p>比插入图片少一个感叹号即可<br><a href="http://markdownpad.com/">markdown pad官网</a></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>前后各加上三个反引号，就是数字1前面那个键<br>预览效果：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list_1 = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">9</span>]</span><br><span class="line"> list_1 = set(list_1)</span><br><span class="line"> list_2 = set([<span class="number">2</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">66</span>, <span class="number">22</span>, <span class="number">8</span>, <span class="number">4</span>])</span><br><span class="line"> print(list_1, list_2)</span><br><span class="line"> <span class="comment">#求交集</span></span><br><span class="line"> print(list_1.intersection(list_2))</span><br><span class="line"> <span class="comment">#求并集</span></span><br><span class="line"> print(list_1.union(list_2))</span><br><span class="line"> <span class="comment">#求差集（你有我无或你无我有）</span></span><br><span class="line"> print(list_1.difference(list_2))</span><br><span class="line"> print(list_2.difference(list_1))</span><br></pre></td></tr></table></figure>
+
+<p>如果不行则需要设置其他模式才能实现代码样式，操作如下：tools-&gt;options-&gt;markdown-&gt;markdown processor-&gt;commonmark。至此OK！或者设置为GitHub离线格式也行。</p>
+<h2 id="分割横线"><a href="#分割横线" class="headerlink" title="分割横线"></a>分割横线</h2><p>三个星就行<br>预览效果：</p>
+<hr>
+<h2 id="给字体加颜色"><a href="#给字体加颜色" class="headerlink" title="给字体加颜色"></a>给字体加颜色</h2><p>1、颜色名称要加英文双引号，如下：  </p>
+<p><font color="red">颜色</font></p>
+<p><code>&lt;font color=&quot;red&quot;&gt;颜色&lt;/font&gt;</code></p>
+<p>color=“对应颜色的英文名”</p>
+<p>2、如果是通过十六进制获取的，十六进制数前要加#，如下：  </p>
+<p><font color="#7ASDF342">颜色</font></p>
+<p><code>&lt;font color=&quot;#7ASDF342&quot;&gt;颜色&lt;/font&gt;</code></p>
+<p>3、&lt; /font &gt; 不要忘记写</p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li>Ctrl + I ： 斜体</li>
+<li>Ctrl + B ： 粗体</li>
+<li>Ctrl + G ： 图片</li>
+<li>Ctrl + Q ： 引用</li>
+<li>Ctrl + 1 ： 标题 1</li>
+<li>Ctrl + 2 ： 标题 2</li>
+<li>Ctrl + 3 ： 标题 3</li>
+<li>Ctrl + K ： 代码块</li>
+<li>Ctrl + L ： 超链接</li>
+<li>Ctrl + T ： 时间戳</li>
+<li>Ctrl + U ： 无序列表</li>
+<li>Ctrl + Shift + O ： 有序列表</li>
+<li>Ctrl + R ： 水平标尺</li>
+<li>F4 ： 启用水平布局/竖直预览</li>
+<li>F5 ： 启用/关闭实时预览</li>
+<li>F6 ： 在浏览器中预览</li>
+</ul>
+<p>** 关于快捷键的一些说明： **</p>
+<ol>
+<li>这里的插入图片快捷键只适用于插入网页链接，下面选项optional可选填，指的就是方括号里的内容</li>
+<li>三级以后标题之后的快捷键不适用</li>
+<li>代码块的快捷键只是缩进了一个tab距离，三个反引号并不会自动添加，不好用</li>
+<li>时间戳在markdown模式下正常显示，在GitHub离线模式下显示有bug</li>
+<li>以上的快捷键或者是各种操作在不同的模式下可能显示都会有所差异，出现时可适当尝试选择。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Markdown学习</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+</search>
