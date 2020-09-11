@@ -24,7 +24,7 @@
   <meta name="description" content="C++ 基本语法C++ 程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。现在让我们简要地看一下什么是类、对象，方法、即时变量。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++基本语法">
-<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/3d38490d.html">
+<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/3d38490d.html">
 <meta property="og:site_name" content="旧时烟雨">
 <meta property="og:description" content="C++ 基本语法C++ 程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。现在让我们简要地看一下什么是类、对象，方法、即时变量。">
 <meta property="og:locale" content="zh_CN">
@@ -34,7 +34,7 @@
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/3d38490d.html">
+<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/3d38490d.html">
 
 
 <script id="page-configurations">
@@ -197,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/3d38490d.html">
+    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/3d38490d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar01.jpg">
@@ -308,10 +308,10 @@
   <div class="popular-posts-header">推荐文章</div>
   <ul class="popular-posts">
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\posts\920fd15b.html" rel="bookmark">C++简介</a></div>
+      <div class="popular-posts-title"><a href="\posts\21965769.html" rel="bookmark">C++环境配置</a></div>
     </li>
     <li class="popular-posts-item">
-      <div class="popular-posts-title"><a href="\posts\21965769.html" rel="bookmark">C++环境配置</a></div>
+      <div class="popular-posts-title"><a href="\posts\920fd15b.html" rel="bookmark">C++简介</a></div>
     </li>
   </ul>
 
@@ -347,6 +347,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -579,6 +580,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'a4e147983aa9a0b47b97',
+      clientSecret: '7816f93281d1eaa9c75fc56770c3ceded1f4f540',
+      repo        : 'BlogComments',
+      owner       : 'lhyxcqc',
+      admin       : ['lhyxcqc'],
+      id          : '75093fd4b45355f493a001119875ccef',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

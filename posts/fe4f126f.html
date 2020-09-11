@@ -24,7 +24,7 @@
   <meta name="description" content="C#中Math.Round()实现中国式四舍五入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C#中Math.Round()实现中国式四舍五入">
-<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/fe4f126f.html">
+<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/fe4f126f.html">
 <meta property="og:site_name" content="旧时烟雨">
 <meta property="og:description" content="C#中Math.Round()实现中国式四舍五入">
 <meta property="og:locale" content="zh_CN">
@@ -37,7 +37,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round.png">
 
-<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/fe4f126f.html">
+<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/fe4f126f.html">
 
 
 <script id="page-configurations">
@@ -200,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/fe4f126f.html">
+    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/fe4f126f.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar01.jpg">
@@ -338,6 +338,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -570,6 +571,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'a4e147983aa9a0b47b97',
+      clientSecret: '7816f93281d1eaa9c75fc56770c3ceded1f4f540',
+      repo        : 'BlogComments',
+      owner       : 'lhyxcqc',
+      admin       : ['lhyxcqc'],
+      id          : '8484e12161def0fb65fe135380d46a69',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

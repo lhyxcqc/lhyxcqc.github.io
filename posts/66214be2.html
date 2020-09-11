@@ -24,7 +24,7 @@
   <meta name="description" content="frp说明frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp, http, https 协议。 frp 的作用 利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。 对于 http, https 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个80端口。 利用处于内网或防火墙后的机器，对外网环境提供 tcp 和 udp 服务，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="frp内网穿透,远程家里电脑">
-<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/66214be2.html">
+<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/66214be2.html">
 <meta property="og:site_name" content="旧时烟雨">
 <meta property="og:description" content="frp说明frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp, http, https 协议。 frp 的作用 利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。 对于 http, https 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个80端口。 利用处于内网或防火墙后的机器，对外网环境提供 tcp 和 udp 服务，">
 <meta property="og:locale" content="zh_CN">
@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://lhyxcqc.gitee.io/tuku/mdImages/frp/frp%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.png">
 
-<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/66214be2.html">
+<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/66214be2.html">
 
 
 <script id="page-configurations">
@@ -199,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/66214be2.html">
+    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/66214be2.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar01.jpg">
@@ -336,6 +336,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -568,6 +569,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'a4e147983aa9a0b47b97',
+      clientSecret: '7816f93281d1eaa9c75fc56770c3ceded1f4f540',
+      repo        : 'BlogComments',
+      owner       : 'lhyxcqc',
+      admin       : ['lhyxcqc'],
+      id          : '4448149b7256529920f7c62029d585a4',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

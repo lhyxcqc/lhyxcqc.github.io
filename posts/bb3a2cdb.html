@@ -24,19 +24,19 @@
   <meta name="description" content="Hexo中添加本地图片">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo中添加本地图片">
-<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/bb3a2cdb.html">
+<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/bb3a2cdb.html">
 <meta property="og:site_name" content="旧时烟雨">
 <meta property="og:description" content="Hexo中添加本地图片">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/bb3a2cdb.htm/02/26/xxxx/图片名.jpg">
+<meta property="og:image" content="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/bb3a2cdb.htm/02/26/xxxx/图片名.jpg">
 <meta property="article:published_time" content="2020-08-28T06:17:15.000Z">
 <meta property="article:modified_time" content="2020-09-06T15:35:27.906Z">
 <meta property="article:author" content="小草青菜">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/bb3a2cdb.htm/02/26/xxxx/图片名.jpg">
+<meta name="twitter:image" content="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/bb3a2cdb.htm/02/26/xxxx/图片名.jpg">
 
-<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/bb3a2cdb.html">
+<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/bb3a2cdb.html">
 
 
 <script id="page-configurations">
@@ -199,7 +199,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/bb3a2cdb.html">
+    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/bb3a2cdb.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar01.jpg">
@@ -280,7 +280,7 @@
 <p><code>![你想输入的替代文字](xxxx/图片名.jpg)</code></p>
 <p>注意： xxxx是这个md文件的名字，也是同名文件夹的名字。只需要有文件夹名字即可，不需要有什么绝对路径。你想引入的图片就只需要放入xxxx这个文件夹内就好了，很像引用相对路径。</p>
 <ol start="5">
-<li>最后检查一下，hexo g生成页面后，进入public\2017\02\26\index.html文件中查看相关字段，可以发现，html标签内的语句是<img src="/lhyxcqc/lhyxcqc/blog.git/posts/bb3a2cdb.htm/02/26/xxxx/图片名.jpg">，而不是&lt;img src=”xxxx/图片名.jpg&gt;。这很重要，关乎你的网页是否可以真正加载你想插入的图片。</li>
+<li>最后检查一下，hexo g生成页面后，进入public\2017\02\26\index.html文件中查看相关字段，可以发现，html标签内的语句是<img src="/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/bb3a2cdb.htm/02/26/xxxx/图片名.jpg">，而不是&lt;img src=”xxxx/图片名.jpg&gt;。这很重要，关乎你的网页是否可以真正加载你想插入的图片。</li>
 </ol>
 <p>注意：<font color="red">一定要注意路径问题,自己运行后f12看浏览器报错的路劲，进行适当的调整。。。</font></p>
 <h3 id="Second"><a href="#Second" class="headerlink" title="Second"></a>Second</h3><p>本地source中建立img文件夹<br><code>&lt;img src=&quot;img/图片名.jpg&quot;&gt;</code><br>这个比较方便</p>
@@ -325,6 +325,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -557,6 +558,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'a4e147983aa9a0b47b97',
+      clientSecret: '7816f93281d1eaa9c75fc56770c3ceded1f4f540',
+      repo        : 'BlogComments',
+      owner       : 'lhyxcqc',
+      admin       : ['lhyxcqc'],
+      id          : '815ad0c58ee18554973652b84fbf2455',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

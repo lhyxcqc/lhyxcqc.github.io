@@ -24,7 +24,7 @@
   <meta name="description" content="C++ 是一种静态类型的、编译式的、通用的、大小写敏感的、不规则的编程语言，支持过程化编程、面向对象编程和泛型编程。   C++ 被认为是一种中级语言，它综合了高级语言和低级语言的特点。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++简介">
-<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/920fd15b.html">
+<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/920fd15b.html">
 <meta property="og:site_name" content="旧时烟雨">
 <meta property="og:description" content="C++ 是一种静态类型的、编译式的、通用的、大小写敏感的、不规则的编程语言，支持过程化编程、面向对象编程和泛型编程。   C++ 被认为是一种中级语言，它综合了高级语言和低级语言的特点。">
 <meta property="og:locale" content="zh_CN">
@@ -34,7 +34,7 @@
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/920fd15b.html">
+<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/920fd15b.html">
 
 
 <script id="page-configurations">
@@ -197,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/920fd15b.html">
+    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/920fd15b.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar01.jpg">
@@ -435,6 +435,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -667,6 +668,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'a4e147983aa9a0b47b97',
+      clientSecret: '7816f93281d1eaa9c75fc56770c3ceded1f4f540',
+      repo        : 'BlogComments',
+      owner       : 'lhyxcqc',
+      admin       : ['lhyxcqc'],
+      id          : 'af324f3feb3adb109a132b9bcee98ac4',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>

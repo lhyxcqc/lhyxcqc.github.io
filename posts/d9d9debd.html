@@ -24,7 +24,7 @@
   <meta name="description" content="最近升级了hexo5.1版本，但node.js版本太低，各种报错。。。 所以网上找了很多升级node.js版本的方法，都不行。 最后看了 https:&#x2F;&#x2F;www.cnblogs.com&#x2F;lijjj&#x2F;p&#x2F;12097234.html 这篇文章：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows10下升级node.js">
-<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/d9d9debd.html">
+<meta property="og:url" content="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/d9d9debd.html">
 <meta property="og:site_name" content="旧时烟雨">
 <meta property="og:description" content="最近升级了hexo5.1版本，但node.js版本太低，各种报错。。。 所以网上找了很多升级node.js版本的方法，都不行。 最后看了 https:&#x2F;&#x2F;www.cnblogs.com&#x2F;lijjj&#x2F;p&#x2F;12097234.html 这篇文章：">
 <meta property="og:locale" content="zh_CN">
@@ -34,7 +34,7 @@
 <meta property="article:tag" content="node.js">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/d9d9debd.html">
+<link rel="canonical" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/d9d9debd.html">
 
 
 <script id="page-configurations">
@@ -197,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc/blog.git/posts/d9d9debd.html">
+    <link itemprop="mainEntityOfPage" href="https://e.coding.net/lhyxcqc/lhyxcqc.coding.me/blog.git/posts/d9d9debd.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar01.jpg">
@@ -309,6 +309,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -540,6 +541,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'a4e147983aa9a0b47b97',
+      clientSecret: '7816f93281d1eaa9c75fc56770c3ceded1f4f540',
+      repo        : 'BlogComments',
+      owner       : 'lhyxcqc',
+      admin       : ['lhyxcqc'],
+      id          : 'a53b9e59610462b54b4d0a984fc97a6f',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
