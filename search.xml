@@ -21,6 +21,231 @@
 ]]></content>
   </entry>
   <entry>
+    <title>CSS学习</title>
+    <url>/posts/238675c9.html</url>
+    <content><![CDATA[<p>怎么让两个Div并排显示：</p>
+<p>一、使用display的inline属性</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;aaa&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;bbb&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>CSS学习</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C#中Math.Round()实现中国式四舍五入</title>
+    <url>/posts/fe4f126f.html</url>
+    <content><![CDATA[<h2 id="C-中Math-Round-实现中国式四舍五入"><a href="#C-中Math-Round-实现中国式四舍五入" class="headerlink" title="C#中Math.Round()实现中国式四舍五入"></a>C#中Math.Round()实现中国式四舍五入</h2><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round.png"></p>
+<p>C#中的Math.Round()并不是使用的”四舍五入”法。其实在VB、VBScript、C#、J#、T-SQL中Round函数都是采用Banker’s rounding（银行家算法），即：四舍六入五取偶。事实上这也是IEEE的规范，因此所有符合IEEE标准的语言都应该采用这样的算法。<br>.NET 2.0 开始，Math.Round 方法提供了一个枚举选项 MidpointRounding.AwayFromZero 可以用来实现传统意义上的”四舍五入”。即： Math.Round(4.5, MidpointRounding.AwayFromZero) = 5。  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Round(Decimal)</span><br><span class="line">Round(Double)</span><br><span class="line">Round(Decimal, Int32)</span><br><span class="line">Round(Decimal, MidpointRounding)</span><br><span class="line">Round(Double, Int32)</span><br><span class="line">Round(Double, MidpointRounding)</span><br><span class="line">Round(Decimal, Int32, MidpointRounding)</span><br><span class="line">Round(Double, Int32, MidpointRounding)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>如：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(0.6) &#x2F;&#x2F;result:1</span><br><span class="line">Math.Round(0.5) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(1.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(2.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(3.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(4.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(5.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(6.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(7.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(8.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(9.5) &#x2F;&#x2F;result:10</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>使用MidpointRounding.AwayFromZero重载后对比：</strong>    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:0</span><br><span class="line"></span><br><span class="line">Math.Round(0.6, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(0.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(1.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:2</span><br><span class="line"></span><br><span class="line">Math.Round(2.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:3</span><br><span class="line"></span><br><span class="line">Math.Round(3.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:4</span><br><span class="line"></span><br><span class="line">Math.Round(4.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:5</span><br><span class="line"></span><br><span class="line">Math.Round(5.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:6</span><br><span class="line"></span><br><span class="line">Math.Round(6.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:7</span><br><span class="line"></span><br><span class="line">Math.Round(7.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:8</span><br><span class="line"></span><br><span class="line">Math.Round(8.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:9</span><br><span class="line"></span><br><span class="line">Math.Round(9.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:10</span><br></pre></td></tr></table></figure>
+
+
+
+<p>但是悲剧的是，如果用这个计算小数的话，就不灵了！！！<br>必须用第七个重载方法，  </p>
+<p><code>decimal Round(decimal d, int decimals, MidpointRounding mode)</code></p>
+<p>这样计算出来的小数才是真正的中国式四舍五入！！  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?Math.Round(526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round(526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.93</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round2.png">  </p>
+<p>原文:<br><a href="https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html">https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html</a></p>
+]]></content>
+      <categories>
+        <category>csharp学习</category>
+      </categories>
+      <tags>
+        <tag>csharp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown Pad2使用教程详细版</title>
+    <url>/posts/5e08edd2.html</url>
+    <content><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>一级标题一个#号，二级标题两个#号，依次类推…直到六级标题，没有七级标题！</p>
+<h2 id="有序列表-amp-无序列表"><a href="#有序列表-amp-无序列表" class="headerlink" title="有序列表&amp;无序列表"></a>有序列表&amp;无序列表</h2><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>“1.”加空格再输入内容，英文输入状态，同时注意每一点后加上两个空格再换行否则列表不自动换行  </p>
+<ol>
+<li>第一条</li>
+<li>第二条</li>
+<li>第三条</li>
+</ol>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>减号“-”或者星号“*”加上空格输入内容即为无序列表  </p>
+<ul>
+<li>减号第一条</li>
+<li>减号第二条</li>
+<li>减号第三条</li>
+</ul>
+<ul>
+<li>星号第一条 </li>
+<li>星号第二条 </li>
+<li>星号第三条</li>
+</ul>
+<h2 id="引用文章等"><a href="#引用文章等" class="headerlink" title="引用文章等"></a>引用文章等</h2><p>在每一行前面加上大于号“&gt;”英文状态下输入  </p>
+<blockquote>
+<p>有些人活着<br>但他已经死了<br>有些人死了<br>但他依旧活着</p>
+</blockquote>
+<p>其实只需要输入一个“&gt;”即可，换行的时候会自动添加。也就是说只要中间不跳行，换行时会自动给你加上大于号，但一旦隔行了就跳出引用模式了，即引用的中间不允许有空行</p>
+<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><p>文本的前后各加上两个星号“<strong>”且与文本之间不能有空格<br>预览效果如下：<br>**加粗</strong></p>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p>文本的前后各加上一个星号<br>预览效果：<br><em>斜体</em></p>
+<h2 id="添加图片和链接"><a href="#添加图片和链接" class="headerlink" title="添加图片和链接"></a>添加图片和链接</h2><p>如果是图片的话就要将图片的本地文件放到与该md文件相同的路径下，且填写文件的相对路径<br>如果是网页链接就直接贴上网页链接，http一定要有</p>
+<h3 id="图片："><a href="#图片：" class="headerlink" title="图片："></a>图片：</h3><p>感叹号+方括号+圆括号。方括号里随便填啥不会显示出来，圆括号里填写图片文件的相对路径或者如果是网页连接的话可以填写网页链接，因为存为本地文件较为方便，本人选择采用前者。注意文件名最好不要带中文，好像不行。还有，如果创作的文章需要发布到网上，需要将图片上传才可以！</p>
+<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/markdownImageLinks.jpg">  </p>
+<p>本地文件  </p>
+<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6.png"></p>
+<p>网页提取</p>
+<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E7%BD%91%E9%A1%B5%E6%8F%90%E5%8F%96.png"></p>
+<h3 id="网页："><a href="#网页：" class="headerlink" title="网页："></a>网页：</h3><p>方括号+圆括号。方括号里填写的会呈灰色的显示出来，链接就粘贴在圆括号里。<br>预览效果：</p>
+<h4 id="文件相对路径法："><a href="#文件相对路径法：" class="headerlink" title="文件相对路径法："></a>文件相对路径法：</h4><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E6%B3%95.png"></p>
+<p>前面是英文输入状态下的“./”后面加上属性里面复制过来的文件名包括后缀名<br>同时刚刚get获取网页图片地址的方法，右键网页图片属性复制全部地址</p>
+<h4 id="网页地址法："><a href="#网页地址法：" class="headerlink" title="网页地址法："></a>网页地址法：</h4><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E7%BD%91%E9%A1%B5%E5%9C%B0%E5%9D%80%E6%B3%95.png"></p>
+<h4 id="添加网页链接："><a href="#添加网页链接：" class="headerlink" title="添加网页链接："></a>添加网页链接：</h4><p>比插入图片少一个感叹号即可<br><a href="http://markdownpad.com/">markdown pad官网</a></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>前后各加上三个反引号，就是数字1前面那个键<br>预览效果：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list_1 = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">9</span>]</span><br><span class="line">  list_1 = set(list_1)</span><br><span class="line">  list_2 = set([<span class="number">2</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">66</span>, <span class="number">22</span>, <span class="number">8</span>, <span class="number">4</span>])</span><br><span class="line">  print(list_1, list_2)</span><br><span class="line">  <span class="comment">#求交集</span></span><br><span class="line">  print(list_1.intersection(list_2))</span><br><span class="line">  <span class="comment">#求并集</span></span><br><span class="line">  print(list_1.union(list_2))</span><br><span class="line">  <span class="comment">#求差集（你有我无或你无我有）</span></span><br><span class="line">  print(list_1.difference(list_2))</span><br><span class="line">  print(list_2.difference(list_1))</span><br></pre></td></tr></table></figure>
+
+<p>如果不行则需要设置其他模式才能实现代码样式，操作如下：tools-&gt;options-&gt;markdown-&gt;markdown processor-&gt;commonmark。至此OK！或者设置为GitHub离线格式也行。</p>
+<h2 id="分割横线"><a href="#分割横线" class="headerlink" title="分割横线"></a>分割横线</h2><p>三个星就行<br>预览效果：</p>
+<hr>
+<h2 id="给字体加颜色"><a href="#给字体加颜色" class="headerlink" title="给字体加颜色"></a>给字体加颜色</h2><p>1、颜色名称要加英文双引号，如下：  </p>
+<p><font color="red">颜色</font></p>
+<p><code>&lt;font color=&quot;red&quot;&gt;颜色&lt;/font&gt;</code></p>
+<p>color=“对应颜色的英文名”</p>
+<p>2、如果是通过十六进制获取的，十六进制数前要加#，如下：  </p>
+<p><font color="#7ASDF342">颜色</font></p>
+<p><code>&lt;font color=&quot;#7ASDF342&quot;&gt;颜色&lt;/font&gt;</code></p>
+<p>3、&lt; /font &gt; 不要忘记写</p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li><p>Ctrl + I ： 斜体</p>
+</li>
+<li><p>Ctrl + B ： 粗体</p>
+</li>
+<li><p>Ctrl + G ： 图片</p>
+</li>
+<li><p>Ctrl + Q ： 引用</p>
+</li>
+<li><p>Ctrl + 1 ： 标题 1</p>
+</li>
+<li><p>Ctrl + 2 ： 标题 2</p>
+</li>
+<li><p>Ctrl + 3 ： 标题 3</p>
+</li>
+<li><p>Ctrl + K ： 代码块</p>
+</li>
+<li><p>Ctrl + L ： 超链接</p>
+</li>
+<li><p>Ctrl + T ： 时间戳</p>
+</li>
+<li><p>Ctrl + U ： 无序列表</p>
+</li>
+<li><p>Ctrl + Shift + O ： 有序列表</p>
+</li>
+<li><p>Ctrl + R ： 水平标尺</p>
+</li>
+<li><p>F4 ： 启用水平布局/竖直预览</p>
+</li>
+<li><p>F5 ： 启用/关闭实时预览</p>
+</li>
+<li><p>F6 ： 在浏览器中预览</p>
+<p><strong>关于快捷键的一些说明:</strong></p>
+</li>
+</ul>
+<ol>
+<li>这里的插入图片快捷键只适用于插入网页链接，下面选项optional可选填，指的就是方括号里的内容</li>
+<li>三级以后标题之后的快捷键不适用</li>
+<li>代码块的快捷键只是缩进了一个tab距离，三个反引号并不会自动添加，不好用</li>
+<li>时间戳在markdown模式下正常显示，在GitHub离线模式下显示有bug</li>
+<li>以上的快捷键或者是各种操作在不同的模式下可能显示都会有所差异，出现时可适当尝试选择。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Markdown学习</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows10下升级node.js</title>
+    <url>/posts/d9d9debd.html</url>
+    <content><![CDATA[<p>最近升级了hexo5.1版本，但node.js版本太低，各种报错。。。</p>
+<p>所以网上找了很多升级node.js版本的方法，都不行。</p>
+<p>最后看了 <a href="https://www.cnblogs.com/lijjj/p/12097234.html">https://www.cnblogs.com/lijjj/p/12097234.html</a> 这篇文章：</p>
+<a id="more"></a>
+
+<p>第一步：node -v查看node.js版本</p>
+<p>第二步:   npm -v 查看npm包管理器的版本</p>
+<p>第三步：打开cmd查看你之前node版本安装的路径，where node</p>
+<p>第四步：直接去<a href="https://nodejs.org/zh-cn/">官网</a>下载与你电脑系统（32位还是64位）对应的最新的mis版本,安装在上述路径中覆盖即可。</p>
+<p>第五步：node -v,发现更新到最新版本了。</p>
+<p>然后ok了。</p>
+]]></content>
+      <categories>
+        <category>nodejs升级</category>
+      </categories>
+      <tags>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>frp内网穿透,远程家里电脑</title>
+    <url>/posts/66214be2.html</url>
+    <content><![CDATA[<h4 id="frp说明"><a href="#frp说明" class="headerlink" title="frp说明"></a>frp说明</h4><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp, http, https 协议。</p>
+<h4 id="frp-的作用"><a href="#frp-的作用" class="headerlink" title="frp 的作用"></a>frp 的作用</h4><ul>
+<li>利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。</li>
+<li>对于 http, https 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个80端口。</li>
+<li>利用处于内网或防火墙后的机器，对外网环境提供 tcp 和 udp 服务，例如在家里通过 ssh 访问处于公司内网环境内的主机。</li>
+</ul>
+<a id="more"></a>
+
+<h4 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h4><p>​    frp下载地址：<a href="https://github.com/fatedier/frp/releases">https://github.com/fatedier/frp/releases</a></p>
+<p>​    下载后有frps开头的是服务端文件，frpc是客户端文件，如下：</p>
+<p>​    <img src="https://lhyxcqc.gitee.io/tuku/mdImages/frp/frp%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.png"></p>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><h5 id="1-服务端配置"><a href="#1-服务端配置" class="headerlink" title="1.服务端配置"></a>1.服务端配置</h5><p>frps.ini</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port &#x3D; 7000</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-客户端配置"><a href="#2-客户端配置" class="headerlink" title="2.客户端配置"></a>2.客户端配置</h5><p>frpc.ini</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; xx.xx.xx.xx  #服务器地址</span><br><span class="line">server_port &#x3D; 7000  #对应服务端配置的 bing_port</span><br><span class="line"></span><br><span class="line">[fire] #proxy name</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">local_ip &#x3D; 127.0.0.1</span><br><span class="line">local_port &#x3D; 3389   </span><br><span class="line">remote_port &#x3D; 30013  #服务器的端口，远程自己电脑时用的端口</span><br></pre></td></tr></table></figure>
+
+<p>客户端可以配置多个。但要注意 proxy name不能一样，remote_port也不能一样。</p>
+<h4 id="frp运行命令"><a href="#frp运行命令" class="headerlink" title="frp运行命令"></a>frp运行命令</h4><p>frps.exe/frpc.exe和frps.ini/frpc.ini所在目录下cmd</p>
+<p>服务端: <code> frps.exe -c frps.ini</code></p>
+<p>客户端: <code> frpc.exe -c frpc.ini</code></p>
+<h4 id="frp安装成服务"><a href="#frp安装成服务" class="headerlink" title="frp安装成服务"></a>frp安装成服务</h4><p>需要下载工具<a href="http://nssm.cc/download">nssm</a></p>
+<p>然后在nssm目录下cmd ：</p>
+<p>以安装frp为例：  </p>
+<p><code> nssm install frpc</code></p>
+<p>frpc是服务名称</p>
+<p>弹出nssm设置窗口，窗口设置项说明：</p>
+<p>Application Path：要注册为服务的程序的路径 (例如： F:\frpc\frpc.exe    )<br>Startup directory：要注册为服务的程序所在的文件夹  (例如： F:\frpc  )<br>Arguments：启动参数(例如： -c frpc.ini  )</p>
+<p>或者在path处选择启动frpc的start.bat</p>
+<p>bat文件 写 命令 <code> frpc.exe -c frpc.ini</code></p>
+<p>设置完成后，可以 win+R, services.msc ,看服务列表中frpc，并启动</p>
+<p><font color="red">服务端配置是同样的流程</font></p>
+<h5 id="NSSM相关命令："><a href="#NSSM相关命令：" class="headerlink" title="NSSM相关命令："></a>NSSM相关命令：</h5><p>启动服务：<code> nssm start &lt;servicename&gt;</code></p>
+<p>停止服务： <code> nssm stop &lt;servicename&gt;</code></p>
+<p>重启服务:    <code> nssm restart &lt;servicename&gt;</code></p>
+<p>删除服务： <code>  nssm remove &lt;servicename&gt;</code></p>
+]]></content>
+      <categories>
+        <category>frp部署</category>
+      </categories>
+      <tags>
+        <tag>frp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++基本语法</title>
     <url>/posts/3d38490d.html</url>
     <content><![CDATA[<h3 id="C-基本语法"><a href="#C-基本语法" class="headerlink" title="C++ 基本语法"></a>C++ 基本语法</h3><p>C++ 程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。现在让我们简要地看一下什么是类、对象，方法、即时变量。  </p>
@@ -215,6 +440,60 @@
       </tags>
   </entry>
   <entry>
+    <title>C#特性学习之一</title>
+    <url>/posts/b26f4754.html</url>
+    <content><![CDATA[<blockquote>
+<h3 id="C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"><a href="#C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber" class="headerlink" title="C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"></a><strong>C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber</strong></h3></blockquote>
+<p>在开发中经常会写个公有静态类记录日志，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;      </span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes the error.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message)  </span><br><span class="line">&#123;                                </span><br><span class="line">    _log4Net.Error(message);     </span><br><span class="line">&#125; </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<p>如果想区分调用来源就比较麻烦了。在.Net 4.5中引入了三个Attribute：CallerMemberName、CallerFilePath和CallerLineNumber 。在编译器的配合下，分别可以获取到调用函数（准确讲应该是成员）名称，调用文件及调用行号。这时可以把方法改成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes an error level logging message.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message,</span><br><span class="line">[CallerMemberName] string memberName &#x3D; &quot;&quot;,</span><br><span class="line">[CallerFilePath] string sourceFilePath &#x3D; &quot;&quot;,</span><br><span class="line">[CallerLineNumber] int sourceLineNumber &#x3D; 0)</span><br><span class="line">&#123;</span><br><span class="line">    _log4Net.ErrorFormat(&quot;文件:&#123;0&#125; 行号:&#123;1&#125; 方法名:&#123;2&#125;,消息:&#123;3&#125;&quot;, sourceFilePath, sourceLineNumber, memberName, message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样就可以区分调用来源了。另外，在构造函数，析构函数、属性等特殊的地方调用CallerMemberName属性所标记的函数时，获取的值有所不同，其取值如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>调用的地方</th>
+<th>CallerMemberName获取的结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方法、属性或事件</td>
+<td>方法，属性或事件的名称</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>字符串 “.ctor”</td>
+</tr>
+<tr>
+<td>静态构造函数</td>
+<td>字符串 “.cctor”</td>
+</tr>
+<tr>
+<td>析构函数</td>
+<td>该字符串 “Finalize”</td>
+</tr>
+<tr>
+<td>用户定义的运算符或转换</td>
+<td>生成的名称成员，例如， “op_Addition”。</td>
+</tr>
+<tr>
+<td>特性构造函数</td>
+<td>特性所应用的成员的名称</td>
+</tr>
+</tbody></table>
+<p>参考链接：<br><a href="https://www.cnblogs.com/TianFang/p/3381484.html">使用CallerMemberName简化InotifyPropertyChanged的实现</a><br><a href="https://www.cnblogs.com/TianFang/archive/2012/08/19/2646146.html">C# 5.0中新增特性</a></p>
+<p>原文：<br><a href="https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&utm_medium=referral">https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
+]]></content>
+      <categories>
+        <category>csharp学习</category>
+      </categories>
+      <tags>
+        <tag>csharp</tag>
+        <tag>csharp特性</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++简介</title>
     <url>/posts/920fd15b.html</url>
     <content><![CDATA[<p>C++ 是一种静态类型的、编译式的、通用的、大小写敏感的、不规则的编程语言，支持过程化编程、面向对象编程和泛型编程。  </p>
@@ -345,285 +624,6 @@
       </categories>
       <tags>
         <tag>C++</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS学习</title>
-    <url>/posts/238675c9.html</url>
-    <content><![CDATA[<p>怎么让两个Div并排显示：</p>
-<p>一、使用display的inline属性</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;aaa&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;bbb&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>CSS学习</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C#中Math.Round()实现中国式四舍五入</title>
-    <url>/posts/fe4f126f.html</url>
-    <content><![CDATA[<h2 id="C-中Math-Round-实现中国式四舍五入"><a href="#C-中Math-Round-实现中国式四舍五入" class="headerlink" title="C#中Math.Round()实现中国式四舍五入"></a>C#中Math.Round()实现中国式四舍五入</h2><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round.png"></p>
-<p>C#中的Math.Round()并不是使用的”四舍五入”法。其实在VB、VBScript、C#、J#、T-SQL中Round函数都是采用Banker’s rounding（银行家算法），即：四舍六入五取偶。事实上这也是IEEE的规范，因此所有符合IEEE标准的语言都应该采用这样的算法。<br>.NET 2.0 开始，Math.Round 方法提供了一个枚举选项 MidpointRounding.AwayFromZero 可以用来实现传统意义上的”四舍五入”。即： Math.Round(4.5, MidpointRounding.AwayFromZero) = 5。  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Round(Decimal)</span><br><span class="line">Round(Double)</span><br><span class="line">Round(Decimal, Int32)</span><br><span class="line">Round(Decimal, MidpointRounding)</span><br><span class="line">Round(Double, Int32)</span><br><span class="line">Round(Double, MidpointRounding)</span><br><span class="line">Round(Decimal, Int32, MidpointRounding)</span><br><span class="line">Round(Double, Int32, MidpointRounding)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>如：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(0.6) &#x2F;&#x2F;result:1</span><br><span class="line">Math.Round(0.5) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(1.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(2.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(3.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(4.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(5.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(6.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(7.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(8.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(9.5) &#x2F;&#x2F;result:10</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>使用MidpointRounding.AwayFromZero重载后对比：</strong>    </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:0</span><br><span class="line"></span><br><span class="line">Math.Round(0.6, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(0.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(1.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:2</span><br><span class="line"></span><br><span class="line">Math.Round(2.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:3</span><br><span class="line"></span><br><span class="line">Math.Round(3.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:4</span><br><span class="line"></span><br><span class="line">Math.Round(4.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:5</span><br><span class="line"></span><br><span class="line">Math.Round(5.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:6</span><br><span class="line"></span><br><span class="line">Math.Round(6.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:7</span><br><span class="line"></span><br><span class="line">Math.Round(7.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:8</span><br><span class="line"></span><br><span class="line">Math.Round(8.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:9</span><br><span class="line"></span><br><span class="line">Math.Round(9.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:10</span><br></pre></td></tr></table></figure>
-
-
-
-<p>但是悲剧的是，如果用这个计算小数的话，就不灵了！！！<br>必须用第七个重载方法，  </p>
-<p><code>decimal Round(decimal d, int decimals, MidpointRounding mode)</code></p>
-<p>这样计算出来的小数才是真正的中国式四舍五入！！  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?Math.Round(526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round(526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.93</span><br></pre></td></tr></table></figure>
-
-
-<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round2.png">  </p>
-<p>原文:<br><a href="https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html">https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html</a></p>
-]]></content>
-      <categories>
-        <category>csharp学习</category>
-      </categories>
-      <tags>
-        <tag>csharp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C#特性学习之一</title>
-    <url>/posts/b26f4754.html</url>
-    <content><![CDATA[<blockquote>
-<h3 id="C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"><a href="#C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber" class="headerlink" title="C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"></a><strong>C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber</strong></h3></blockquote>
-<p>在开发中经常会写个公有静态类记录日志，如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;      </span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes the error.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message)  </span><br><span class="line">&#123;                                </span><br><span class="line">    _log4Net.Error(message);     </span><br><span class="line">&#125; </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-<p>如果想区分调用来源就比较麻烦了。在.Net 4.5中引入了三个Attribute：CallerMemberName、CallerFilePath和CallerLineNumber 。在编译器的配合下，分别可以获取到调用函数（准确讲应该是成员）名称，调用文件及调用行号。这时可以把方法改成：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes an error level logging message.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message,</span><br><span class="line">[CallerMemberName] string memberName &#x3D; &quot;&quot;,</span><br><span class="line">[CallerFilePath] string sourceFilePath &#x3D; &quot;&quot;,</span><br><span class="line">[CallerLineNumber] int sourceLineNumber &#x3D; 0)</span><br><span class="line">&#123;</span><br><span class="line">    _log4Net.ErrorFormat(&quot;文件:&#123;0&#125; 行号:&#123;1&#125; 方法名:&#123;2&#125;,消息:&#123;3&#125;&quot;, sourceFilePath, sourceLineNumber, memberName, message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这样就可以区分调用来源了。另外，在构造函数，析构函数、属性等特殊的地方调用CallerMemberName属性所标记的函数时，获取的值有所不同，其取值如下表所示：</p>
-<table>
-<thead>
-<tr>
-<th>调用的地方</th>
-<th>CallerMemberName获取的结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>方法、属性或事件</td>
-<td>方法，属性或事件的名称</td>
-</tr>
-<tr>
-<td>构造函数</td>
-<td>字符串 “.ctor”</td>
-</tr>
-<tr>
-<td>静态构造函数</td>
-<td>字符串 “.cctor”</td>
-</tr>
-<tr>
-<td>析构函数</td>
-<td>该字符串 “Finalize”</td>
-</tr>
-<tr>
-<td>用户定义的运算符或转换</td>
-<td>生成的名称成员，例如， “op_Addition”。</td>
-</tr>
-<tr>
-<td>特性构造函数</td>
-<td>特性所应用的成员的名称</td>
-</tr>
-</tbody></table>
-<p>参考链接：<br><a href="https://www.cnblogs.com/TianFang/p/3381484.html">使用CallerMemberName简化InotifyPropertyChanged的实现</a><br><a href="https://www.cnblogs.com/TianFang/archive/2012/08/19/2646146.html">C# 5.0中新增特性</a></p>
-<p>原文：<br><a href="https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&utm_medium=referral">https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
-]]></content>
-      <categories>
-        <category>csharp学习</category>
-      </categories>
-      <tags>
-        <tag>csharp</tag>
-        <tag>csharp特性</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>frp内网穿透,远程家里电脑</title>
-    <url>/posts/66214be2.html</url>
-    <content><![CDATA[<h4 id="frp说明"><a href="#frp说明" class="headerlink" title="frp说明"></a>frp说明</h4><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp, http, https 协议。</p>
-<h4 id="frp-的作用"><a href="#frp-的作用" class="headerlink" title="frp 的作用"></a>frp 的作用</h4><ul>
-<li>利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。</li>
-<li>对于 http, https 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个80端口。</li>
-<li>利用处于内网或防火墙后的机器，对外网环境提供 tcp 和 udp 服务，例如在家里通过 ssh 访问处于公司内网环境内的主机。</li>
-</ul>
-<a id="more"></a>
-
-<h4 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h4><p>​    frp下载地址：<a href="https://github.com/fatedier/frp/releases">https://github.com/fatedier/frp/releases</a></p>
-<p>​    下载后有frps开头的是服务端文件，frpc是客户端文件，如下：</p>
-<p>​    <img src="https://lhyxcqc.gitee.io/tuku/mdImages/frp/frp%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.png"></p>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><h5 id="1-服务端配置"><a href="#1-服务端配置" class="headerlink" title="1.服务端配置"></a>1.服务端配置</h5><p>frps.ini</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port &#x3D; 7000</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-客户端配置"><a href="#2-客户端配置" class="headerlink" title="2.客户端配置"></a>2.客户端配置</h5><p>frpc.ini</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; xx.xx.xx.xx  #服务器地址</span><br><span class="line">server_port &#x3D; 7000  #对应服务端配置的 bing_port</span><br><span class="line"></span><br><span class="line">[fire] #proxy name</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">local_ip &#x3D; 127.0.0.1</span><br><span class="line">local_port &#x3D; 3389   </span><br><span class="line">remote_port &#x3D; 30013  #服务器的端口，远程自己电脑时用的端口</span><br></pre></td></tr></table></figure>
-
-<p>客户端可以配置多个。但要注意 proxy name不能一样，remote_port也不能一样。</p>
-<h4 id="frp运行命令"><a href="#frp运行命令" class="headerlink" title="frp运行命令"></a>frp运行命令</h4><p>frps.exe/frpc.exe和frps.ini/frpc.ini所在目录下cmd</p>
-<p>服务端: <code> frps.exe -c frps.ini</code></p>
-<p>客户端: <code> frpc.exe -c frpc.ini</code></p>
-<h4 id="frp安装成服务"><a href="#frp安装成服务" class="headerlink" title="frp安装成服务"></a>frp安装成服务</h4><p>需要下载工具<a href="http://nssm.cc/download">nssm</a></p>
-<p>然后在nssm目录下cmd ：</p>
-<p>以安装frp为例：  </p>
-<p><code> nssm install frpc</code></p>
-<p>frpc是服务名称</p>
-<p>弹出nssm设置窗口，窗口设置项说明：</p>
-<p>Application Path：要注册为服务的程序的路径 (例如： F:\frpc\frpc.exe    )<br>Startup directory：要注册为服务的程序所在的文件夹  (例如： F:\frpc  )<br>Arguments：启动参数(例如： -c frpc.ini  )</p>
-<p>或者在path处选择启动frpc的start.bat</p>
-<p>bat文件 写 命令 <code> frpc.exe -c frpc.ini</code></p>
-<p>设置完成后，可以 win+R, services.msc ,看服务列表中frpc，并启动</p>
-<p><font color="red">服务端配置是同样的流程</font></p>
-<h5 id="NSSM相关命令："><a href="#NSSM相关命令：" class="headerlink" title="NSSM相关命令："></a>NSSM相关命令：</h5><p>启动服务：<code> nssm start &lt;servicename&gt;</code></p>
-<p>停止服务： <code> nssm stop &lt;servicename&gt;</code></p>
-<p>重启服务:    <code> nssm restart &lt;servicename&gt;</code></p>
-<p>删除服务： <code>  nssm remove &lt;servicename&gt;</code></p>
-]]></content>
-      <categories>
-        <category>frp部署</category>
-      </categories>
-      <tags>
-        <tag>frp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown Pad2使用教程详细版</title>
-    <url>/posts/5e08edd2.html</url>
-    <content><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>一级标题一个#号，二级标题两个#号，依次类推…直到六级标题，没有七级标题！</p>
-<h2 id="有序列表-amp-无序列表"><a href="#有序列表-amp-无序列表" class="headerlink" title="有序列表&amp;无序列表"></a>有序列表&amp;无序列表</h2><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>“1.”加空格再输入内容，英文输入状态，同时注意每一点后加上两个空格再换行否则列表不自动换行  </p>
-<ol>
-<li>第一条</li>
-<li>第二条</li>
-<li>第三条</li>
-</ol>
-<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>减号“-”或者星号“*”加上空格输入内容即为无序列表  </p>
-<ul>
-<li>减号第一条</li>
-<li>减号第二条</li>
-<li>减号第三条</li>
-</ul>
-<ul>
-<li>星号第一条 </li>
-<li>星号第二条 </li>
-<li>星号第三条</li>
-</ul>
-<h2 id="引用文章等"><a href="#引用文章等" class="headerlink" title="引用文章等"></a>引用文章等</h2><p>在每一行前面加上大于号“&gt;”英文状态下输入  </p>
-<blockquote>
-<p>有些人活着<br>但他已经死了<br>有些人死了<br>但他依旧活着</p>
-</blockquote>
-<p>其实只需要输入一个“&gt;”即可，换行的时候会自动添加。也就是说只要中间不跳行，换行时会自动给你加上大于号，但一旦隔行了就跳出引用模式了，即引用的中间不允许有空行</p>
-<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><p>文本的前后各加上两个星号“<strong>”且与文本之间不能有空格<br>预览效果如下：<br>**加粗</strong></p>
-<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p>文本的前后各加上一个星号<br>预览效果：<br><em>斜体</em></p>
-<h2 id="添加图片和链接"><a href="#添加图片和链接" class="headerlink" title="添加图片和链接"></a>添加图片和链接</h2><p>如果是图片的话就要将图片的本地文件放到与该md文件相同的路径下，且填写文件的相对路径<br>如果是网页链接就直接贴上网页链接，http一定要有</p>
-<h3 id="图片："><a href="#图片：" class="headerlink" title="图片："></a>图片：</h3><p>感叹号+方括号+圆括号。方括号里随便填啥不会显示出来，圆括号里填写图片文件的相对路径或者如果是网页连接的话可以填写网页链接，因为存为本地文件较为方便，本人选择采用前者。注意文件名最好不要带中文，好像不行。还有，如果创作的文章需要发布到网上，需要将图片上传才可以！</p>
-<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/markdownImageLinks.jpg">  </p>
-<p>本地文件  </p>
-<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6.png"></p>
-<p>网页提取</p>
-<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E7%BD%91%E9%A1%B5%E6%8F%90%E5%8F%96.png"></p>
-<h3 id="网页："><a href="#网页：" class="headerlink" title="网页："></a>网页：</h3><p>方括号+圆括号。方括号里填写的会呈灰色的显示出来，链接就粘贴在圆括号里。<br>预览效果：</p>
-<h4 id="文件相对路径法："><a href="#文件相对路径法：" class="headerlink" title="文件相对路径法："></a>文件相对路径法：</h4><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E6%B3%95.png"></p>
-<p>前面是英文输入状态下的“./”后面加上属性里面复制过来的文件名包括后缀名<br>同时刚刚get获取网页图片地址的方法，右键网页图片属性复制全部地址</p>
-<h4 id="网页地址法："><a href="#网页地址法：" class="headerlink" title="网页地址法："></a>网页地址法：</h4><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E7%BD%91%E9%A1%B5%E5%9C%B0%E5%9D%80%E6%B3%95.png"></p>
-<h4 id="添加网页链接："><a href="#添加网页链接：" class="headerlink" title="添加网页链接："></a>添加网页链接：</h4><p>比插入图片少一个感叹号即可<br><a href="http://markdownpad.com/">markdown pad官网</a></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>前后各加上三个反引号，就是数字1前面那个键<br>预览效果：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list_1 = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">9</span>]</span><br><span class="line">  list_1 = set(list_1)</span><br><span class="line">  list_2 = set([<span class="number">2</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">66</span>, <span class="number">22</span>, <span class="number">8</span>, <span class="number">4</span>])</span><br><span class="line">  print(list_1, list_2)</span><br><span class="line">  <span class="comment">#求交集</span></span><br><span class="line">  print(list_1.intersection(list_2))</span><br><span class="line">  <span class="comment">#求并集</span></span><br><span class="line">  print(list_1.union(list_2))</span><br><span class="line">  <span class="comment">#求差集（你有我无或你无我有）</span></span><br><span class="line">  print(list_1.difference(list_2))</span><br><span class="line">  print(list_2.difference(list_1))</span><br></pre></td></tr></table></figure>
-
-<p>如果不行则需要设置其他模式才能实现代码样式，操作如下：tools-&gt;options-&gt;markdown-&gt;markdown processor-&gt;commonmark。至此OK！或者设置为GitHub离线格式也行。</p>
-<h2 id="分割横线"><a href="#分割横线" class="headerlink" title="分割横线"></a>分割横线</h2><p>三个星就行<br>预览效果：</p>
-<hr>
-<h2 id="给字体加颜色"><a href="#给字体加颜色" class="headerlink" title="给字体加颜色"></a>给字体加颜色</h2><p>1、颜色名称要加英文双引号，如下：  </p>
-<p><font color="red">颜色</font></p>
-<p><code>&lt;font color=&quot;red&quot;&gt;颜色&lt;/font&gt;</code></p>
-<p>color=“对应颜色的英文名”</p>
-<p>2、如果是通过十六进制获取的，十六进制数前要加#，如下：  </p>
-<p><font color="#7ASDF342">颜色</font></p>
-<p><code>&lt;font color=&quot;#7ASDF342&quot;&gt;颜色&lt;/font&gt;</code></p>
-<p>3、&lt; /font &gt; 不要忘记写</p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li><p>Ctrl + I ： 斜体</p>
-</li>
-<li><p>Ctrl + B ： 粗体</p>
-</li>
-<li><p>Ctrl + G ： 图片</p>
-</li>
-<li><p>Ctrl + Q ： 引用</p>
-</li>
-<li><p>Ctrl + 1 ： 标题 1</p>
-</li>
-<li><p>Ctrl + 2 ： 标题 2</p>
-</li>
-<li><p>Ctrl + 3 ： 标题 3</p>
-</li>
-<li><p>Ctrl + K ： 代码块</p>
-</li>
-<li><p>Ctrl + L ： 超链接</p>
-</li>
-<li><p>Ctrl + T ： 时间戳</p>
-</li>
-<li><p>Ctrl + U ： 无序列表</p>
-</li>
-<li><p>Ctrl + Shift + O ： 有序列表</p>
-</li>
-<li><p>Ctrl + R ： 水平标尺</p>
-</li>
-<li><p>F4 ： 启用水平布局/竖直预览</p>
-</li>
-<li><p>F5 ： 启用/关闭实时预览</p>
-</li>
-<li><p>F6 ： 在浏览器中预览</p>
-<p><strong>关于快捷键的一些说明:</strong></p>
-</li>
-</ul>
-<ol>
-<li>这里的插入图片快捷键只适用于插入网页链接，下面选项optional可选填，指的就是方括号里的内容</li>
-<li>三级以后标题之后的快捷键不适用</li>
-<li>代码块的快捷键只是缩进了一个tab距离，三个反引号并不会自动添加，不好用</li>
-<li>时间戳在markdown模式下正常显示，在GitHub离线模式下显示有bug</li>
-<li>以上的快捷键或者是各种操作在不同的模式下可能显示都会有所差异，出现时可适当尝试选择。</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Markdown学习</category>
-      </categories>
-      <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>windows10下升级node.js</title>
-    <url>/posts/d9d9debd.html</url>
-    <content><![CDATA[<p>最近升级了hexo5.1版本，但node.js版本太低，各种报错。。。</p>
-<p>所以网上找了很多升级node.js版本的方法，都不行。</p>
-<p>最后看了 <a href="https://www.cnblogs.com/lijjj/p/12097234.html">https://www.cnblogs.com/lijjj/p/12097234.html</a> 这篇文章：</p>
-<a id="more"></a>
-
-<p>第一步：node -v查看node.js版本</p>
-<p>第二步:   npm -v 查看npm包管理器的版本</p>
-<p>第三步：打开cmd查看你之前node版本安装的路径，where node</p>
-<p>第四步：直接去<a href="https://nodejs.org/zh-cn/">官网</a>下载与你电脑系统（32位还是64位）对应的最新的mis版本,安装在上述路径中覆盖即可。</p>
-<p>第五步：node -v,发现更新到最新版本了。</p>
-<p>然后ok了。</p>
-]]></content>
-      <categories>
-        <category>nodejs升级</category>
-      </categories>
-      <tags>
-        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -2407,6 +2407,22 @@
 <p>然后在 NexT 的配置文件 <code>next.yml</code> 中取消 <code>sidebar.swig</code> 的注释：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar: source&#x2F;_data&#x2F;sidebar.swig</span><br></pre></td></tr></table></figure>
 
+<h4 id="Hexo-页面静态资源压缩插件"><a href="#Hexo-页面静态资源压缩插件" class="headerlink" title="Hexo 页面静态资源压缩插件"></a>Hexo 页面静态资源压缩插件</h4><p>我们自己添加的 css 和 js 文件为了可读性，往往会有很多换行和空格，这些对于浏览器来说是没有用的，甚至还会降低渲染页面的速度。同时，由于 Markdown 转成 html 的 bug，会导致页面存在大量的空白，我们可以通过查看页面源代码发现这些大量的空白符，这也会造成页面渲染的性能问题。</p>
+<p>因此，我们需要对页面的静态资源进行压缩，包括 css、js 和 html 等文件。</p>
+<p>我们可以使用 <code>hexo-neat</code> 插件进行压缩。<code>hexo-neat</code> 配置简单，无需额外命令，我们只需使用原本的调试、部署命令就可以自动完成静态资源的压缩。</p>
+<p>安装 hexo-neat 插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat --save</span><br></pre></td></tr></table></figure>
+
+<p>然后我们需要在<strong>站点</strong>配置文件<code>_config.yml</code> 中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 博文压缩</span><br><span class="line">neat_enable: true</span><br><span class="line"># 压缩html</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line"># 压缩css  </span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.css&#39;</span><br><span class="line"># 压缩js</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.js&#39;</span><br><span class="line">    - &#39;**&#x2F;jquery.fancybox.pack.js&#39;</span><br><span class="line">    - &#39;**&#x2F;index.js&#39;</span><br><span class="line">    - &#39;**&#x2F;fireworks.js&#39;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Hexo-部署插件"><a href="#Hexo-部署插件" class="headerlink" title="Hexo 部署插件"></a>Hexo 部署插件</h4><p>地址:<a href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后修改站点配置文件<code>_config.yml</code> 中的配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:dta0502&#x2F;dta0502.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>然后输入命令 <code>hexo d</code> 就可部署到github,gitee同理</p>
 ]]></content>
       <categories>
         <category>Hexo+Next部署</category>
