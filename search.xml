@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>Hexo中添加本地图片</title>
     <url>/posts/bb3a2cdb.html</url>
     <content><![CDATA[<h3 id="First"><a href="#First" class="headerlink" title="First"></a>First</h3><ol>
@@ -50,93 +30,24 @@
       </tags>
   </entry>
   <entry>
-    <title>C#中Math.Round()实现中国式四舍五入</title>
-    <url>/posts/fe4f126f.html</url>
-    <content><![CDATA[<h2 id="C-中Math-Round-实现中国式四舍五入"><a href="#C-中Math-Round-实现中国式四舍五入" class="headerlink" title="C#中Math.Round()实现中国式四舍五入"></a>C#中Math.Round()实现中国式四舍五入</h2><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round.png"></p>
-<p>C#中的Math.Round()并不是使用的”四舍五入”法。其实在VB、VBScript、C#、J#、T-SQL中Round函数都是采用Banker’s rounding（银行家算法），即：四舍六入五取偶。事实上这也是IEEE的规范，因此所有符合IEEE标准的语言都应该采用这样的算法。<br>.NET 2.0 开始，Math.Round 方法提供了一个枚举选项 MidpointRounding.AwayFromZero 可以用来实现传统意义上的”四舍五入”。即： Math.Round(4.5, MidpointRounding.AwayFromZero) = 5。  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Round(Decimal)</span><br><span class="line">Round(Double)</span><br><span class="line">Round(Decimal, Int32)</span><br><span class="line">Round(Decimal, MidpointRounding)</span><br><span class="line">Round(Double, Int32)</span><br><span class="line">Round(Double, MidpointRounding)</span><br><span class="line">Round(Decimal, Int32, MidpointRounding)</span><br><span class="line">Round(Double, Int32, MidpointRounding)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>Hello World</title>
+    <url>/posts/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
 
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p><strong>如：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(0.6) &#x2F;&#x2F;result:1</span><br><span class="line">Math.Round(0.5) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(1.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(2.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(3.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(4.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(5.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(6.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(7.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(8.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(9.5) &#x2F;&#x2F;result:10</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-
-<p><strong>使用MidpointRounding.AwayFromZero重载后对比：</strong>    </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:0</span><br><span class="line"></span><br><span class="line">Math.Round(0.6, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(0.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(1.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:2</span><br><span class="line"></span><br><span class="line">Math.Round(2.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:3</span><br><span class="line"></span><br><span class="line">Math.Round(3.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:4</span><br><span class="line"></span><br><span class="line">Math.Round(4.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:5</span><br><span class="line"></span><br><span class="line">Math.Round(5.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:6</span><br><span class="line"></span><br><span class="line">Math.Round(6.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:7</span><br><span class="line"></span><br><span class="line">Math.Round(7.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:8</span><br><span class="line"></span><br><span class="line">Math.Round(8.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:9</span><br><span class="line"></span><br><span class="line">Math.Round(9.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:10</span><br></pre></td></tr></table></figure>
-
-
-
-<p>但是悲剧的是，如果用这个计算小数的话，就不灵了！！！<br>必须用第七个重载方法，  </p>
-<p><code>decimal Round(decimal d, int decimals, MidpointRounding mode)</code></p>
-<p>这样计算出来的小数才是真正的中国式四舍五入！！  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?Math.Round(526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round(526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.93</span><br></pre></td></tr></table></figure>
-
-
-<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round2.png">  </p>
-<p>原文:<br><a href="https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html">https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html</a></p>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>csharp学习</category>
-      </categories>
-      <tags>
-        <tag>csharp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C#特性学习之一</title>
-    <url>/posts/b26f4754.html</url>
-    <content><![CDATA[<blockquote>
-<h3 id="C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"><a href="#C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber" class="headerlink" title="C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"></a><strong>C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber</strong></h3></blockquote>
-<p>在开发中经常会写个公有静态类记录日志，如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;      </span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes the error.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message)  </span><br><span class="line">&#123;                                </span><br><span class="line">    _log4Net.Error(message);     </span><br><span class="line">&#125; </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-<p>如果想区分调用来源就比较麻烦了。在.Net 4.5中引入了三个Attribute：CallerMemberName、CallerFilePath和CallerLineNumber 。在编译器的配合下，分别可以获取到调用函数（准确讲应该是成员）名称，调用文件及调用行号。这时可以把方法改成：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes an error level logging message.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message,</span><br><span class="line">[CallerMemberName] string memberName &#x3D; &quot;&quot;,</span><br><span class="line">[CallerFilePath] string sourceFilePath &#x3D; &quot;&quot;,</span><br><span class="line">[CallerLineNumber] int sourceLineNumber &#x3D; 0)</span><br><span class="line">&#123;</span><br><span class="line">    _log4Net.ErrorFormat(&quot;文件:&#123;0&#125; 行号:&#123;1&#125; 方法名:&#123;2&#125;,消息:&#123;3&#125;&quot;, sourceFilePath, sourceLineNumber, memberName, message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这样就可以区分调用来源了。另外，在构造函数，析构函数、属性等特殊的地方调用CallerMemberName属性所标记的函数时，获取的值有所不同，其取值如下表所示：</p>
-<table>
-<thead>
-<tr>
-<th>调用的地方</th>
-<th>CallerMemberName获取的结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>方法、属性或事件</td>
-<td>方法，属性或事件的名称</td>
-</tr>
-<tr>
-<td>构造函数</td>
-<td>字符串 “.ctor”</td>
-</tr>
-<tr>
-<td>静态构造函数</td>
-<td>字符串 “.cctor”</td>
-</tr>
-<tr>
-<td>析构函数</td>
-<td>该字符串 “Finalize”</td>
-</tr>
-<tr>
-<td>用户定义的运算符或转换</td>
-<td>生成的名称成员，例如， “op_Addition”。</td>
-</tr>
-<tr>
-<td>特性构造函数</td>
-<td>特性所应用的成员的名称</td>
-</tr>
-</tbody></table>
-<p>参考链接：<br><a href="https://www.cnblogs.com/TianFang/p/3381484.html">使用CallerMemberName简化InotifyPropertyChanged的实现</a><br><a href="https://www.cnblogs.com/TianFang/archive/2012/08/19/2646146.html">C# 5.0中新增特性</a></p>
-<p>原文：<br><a href="https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&utm_medium=referral">https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
-]]></content>
-      <categories>
-        <category>csharp学习</category>
-      </categories>
-      <tags>
-        <tag>csharp</tag>
-        <tag>csharp特性</tag>
-      </tags>
   </entry>
   <entry>
     <title>C++基本语法</title>
@@ -466,6 +377,23 @@
       </tags>
   </entry>
   <entry>
+    <title>CSS学习</title>
+    <url>/posts/238675c9.html</url>
+    <content><![CDATA[<p>怎么让两个Div并排显示：</p>
+<p>一、使用display的inline属性</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;aaa&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;bbb&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>CSS学习</category>
+      </categories>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo+Next主题安装美化到部署(gitee或github)</title>
     <url>/posts/f1ef64f7.html</url>
     <content><![CDATA[<h5 id="Hexo介绍："><a href="#Hexo介绍：" class="headerlink" title="Hexo介绍："></a>Hexo介绍：</h5><ul>
@@ -505,67 +433,6 @@
       <tags>
         <tag>Hexo</tag>
         <tag>Next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>frp内网穿透,远程家里电脑</title>
-    <url>/posts/66214be2.html</url>
-    <content><![CDATA[<h4 id="frp说明"><a href="#frp说明" class="headerlink" title="frp说明"></a>frp说明</h4><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp, http, https 协议。</p>
-<h4 id="frp-的作用"><a href="#frp-的作用" class="headerlink" title="frp 的作用"></a>frp 的作用</h4><ul>
-<li>利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。</li>
-<li>对于 http, https 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个80端口。</li>
-<li>利用处于内网或防火墙后的机器，对外网环境提供 tcp 和 udp 服务，例如在家里通过 ssh 访问处于公司内网环境内的主机。</li>
-</ul>
-<a id="more"></a>
-
-<h4 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h4><p>​    frp下载地址：<a href="https://github.com/fatedier/frp/releases">https://github.com/fatedier/frp/releases</a></p>
-<p>​    下载后有frps开头的是服务端文件，frpc是客户端文件，如下：</p>
-<p>​    <img src="https://lhyxcqc.gitee.io/tuku/mdImages/frp/frp%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.png"></p>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><h5 id="1-服务端配置"><a href="#1-服务端配置" class="headerlink" title="1.服务端配置"></a>1.服务端配置</h5><p>frps.ini</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port &#x3D; 7000</span><br></pre></td></tr></table></figure>
-
-<h5 id="2-客户端配置"><a href="#2-客户端配置" class="headerlink" title="2.客户端配置"></a>2.客户端配置</h5><p>frpc.ini</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; xx.xx.xx.xx  #服务器地址</span><br><span class="line">server_port &#x3D; 7000  #对应服务端配置的 bing_port</span><br><span class="line"></span><br><span class="line">[fire] #proxy name</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">local_ip &#x3D; 127.0.0.1</span><br><span class="line">local_port &#x3D; 3389   </span><br><span class="line">remote_port &#x3D; 30013  #服务器的端口，远程自己电脑时用的端口</span><br></pre></td></tr></table></figure>
-
-<p>客户端可以配置多个。但要注意 proxy name不能一样，remote_port也不能一样。</p>
-<h4 id="frp运行命令"><a href="#frp运行命令" class="headerlink" title="frp运行命令"></a>frp运行命令</h4><p>frps.exe/frpc.exe和frps.ini/frpc.ini所在目录下cmd</p>
-<p>服务端: <code> frps.exe -c frps.ini</code></p>
-<p>客户端: <code> frpc.exe -c frpc.ini</code></p>
-<h4 id="frp安装成服务"><a href="#frp安装成服务" class="headerlink" title="frp安装成服务"></a>frp安装成服务</h4><p>需要下载工具<a href="http://nssm.cc/download">nssm</a></p>
-<p>然后在nssm目录下cmd ：</p>
-<p>以安装frp为例：  </p>
-<p><code> nssm install frpc</code></p>
-<p>frpc是服务名称</p>
-<p>弹出nssm设置窗口，窗口设置项说明：</p>
-<p>Application Path：要注册为服务的程序的路径 (例如： F:\frpc\frpc.exe    )<br>Startup directory：要注册为服务的程序所在的文件夹  (例如： F:\frpc  )<br>Arguments：启动参数(例如： -c frpc.ini  )</p>
-<p>或者</p>
-<p>设置完成后，可以 win+R, services.msc ,看服务列表中frpc，并启动</p>
-<p><font color="red">服务端配置是同样的流程</font></p>
-<p>删除服务：</p>
-<p>nssm remove frpc</p>
-]]></content>
-      <categories>
-        <category>frp部署</category>
-      </categories>
-      <tags>
-        <tag>frp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS学习</title>
-    <url>/posts/238675c9.html</url>
-    <content><![CDATA[<p>怎么让两个Div并排显示：</p>
-<p>一、使用display的inline属性</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;aaa&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;bbb&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>CSS学习</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
@@ -673,25 +540,136 @@
       </tags>
   </entry>
   <entry>
-    <title>windows10下升级node.js</title>
-    <url>/posts/d9d9debd.html</url>
-    <content><![CDATA[<p>最近升级了hexo5.1版本，但node.js版本太低，各种报错。。。</p>
-<p>所以网上找了很多升级node.js版本的方法，都不行。</p>
-<p>最后看了 <a href="https://www.cnblogs.com/lijjj/p/12097234.html">https://www.cnblogs.com/lijjj/p/12097234.html</a> 这篇文章：</p>
-<a id="more"></a>
+    <title>C#中Math.Round()实现中国式四舍五入</title>
+    <url>/posts/fe4f126f.html</url>
+    <content><![CDATA[<h2 id="C-中Math-Round-实现中国式四舍五入"><a href="#C-中Math-Round-实现中国式四舍五入" class="headerlink" title="C#中Math.Round()实现中国式四舍五入"></a>C#中Math.Round()实现中国式四舍五入</h2><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round.png"></p>
+<p>C#中的Math.Round()并不是使用的”四舍五入”法。其实在VB、VBScript、C#、J#、T-SQL中Round函数都是采用Banker’s rounding（银行家算法），即：四舍六入五取偶。事实上这也是IEEE的规范，因此所有符合IEEE标准的语言都应该采用这样的算法。<br>.NET 2.0 开始，Math.Round 方法提供了一个枚举选项 MidpointRounding.AwayFromZero 可以用来实现传统意义上的”四舍五入”。即： Math.Round(4.5, MidpointRounding.AwayFromZero) = 5。  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Round(Decimal)</span><br><span class="line">Round(Double)</span><br><span class="line">Round(Decimal, Int32)</span><br><span class="line">Round(Decimal, MidpointRounding)</span><br><span class="line">Round(Double, Int32)</span><br><span class="line">Round(Double, MidpointRounding)</span><br><span class="line">Round(Decimal, Int32, MidpointRounding)</span><br><span class="line">Round(Double, Int32, MidpointRounding)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>第一步：node -v查看node.js版本</p>
-<p>第二步:   npm -v 查看npm包管理器的版本</p>
-<p>第三步：打开cmd查看你之前node版本安装的路径，where node</p>
-<p>第四步：直接去<a href="https://nodejs.org/zh-cn/">官网</a>下载与你电脑系统（32位还是64位）对应的最新的mis版本,安装在上述路径中覆盖即可。</p>
-<p>第五步：node -v,发现更新到最新版本了。</p>
-<p>然后ok了。</p>
+
+
+<p><strong>如：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(0.6) &#x2F;&#x2F;result:1</span><br><span class="line">Math.Round(0.5) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(1.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(2.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(3.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(4.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(5.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(6.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(7.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(8.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(9.5) &#x2F;&#x2F;result:10</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>使用MidpointRounding.AwayFromZero重载后对比：</strong>    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:0</span><br><span class="line"></span><br><span class="line">Math.Round(0.6, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(0.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(1.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:2</span><br><span class="line"></span><br><span class="line">Math.Round(2.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:3</span><br><span class="line"></span><br><span class="line">Math.Round(3.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:4</span><br><span class="line"></span><br><span class="line">Math.Round(4.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:5</span><br><span class="line"></span><br><span class="line">Math.Round(5.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:6</span><br><span class="line"></span><br><span class="line">Math.Round(6.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:7</span><br><span class="line"></span><br><span class="line">Math.Round(7.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:8</span><br><span class="line"></span><br><span class="line">Math.Round(8.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:9</span><br><span class="line"></span><br><span class="line">Math.Round(9.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:10</span><br></pre></td></tr></table></figure>
+
+
+
+<p>但是悲剧的是，如果用这个计算小数的话，就不灵了！！！<br>必须用第七个重载方法，  </p>
+<p><code>decimal Round(decimal d, int decimals, MidpointRounding mode)</code></p>
+<p>这样计算出来的小数才是真正的中国式四舍五入！！  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?Math.Round(526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round(526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.93</span><br></pre></td></tr></table></figure>
+
+
+<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round2.png">  </p>
+<p>原文:<br><a href="https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html">https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html</a></p>
 ]]></content>
       <categories>
-        <category>nodejs升级</category>
+        <category>csharp学习</category>
       </categories>
       <tags>
-        <tag>node.js</tag>
+        <tag>csharp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C#特性学习之一</title>
+    <url>/posts/b26f4754.html</url>
+    <content><![CDATA[<blockquote>
+<h3 id="C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"><a href="#C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber" class="headerlink" title="C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"></a><strong>C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber</strong></h3></blockquote>
+<p>在开发中经常会写个公有静态类记录日志，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;      </span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes the error.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message)  </span><br><span class="line">&#123;                                </span><br><span class="line">    _log4Net.Error(message);     </span><br><span class="line">&#125; </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<p>如果想区分调用来源就比较麻烦了。在.Net 4.5中引入了三个Attribute：CallerMemberName、CallerFilePath和CallerLineNumber 。在编译器的配合下，分别可以获取到调用函数（准确讲应该是成员）名称，调用文件及调用行号。这时可以把方法改成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes an error level logging message.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message,</span><br><span class="line">[CallerMemberName] string memberName &#x3D; &quot;&quot;,</span><br><span class="line">[CallerFilePath] string sourceFilePath &#x3D; &quot;&quot;,</span><br><span class="line">[CallerLineNumber] int sourceLineNumber &#x3D; 0)</span><br><span class="line">&#123;</span><br><span class="line">    _log4Net.ErrorFormat(&quot;文件:&#123;0&#125; 行号:&#123;1&#125; 方法名:&#123;2&#125;,消息:&#123;3&#125;&quot;, sourceFilePath, sourceLineNumber, memberName, message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样就可以区分调用来源了。另外，在构造函数，析构函数、属性等特殊的地方调用CallerMemberName属性所标记的函数时，获取的值有所不同，其取值如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>调用的地方</th>
+<th>CallerMemberName获取的结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方法、属性或事件</td>
+<td>方法，属性或事件的名称</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>字符串 “.ctor”</td>
+</tr>
+<tr>
+<td>静态构造函数</td>
+<td>字符串 “.cctor”</td>
+</tr>
+<tr>
+<td>析构函数</td>
+<td>该字符串 “Finalize”</td>
+</tr>
+<tr>
+<td>用户定义的运算符或转换</td>
+<td>生成的名称成员，例如， “op_Addition”。</td>
+</tr>
+<tr>
+<td>特性构造函数</td>
+<td>特性所应用的成员的名称</td>
+</tr>
+</tbody></table>
+<p>参考链接：<br><a href="https://www.cnblogs.com/TianFang/p/3381484.html">使用CallerMemberName简化InotifyPropertyChanged的实现</a><br><a href="https://www.cnblogs.com/TianFang/archive/2012/08/19/2646146.html">C# 5.0中新增特性</a></p>
+<p>原文：<br><a href="https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&utm_medium=referral">https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
+]]></content>
+      <categories>
+        <category>csharp学习</category>
+      </categories>
+      <tags>
+        <tag>csharp</tag>
+        <tag>csharp特性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>frp内网穿透,远程家里电脑</title>
+    <url>/posts/66214be2.html</url>
+    <content><![CDATA[<h4 id="frp说明"><a href="#frp说明" class="headerlink" title="frp说明"></a>frp说明</h4><p>frp 是一个可用于内网穿透的高性能的反向代理应用，支持 tcp, udp, http, https 协议。</p>
+<h4 id="frp-的作用"><a href="#frp-的作用" class="headerlink" title="frp 的作用"></a>frp 的作用</h4><ul>
+<li>利用处于内网或防火墙后的机器，对外网环境提供 http 或 https 服务。</li>
+<li>对于 http, https 服务支持基于域名的虚拟主机，支持自定义域名绑定，使多个域名可以共用一个80端口。</li>
+<li>利用处于内网或防火墙后的机器，对外网环境提供 tcp 和 udp 服务，例如在家里通过 ssh 访问处于公司内网环境内的主机。</li>
+</ul>
+<a id="more"></a>
+
+<h4 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h4><p>​    frp下载地址：<a href="https://github.com/fatedier/frp/releases">https://github.com/fatedier/frp/releases</a></p>
+<p>​    下载后有frps开头的是服务端文件，frpc是客户端文件，如下：</p>
+<p>​    <img src="https://lhyxcqc.gitee.io/tuku/mdImages/frp/frp%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.png"></p>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><h5 id="1-服务端配置"><a href="#1-服务端配置" class="headerlink" title="1.服务端配置"></a>1.服务端配置</h5><p>frps.ini</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port &#x3D; 7000</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-客户端配置"><a href="#2-客户端配置" class="headerlink" title="2.客户端配置"></a>2.客户端配置</h5><p>frpc.ini</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr &#x3D; xx.xx.xx.xx  #服务器地址</span><br><span class="line">server_port &#x3D; 7000  #对应服务端配置的 bing_port</span><br><span class="line"></span><br><span class="line">[fire] #proxy name</span><br><span class="line">type &#x3D; tcp</span><br><span class="line">local_ip &#x3D; 127.0.0.1</span><br><span class="line">local_port &#x3D; 3389   </span><br><span class="line">remote_port &#x3D; 30013  #服务器的端口，远程自己电脑时用的端口</span><br></pre></td></tr></table></figure>
+
+<p>客户端可以配置多个。但要注意 proxy name不能一样，remote_port也不能一样。</p>
+<h4 id="frp运行命令"><a href="#frp运行命令" class="headerlink" title="frp运行命令"></a>frp运行命令</h4><p>frps.exe/frpc.exe和frps.ini/frpc.ini所在目录下cmd</p>
+<p>服务端: <code> frps.exe -c frps.ini</code></p>
+<p>客户端: <code> frpc.exe -c frpc.ini</code></p>
+<h4 id="frp安装成服务"><a href="#frp安装成服务" class="headerlink" title="frp安装成服务"></a>frp安装成服务</h4><p>需要下载工具<a href="http://nssm.cc/download">nssm</a></p>
+<p>然后在nssm目录下cmd ：</p>
+<p>以安装frp为例：  </p>
+<p><code> nssm install frpc</code></p>
+<p>frpc是服务名称</p>
+<p>弹出nssm设置窗口，窗口设置项说明：</p>
+<p>Application Path：要注册为服务的程序的路径 (例如： F:\frpc\frpc.exe    )<br>Startup directory：要注册为服务的程序所在的文件夹  (例如： F:\frpc  )<br>Arguments：启动参数(例如： -c frpc.ini  )</p>
+<p>或者</p>
+<p>设置完成后，可以 win+R, services.msc ,看服务列表中frpc，并启动</p>
+<p><font color="red">服务端配置是同样的流程</font></p>
+<p>删除服务：</p>
+<p>nssm remove frpc</p>
+]]></content>
+      <categories>
+        <category>frp部署</category>
+      </categories>
+      <tags>
+        <tag>frp</tag>
       </tags>
   </entry>
   <entry>
@@ -2242,6 +2220,28 @@
       <tags>
         <tag>HTTP</tag>
         <tag>Content-Type</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>windows10下升级node.js</title>
+    <url>/posts/d9d9debd.html</url>
+    <content><![CDATA[<p>最近升级了hexo5.1版本，但node.js版本太低，各种报错。。。</p>
+<p>所以网上找了很多升级node.js版本的方法，都不行。</p>
+<p>最后看了 <a href="https://www.cnblogs.com/lijjj/p/12097234.html">https://www.cnblogs.com/lijjj/p/12097234.html</a> 这篇文章：</p>
+<a id="more"></a>
+
+<p>第一步：node -v查看node.js版本</p>
+<p>第二步:   npm -v 查看npm包管理器的版本</p>
+<p>第三步：打开cmd查看你之前node版本安装的路径，where node</p>
+<p>第四步：直接去<a href="https://nodejs.org/zh-cn/">官网</a>下载与你电脑系统（32位还是64位）对应的最新的mis版本,安装在上述路径中覆盖即可。</p>
+<p>第五步：node -v,发现更新到最新版本了。</p>
+<p>然后ok了。</p>
+]]></content>
+      <categories>
+        <category>nodejs升级</category>
+      </categories>
+      <tags>
+        <tag>node.js</tag>
       </tags>
   </entry>
 </search>
