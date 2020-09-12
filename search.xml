@@ -1,201 +1,314 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+    <title>Hexo+Next主题安装美化到部署(gitee或github)</title>
+    <url>/posts/f1ef64f7.html</url>
+    <content><![CDATA[<p>本篇文章是针对 7.8.0 版本的安装部署笔记，具体效果可以查看我的博客 <a href="https://lhyxcqc.gitee.io/">旧时烟雨</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://tding.top/">小丁的个人博客</a>    <a href="https://blog.csdn.net/tuckEnough/article/details/107383201">hexo 主题 next7.8 版本配置美化</a></p>
+<h3 id="Hexo介绍："><a href="#Hexo介绍：" class="headerlink" title="Hexo介绍："></a>Hexo介绍：</h3><ul>
+<li>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</li>
+<li>文档： <a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a> 可以理解为是基于node.js制作的一个博客工具。</li>
+<li>通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 <a href="https://hexo.io/zh-cn/docs/tag-plugins.html">标签插件</a> 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。</li>
+</ul>
 <a id="more"></a>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>CSS学习</title>
-    <url>/posts/238675c9.html</url>
-    <content><![CDATA[<p>怎么让两个Div并排显示：</p>
-<p>一、使用display的inline属性</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;aaa&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;bbb&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-]]></content>
-      <categories>
-        <category>CSS学习</category>
-      </categories>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C#中Math.Round()实现中国式四舍五入</title>
-    <url>/posts/fe4f126f.html</url>
-    <content><![CDATA[<h2 id="C-中Math-Round-实现中国式四舍五入"><a href="#C-中Math-Round-实现中国式四舍五入" class="headerlink" title="C#中Math.Round()实现中国式四舍五入"></a>C#中Math.Round()实现中国式四舍五入</h2><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round.png"></p>
-<p>C#中的Math.Round()并不是使用的”四舍五入”法。其实在VB、VBScript、C#、J#、T-SQL中Round函数都是采用Banker’s rounding（银行家算法），即：四舍六入五取偶。事实上这也是IEEE的规范，因此所有符合IEEE标准的语言都应该采用这样的算法。<br>.NET 2.0 开始，Math.Round 方法提供了一个枚举选项 MidpointRounding.AwayFromZero 可以用来实现传统意义上的”四舍五入”。即： Math.Round(4.5, MidpointRounding.AwayFromZero) = 5。  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Round(Decimal)</span><br><span class="line">Round(Double)</span><br><span class="line">Round(Decimal, Int32)</span><br><span class="line">Round(Decimal, MidpointRounding)</span><br><span class="line">Round(Double, Int32)</span><br><span class="line">Round(Double, MidpointRounding)</span><br><span class="line">Round(Decimal, Int32, MidpointRounding)</span><br><span class="line">Round(Double, Int32, MidpointRounding)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>如：</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(0.6) &#x2F;&#x2F;result:1</span><br><span class="line">Math.Round(0.5) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(1.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(2.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(3.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(4.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(5.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(6.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(7.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(8.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(9.5) &#x2F;&#x2F;result:10</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>使用MidpointRounding.AwayFromZero重载后对比：</strong>    </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:0</span><br><span class="line"></span><br><span class="line">Math.Round(0.6, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(0.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(1.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:2</span><br><span class="line"></span><br><span class="line">Math.Round(2.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:3</span><br><span class="line"></span><br><span class="line">Math.Round(3.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:4</span><br><span class="line"></span><br><span class="line">Math.Round(4.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:5</span><br><span class="line"></span><br><span class="line">Math.Round(5.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:6</span><br><span class="line"></span><br><span class="line">Math.Round(6.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:7</span><br><span class="line"></span><br><span class="line">Math.Round(7.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:8</span><br><span class="line"></span><br><span class="line">Math.Round(8.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:9</span><br><span class="line"></span><br><span class="line">Math.Round(9.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:10</span><br></pre></td></tr></table></figure>
-
-
-
-<p>但是悲剧的是，如果用这个计算小数的话，就不灵了！！！<br>必须用第七个重载方法，  </p>
-<p><code>decimal Round(decimal d, int decimals, MidpointRounding mode)</code></p>
-<p>这样计算出来的小数才是真正的中国式四舍五入！！  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?Math.Round(526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round(526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.93</span><br></pre></td></tr></table></figure>
-
-
-<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round2.png">  </p>
-<p>原文:<br><a href="https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html">https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html</a></p>
-]]></content>
-      <categories>
-        <category>csharp学习</category>
-      </categories>
-      <tags>
-        <tag>csharp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown Pad2使用教程详细版</title>
-    <url>/posts/5e08edd2.html</url>
-    <content><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>一级标题一个#号，二级标题两个#号，依次类推…直到六级标题，没有七级标题！</p>
-<h2 id="有序列表-amp-无序列表"><a href="#有序列表-amp-无序列表" class="headerlink" title="有序列表&amp;无序列表"></a>有序列表&amp;无序列表</h2><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>“1.”加空格再输入内容，英文输入状态，同时注意每一点后加上两个空格再换行否则列表不自动换行  </p>
-<ol>
-<li>第一条</li>
-<li>第二条</li>
-<li>第三条</li>
-</ol>
-<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>减号“-”或者星号“*”加上空格输入内容即为无序列表  </p>
+<h3 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h3><p>我的环境是：以下环境如果没有需要安装</p>
 <ul>
-<li>减号第一条</li>
-<li>减号第二条</li>
-<li>减号第三条</li>
+<li>Node: v12.18.3</li>
+<li>npm: 6.14.8</li>
+<li>Hexo: 5.1</li>
+<li>Next: 7.8</li>
+<li>Git: git version 2.19.1.windows.1</li>
 </ul>
+<p>时间：2020/09/08</p>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<p>新建完成后，指定文件夹的目录如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
+
+<h4 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h4><p>网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，您可以在此配置大部分的参数。</p>
+<h4 id="source"><a href="#source" class="headerlink" title="source"></a>source</h4><p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
+<h4 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h4><p><a href="https://hexo.io/zh-cn/docs/themes">主题</a> 文件夹。Hexo 会根据主题来生成静态页面。</p>
+<h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 进入你的博客目录</span><br><span class="line">cd blog</span><br><span class="line"></span><br><span class="line"># 将仓库复制到博客目录的 themes&#x2F;next 文件夹中</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p>下载完成之后，可以在博客的 <code>themes</code> 文件夹中看到多了一个名为 <code>next</code> 的目录，这个目录就是主题仓库。</p>
+<h3 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h3><h4 id="next-yml"><a href="#next-yml" class="headerlink" title="next.yml"></a>next.yml</h4><p>自从 NexT-7.3.0 开始，官方推荐使用数据文件将配置和主题分离，这样可以在不修改主题源码的情况下完成主题的配置，便于后续 next 版本更新，我目前使用的Next 7.8.0。</p>
+<p>我们将所有的主题配置都放在 <code>hexo/source/_data/next.yml</code> 中，所有的修改都将在这个文件中进行，不修改主题配置文件 <code>next/_config.yml</code> 。</p>
+<p>具体步骤：</p>
 <ul>
-<li>星号第一条 </li>
-<li>星号第二条 </li>
-<li>星号第三条</li>
+<li>在   <code>hexo/source/_data</code> 目录下新建 <code>next.yml</code> 文件，如果 <code>_data</code> 目录不存在，则创建 <code>_data</code> 目录；</li>
+<li>将主题配置文件 <code>next/_config.yml</code> 所有内容复制到 <code>hexo/source/_data/next.yml</code> 文件中；</li>
+<li>将 <code>hexo/source/_data/next.yml</code> 文件中 <code>override</code> 选项设置为 <code>true</code> 。</li>
 </ul>
-<h2 id="引用文章等"><a href="#引用文章等" class="headerlink" title="引用文章等"></a>引用文章等</h2><p>在每一行前面加上大于号“&gt;”英文状态下输入  </p>
-<blockquote>
-<p>有些人活着<br>但他已经死了<br>有些人死了<br>但他依旧活着</p>
-</blockquote>
-<p>其实只需要输入一个“&gt;”即可，换行的时候会自动添加。也就是说只要中间不跳行，换行时会自动给你加上大于号，但一旦隔行了就跳出引用模式了，即引用的中间不允许有空行</p>
-<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><p>文本的前后各加上两个星号“<strong>”且与文本之间不能有空格<br>预览效果如下：<br>**加粗</strong></p>
-<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p>文本的前后各加上一个星号<br>预览效果：<br><em>斜体</em></p>
-<h2 id="添加图片和链接"><a href="#添加图片和链接" class="headerlink" title="添加图片和链接"></a>添加图片和链接</h2><p>如果是图片的话就要将图片的本地文件放到与该md文件相同的路径下，且填写文件的相对路径<br>如果是网页链接就直接贴上网页链接，http一定要有</p>
-<h3 id="图片："><a href="#图片：" class="headerlink" title="图片："></a>图片：</h3><p>感叹号+方括号+圆括号。方括号里随便填啥不会显示出来，圆括号里填写图片文件的相对路径或者如果是网页连接的话可以填写网页链接，因为存为本地文件较为方便，本人选择采用前者。注意文件名最好不要带中文，好像不行。还有，如果创作的文章需要发布到网上，需要将图片上传才可以！</p>
-<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/markdownImageLinks.jpg">  </p>
-<p>本地文件  </p>
-<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6.png"></p>
-<p>网页提取</p>
-<p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E7%BD%91%E9%A1%B5%E6%8F%90%E5%8F%96.png"></p>
-<h3 id="网页："><a href="#网页：" class="headerlink" title="网页："></a>网页：</h3><p>方括号+圆括号。方括号里填写的会呈灰色的显示出来，链接就粘贴在圆括号里。<br>预览效果：</p>
-<h4 id="文件相对路径法："><a href="#文件相对路径法：" class="headerlink" title="文件相对路径法："></a>文件相对路径法：</h4><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E6%B3%95.png"></p>
-<p>前面是英文输入状态下的“./”后面加上属性里面复制过来的文件名包括后缀名<br>同时刚刚get获取网页图片地址的方法，右键网页图片属性复制全部地址</p>
-<h4 id="网页地址法："><a href="#网页地址法：" class="headerlink" title="网页地址法："></a>网页地址法：</h4><p><img src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E7%BD%91%E9%A1%B5%E5%9C%B0%E5%9D%80%E6%B3%95.png"></p>
-<h4 id="添加网页链接："><a href="#添加网页链接：" class="headerlink" title="添加网页链接："></a>添加网页链接：</h4><p>比插入图片少一个感叹号即可<br><a href="http://markdownpad.com/">markdown pad官网</a></p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>前后各加上三个反引号，就是数字1前面那个键<br>预览效果：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list_1 = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">9</span>]</span><br><span class="line">  list_1 = set(list_1)</span><br><span class="line">  list_2 = set([<span class="number">2</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">66</span>, <span class="number">22</span>, <span class="number">8</span>, <span class="number">4</span>])</span><br><span class="line">  print(list_1, list_2)</span><br><span class="line">  <span class="comment">#求交集</span></span><br><span class="line">  print(list_1.intersection(list_2))</span><br><span class="line">  <span class="comment">#求并集</span></span><br><span class="line">  print(list_1.union(list_2))</span><br><span class="line">  <span class="comment">#求差集（你有我无或你无我有）</span></span><br><span class="line">  print(list_1.difference(list_2))</span><br><span class="line">  print(list_2.difference(list_1))</span><br></pre></td></tr></table></figure>
+<h4 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h4><p>在站点配置文件 <code>hexo/_config.yml</code> 中，通过改变 <code>theme</code> 选项的值来选择主题。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 选择 next 主题</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
 
-<p>如果不行则需要设置其他模式才能实现代码样式，操作如下：tools-&gt;options-&gt;markdown-&gt;markdown processor-&gt;commonmark。至此OK！或者设置为GitHub离线格式也行。</p>
-<h2 id="分割横线"><a href="#分割横线" class="headerlink" title="分割横线"></a>分割横线</h2><p>三个星就行<br>预览效果：</p>
-<hr>
-<h2 id="给字体加颜色"><a href="#给字体加颜色" class="headerlink" title="给字体加颜色"></a>给字体加颜色</h2><p>1、颜色名称要加英文双引号，如下：  </p>
-<p><font color="red">颜色</font></p>
-<p><code>&lt;font color=&quot;red&quot;&gt;颜色&lt;/font&gt;</code></p>
-<p>color=“对应颜色的英文名”</p>
-<p>2、如果是通过十六进制获取的，十六进制数前要加#，如下：  </p>
-<p><font color="#7ASDF342">颜色</font></p>
-<p><code>&lt;font color=&quot;#7ASDF342&quot;&gt;颜色&lt;/font&gt;</code></p>
-<p>3、&lt; /font &gt; 不要忘记写</p>
-<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
-<li><p>Ctrl + I ： 斜体</p>
-</li>
-<li><p>Ctrl + B ： 粗体</p>
-</li>
-<li><p>Ctrl + G ： 图片</p>
-</li>
-<li><p>Ctrl + Q ： 引用</p>
-</li>
-<li><p>Ctrl + 1 ： 标题 1</p>
-</li>
-<li><p>Ctrl + 2 ： 标题 2</p>
-</li>
-<li><p>Ctrl + 3 ： 标题 3</p>
-</li>
-<li><p>Ctrl + K ： 代码块</p>
-</li>
-<li><p>Ctrl + L ： 超链接</p>
-</li>
-<li><p>Ctrl + T ： 时间戳</p>
-</li>
-<li><p>Ctrl + U ： 无序列表</p>
-</li>
-<li><p>Ctrl + Shift + O ： 有序列表</p>
-</li>
-<li><p>Ctrl + R ： 水平标尺</p>
-</li>
-<li><p>F4 ： 启用水平布局/竖直预览</p>
-</li>
-<li><p>F5 ： 启用/关闭实时预览</p>
-</li>
-<li><p>F6 ： 在浏览器中预览</p>
-<p><strong>关于快捷键的一些说明:</strong></p>
-</li>
+<p>在 <code>next.yml</code> 中通过改变 <code>scheme</code> 来选择主题样式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<p>预览，输入下面命令后，在 <code>http://localhost:4000/</code> 查看效果。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+
+<h5 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h5><ul>
+<li>清除缓存文件 db.json 和已生成的静态文件 public 。</li>
+<li>网站显示异常时可以执行这条命令试试</li>
 </ul>
-<ol>
-<li>这里的插入图片快捷键只适用于插入网页链接，下面选项optional可选填，指的就是方括号里的内容</li>
-<li>三级以后标题之后的快捷键不适用</li>
-<li>代码块的快捷键只是缩进了一个tab距离，三个反引号并不会自动添加，不好用</li>
-<li>时间戳在markdown模式下正常显示，在GitHub离线模式下显示有bug</li>
-<li>以上的快捷键或者是各种操作在不同的模式下可能显示都会有所差异，出现时可适当尝试选择。</li>
-</ol>
+<h5 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h5><p>生成网站静态文件到默认设置的 public 文件夹。</p>
+<ul>
+<li>便于查看网站生成的静态文件或者手动部署网站；</li>
+<li>如果使用自动部署，不需要先执行该命令；</li>
+<li><code>hexo g</code> 是<code>hexo generate</code> 的缩写，命令效果一致。</li>
+</ul>
+<h5 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h5><ul>
+<li>启动本地服务器，用于预览主题。默认地址： <a href="http://localhost:4000/">http://localhost:4000/</a></li>
+<li><code>hexo s</code> 是 <code>hexo server</code> 的缩写，命令效果一致。</li>
+<li>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。</li>
+<li>对 Hexo 根目录 <code>_config.yml</code> 的修改，需要重启本地服务器后才能预览效果。</li>
+</ul>
+<h4 id="设置博客文字描述和语言"><a href="#设置博客文字描述和语言" class="headerlink" title="设置博客文字描述和语言"></a>设置博客文字描述和语言</h4><p>站点配置文件 <code>hexo/_config.yml</code> 修改 <code>site</code> 。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: orduster 旧时烟雨 # 网站的标题</span><br><span class="line">subtitle: &#39;&#39; # 子标题</span><br><span class="line">description: &#39;&#39; </span><br><span class="line">keywords: # 网站关键字</span><br><span class="line">author: lhy # 网站作者</span><br><span class="line">language: zh-CN # 网站采用语言，要跟&#x2F;theme&#x2F;***&#x2F;languages&#x2F;**.yml下的文件名对应</span><br><span class="line">timezone: &#39;&#39; # 网站的时区</span><br></pre></td></tr></table></figure>
+
+<h3 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h3><h4 id="增加关于、标签、分类页面"><a href="#增加关于、标签、分类页面" class="headerlink" title="增加关于、标签、分类页面"></a>增加关于、标签、分类页面</h4><p>主题配置文件 <code>next.yml</code> 修改 <code>menu</code>，将 <code>about</code>、<code>tags</code>、<code>categories</code> 的注释去除。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br></pre></td></tr></table></figure>
+
+<p>执行下面命令新建相关文件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &quot;about&quot;</span><br><span class="line">hexo new page &quot;tags&quot;</span><br><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
+
+<p>修改生成页面所在位置和相关配置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source\about\index.md</span><br><span class="line">source\tags\index.md</span><br><span class="line">source\categories\index.md</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 关于</span><br><span class="line">type: &quot;about&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h4 id="显示本地图片"><a href="#显示本地图片" class="headerlink" title="显示本地图片"></a>显示本地图片</h4><p>特别说明：<font color="red">如果有图床或者公共的图片存储库，可以不用配置这个，没太大必要。</font></p>
+<p>安装 <code>hexo-asset-image</code> 插件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save </span><br></pre></td></tr></table></figure>
+
+<p>站点配置文件 <code>hexo/_config.yml</code> 中设置 <code>post_asset_folder</code> 的值为 <code>true</code> ，这样新建文章时，hexo 会自动建立一个与文章同名的目录，可以将这篇文章所有的图片放入。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章资源文件夹</span><br><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+
+<p>运行 <code>hexo n &quot;xxxxx&quot;</code> /source/_posts文件夹内会生成一个同名的文件夹xxxxx</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 使用这种方式引用图片</span><br><span class="line">![](文件夹名&#x2F;图片名称)</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加图片放大预览功能"><a href="#添加图片放大预览功能" class="headerlink" title="添加图片放大预览功能"></a>添加图片放大预览功能</h4><p><code>next.yml</code> 文件 <code>fancybox</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fancybox: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置博客文章持久化链接"><a href="#设置博客文章持久化链接" class="headerlink" title="设置博客文章持久化链接"></a>设置博客文章持久化链接</h4><p>安装 <code>hexo-abbrlink</code> 插件 。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+
+<p>站点配置文件 <code>hexo/_config.yml</code> 修改 <code>permalink</code> 选项，添加下面内容。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</span><br><span class="line"># permalink_defaults:</span><br><span class="line">permalink: posts&#x2F;:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex    # 进制：dec(default) and hex</span><br></pre></td></tr></table></figure>
+
+<h4 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h4><p>安装 <code>exo-generator-searchdb</code> 插件 。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件 <code>next.yml</code> 添加 <code>search</code> 选项，修改 <code>local_search</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  # Show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # Unescape html strings to the readable one.</span><br><span class="line">  unescape: false</span><br><span class="line">  # Preload the search data when the page loads.</span><br><span class="line">  preload: false</span><br></pre></td></tr></table></figure>
+
+<h4 id="回到顶部按钮"><a href="#回到顶部按钮" class="headerlink" title="回到顶部按钮"></a>回到顶部按钮</h4><p>修改主题配置文件 <code>next.yml</code> <code>back2top</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">back2top:</span><br><span class="line">  enable: true</span><br><span class="line">  # 将返回按钮设置在侧边栏</span><br><span class="line">  sidebar: false</span><br><span class="line">  # 按钮上显示进度百分比</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置字数统计和预计阅读时间"><a href="#设置字数统计和预计阅读时间" class="headerlink" title="设置字数统计和预计阅读时间"></a>设置字数统计和预计阅读时间</h4><p>安装 <code>hexo-symbols-count-time</code> 插件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
+
+<p>编辑站点配置文件 <code>hexo/_config.yml</code>，添加如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true </span><br><span class="line">  time: true </span><br><span class="line">  total_symbols: true </span><br><span class="line">  total_time: true </span><br></pre></td></tr></table></figure>
+
+<p>修改主题配置文件 <code>next.yml</code> 中 <code>symbols_count_time</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true </span><br><span class="line">  item_text_post: true </span><br><span class="line">  item_text_total: true </span><br><span class="line">  awl: 2</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure>
+
+<h4 id="标签云特效"><a href="#标签云特效" class="headerlink" title="标签云特效"></a>标签云特效</h4><p>安装 <code>hexo-tag-cloud</code> 插件。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-cloud@^2.0.* --save</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>hexo/source/_data</code> 目录下新建 <code>sidebar.swig</code> 文件，输入下面内容。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if site.tags.length &gt; 1 %&#125;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcloud.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcanvas.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;widget-wrap&quot;&gt;</span><br><span class="line">    &lt;h3 class&#x3D;&quot;widget-title&quot;&gt;标签云&lt;&#x2F;h3&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;myCanvasContainer&quot; class&#x3D;&quot;widget tagcloud&quot;&gt;</span><br><span class="line">        &lt;canvas width&#x3D;&quot;250&quot; height&#x3D;&quot;250&quot; id&#x3D;&quot;resCanvas&quot; style&#x3D;&quot;width&#x3D;100%&quot;&gt;</span><br><span class="line">            &#123;&#123; list_tags() &#125;&#125;</span><br><span class="line">        &lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件 <code>next.yml</code> 去除 <code>sidebar.swig</code> 的注释。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar: source&#x2F;_data&#x2F;sidebar.swig</span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件 <code>next.yml</code> 添加下面内容。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 标签云</span><br><span class="line">tag_cloud:</span><br><span class="line">    textFont: Trebuchet MS, Helvetica</span><br><span class="line">    textColor: &#39;#333&#39;</span><br><span class="line">    textHeight: 25</span><br><span class="line">    outlineColor: &#39;#E2E1D1&#39;</span><br><span class="line">    maxSpeed: 0.1</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置代码块复制和代码高亮"><a href="#设置代码块复制和代码高亮" class="headerlink" title="设置代码块复制和代码高亮"></a>设置代码块复制和代码高亮</h4><p>主题配置文件 <code>next.yml</code> 中修改 <code>codeblock</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  # 代码高亮</span><br><span class="line">  highlight_theme: night bright</span><br><span class="line">  # 复制</span><br><span class="line">  copy_button:</span><br><span class="line">    enable: true</span><br><span class="line">    # 显示文本复制结果</span><br><span class="line">    show_result: true</span><br><span class="line">    # 可以选择的样式: default | flat | mac</span><br><span class="line">    style: mac</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改文章内链接文本样式"><a href="#修改文章内链接文本样式" class="headerlink" title="修改文章内链接文本样式"></a>修改文章内链接文本样式</h4><p>在 <code>hexo/source/_data</code> 目录下新建 <code>styles.styl</code> 文件，填入下面内容。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 修改链接样式</span><br><span class="line">.post-body p a&#123;</span><br><span class="line">  color: #0593d3;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #ff106c;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a, span.exturl &#123;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #ff106c;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件 <code>next.yml</code> 去除 <code>styles.styl</code> 的注释。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">style: source&#x2F;_data&#x2F;styles.styl</span><br></pre></td></tr></table></figure>
+
+<h4 id="在文章底部增加版权信息"><a href="#在文章底部增加版权信息" class="headerlink" title="在文章底部增加版权信息"></a>在文章底部增加版权信息</h4><p>主题配置文件 <code>next.yml</code> 修改 <code>creative_commons</code> 选项。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">creative_commons:</span><br><span class="line">  license: by-nc-sa</span><br><span class="line">  sidebar: false # 不显示在侧边栏</span><br><span class="line">  post: true</span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改文章底部-tag-图标"><a href="#修改文章底部-tag-图标" class="headerlink" title="修改文章底部 tag 图标"></a>修改文章底部 tag 图标</h4><p>主题配置文件 <code>next.yml</code>，打开底部标签 。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tag_icon: true</span><br></pre></td></tr></table></figure>
+
+<h4 id="目录设置"><a href="#目录设置" class="headerlink" title="目录设置"></a>目录设置</h4><p>主题配置文件 <code>next.yml</code>，修改 <code>toc</code> 属性。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line">  # 自动编号</span><br><span class="line">  number: false</span><br><span class="line">  # 超出宽度跨行</span><br><span class="line">  wrap: true</span><br><span class="line">  # 展开所有</span><br><span class="line">  expand_all: true</span><br><span class="line">  # 最大标题深度</span><br><span class="line">  max_depth: 6</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改主题页面布局为圆角"><a href="#修改主题页面布局为圆角" class="headerlink" title="修改主题页面布局为圆角"></a>修改主题页面布局为圆角</h4><p>在 <code>hexo/source/_data</code> 目录下新建 <code>variables.styl</code> 文件，填写下面内容。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">// 圆角设置</span><br><span class="line">$border-radius-inner     = 20px 20px 20px 20px;</span><br><span class="line">$border-radius           = 20px;</span><br></pre></td></tr></table></figure>
+
+<p>主题配置文件 <code>next.yml</code> 去除 <code>variables.styl</code> 的注释。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">variable: source&#x2F;_data&#x2F;variables.styl</span><br></pre></td></tr></table></figure>
+
+<h4 id="隐藏底部的强力驱动"><a href="#隐藏底部的强力驱动" class="headerlink" title="隐藏底部的强力驱动"></a>隐藏底部的强力驱动</h4><p>主题配置文件 <code>next.yml</code> 修改 <code>footer</code> 选项下的 <code>powered</code> 。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">footer:</span></span><br><span class="line">  <span class="comment"># Powered by Hexo &amp; NexT</span></span><br><span class="line">  <span class="attr">powered:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h4><p><font color="#666fff">目前我还没用过这个</font></p>
+<p>安装 <code>hexo-blog-encrypt</code> 插件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-blog-encrypt --save</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>在需要加密的文章中添加下面内容。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">password: 123456</span><br><span class="line">abstract: 加密文章，请输入密码 123456 查看</span><br><span class="line">message: 请输入密码</span><br></pre></td></tr></table></figure>
+
+<h4 id="提示块-note"><a href="#提示块-note" class="headerlink" title="提示块 - note"></a>提示块 - note</h4><p>主题配置文件 <code>next.yml</code> 中 <code>note</code> 选项。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">simple</span></span><br><span class="line">  <span class="comment"># 是否显示图标</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span> </span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="设置博客背景图片"><a href="#设置博客背景图片" class="headerlink" title="设置博客背景图片"></a>设置博客背景图片</h4><p>新建 <code>hexo/source/images</code> 目录，将想要设置的背景图片放入，除了设置背景图片，还需要设置博客文章博客文章透明度才能看到背景图片。</p>
+<p>在 <code>hexo/source/_data/style.styl</code> 文件中写入下面代码。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 设置背景图片</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">url</span>(/images/background.png);</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    background-attachment:fixed; //不重复</span><br><span class="line">    background-size: cover;      //填充</span><br><span class="line">    <span class="selector-tag">background-position</span><span class="selector-pseudo">:50</span>% 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>background:url 为图片路径，也可以直接使用链接。</li>
+<li>background-repeat：若果背景图片不能全屏，那么是否平铺显示，充满屏幕</li>
+<li>background-attachment：背景是否随着网页上下滚动而滚动，fixed 为固定</li>
+<li>background-size：图片展示大小，这里设置 100%，100% 的意义为：如果背景图片不能全屏，那么是否通过拉伸的方式将背景强制拉伸至全屏显示。</li>
+</ul>
+<h4 id="设置博客文章透明度"><a href="#设置博客文章透明度" class="headerlink" title="设置博客文章透明度"></a>设置博客文章透明度</h4><p>next 主题的博客文章都是不透明的，这样即使设置了背景图片也无法看到，在 <code>hexo/source/_data/styles.styl</code> 中写入下面内容，使博客文章透明化。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">//博客内容透明化</span><br><span class="line">//文章内容的透明度设置</span><br><span class="line"><span class="selector-class">.content-wrap</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br><span class="line">//侧边框的透明度设置</span><br><span class="line"><span class="selector-class">.sidebar</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br><span class="line">//菜单栏的透明度设置</span><br><span class="line"><span class="selector-class">.header-inner</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);</span><br><span class="line">&#125;</span><br><span class="line">//搜索框（local-search）的透明度设置</span><br><span class="line"><span class="selector-class">.popup</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：<br>其中 header-inner 不能使用 opacity 进行配置。因为 header-inner 包含 header.swig 中的所有内容。若使用 opacity 进行配置，子结点会出很多问题。</p>
+<h4 id="顶部阅读进度条"><a href="#顶部阅读进度条" class="headerlink" title="顶部阅读进度条"></a>顶部阅读进度条</h4><p>主题配置文件 <code>next.yml</code> 中修改 <code>reading_progress</code> 选项。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">reading_progress:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 显示在顶部</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">top</span></span><br><span class="line">  <span class="attr">color:</span> <span class="string">&quot;#06d633&quot;</span></span><br><span class="line">  <span class="attr">height:</span> <span class="string">3px</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="文章阴影"><a href="#文章阴影" class="headerlink" title="文章阴影"></a>文章阴影</h4><p>在 <code>hexo/source/_data/styles.styl</code> 中添加下面内容。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 文章阴影</span><br><span class="line"><span class="selector-class">.post</span> &#123;</span><br><span class="line">   <span class="attribute">margin-top</span>: <span class="number">50px</span>;</span><br><span class="line">   <span class="attribute">margin-bottom</span>: <span class="number">50px</span>;</span><br><span class="line">   <span class="attribute">padding</span>: <span class="number">25px</span>;</span><br><span class="line">   <span class="attribute">-webkit-box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">202</span>, <span class="number">203</span>, <span class="number">203</span>, .<span class="number">5</span>);</span><br><span class="line">   <span class="attribute">-moz-box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">202</span>, <span class="number">203</span>, <span class="number">204</span>, .<span class="number">5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改分类页面样式"><a href="#修改分类页面样式" class="headerlink" title="修改分类页面样式"></a>修改分类页面样式</h4><p><font color="#ffdd00">我觉得有点丑，，，没有设置</font></p>
+<p>在 <code>hexo/source/_data/styles.styl</code> 添加下面内容。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 分类&amp;&amp;标签 页面样式</span><br><span class="line"><span class="selector-class">.post-block</span><span class="selector-class">.page</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br><span class="line">// 分类页面page</span><br><span class="line"><span class="selector-class">.category-all-page</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">0px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#797D7F</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">30px</span> <span class="number">60px</span> <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">25px</span> <span class="number">25px</span> <span class="number">25px</span> <span class="number">25px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-all-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: Impact;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">    <span class="attribute">color</span>: aqua;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">3px</span> solid <span class="number">#222</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-all</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span><span class="selector-pseudo">:last-child</span> &#123;</span><br><span class="line">    <span class="attribute">border-right</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">color</span>: chartreuse;</span><br><span class="line">    <span class="attribute">font-family</span>: Helvetica, Verdana, sans-serif;</span><br><span class="line">    // text-transform: uppercase;</span><br><span class="line">    <span class="selector-tag">-webkit-transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">    <span class="selector-tag">-moz-transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">    <span class="selector-tag">-o-transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">    <span class="selector-tag">-ms-transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">    <span class="selector-tag">transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span><span class="selector-class">.active</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置头像和图标"><a href="#设置头像和图标" class="headerlink" title="设置头像和图标"></a>设置头像和图标</h4><p>将需要设置的头像和图标放入到 <code>hexo/source/images</code> 文件中，然后修改主题配置文件 <code>next.yml</code> 中 <code>avatar</code> 和 <code>favicon</code> 选项。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/avatar.png</span></span><br><span class="line">  <span class="comment"># 圆角显示，如果图片长宽比例差距过大，显示的是椭圆</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 方形显示</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 填写自己的图片</span><br><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;favicon.ico</span><br><span class="line">  medium: &#x2F;images&#x2F;favicon.ico</span><br><span class="line">  apple_touch_icon: &#x2F;images&#x2F;favicon.ico</span><br><span class="line">  safari_pinned_tab: &#x2F;images&#x2F;favicon.ico</span><br></pre></td></tr></table></figure>
+
+<h4 id="侧边栏社交链接"><a href="#侧边栏社交链接" class="headerlink" title="侧边栏社交链接"></a>侧边栏社交链接</h4><p>修改主题配置文件 <code>next.yml</code> 中 <code>social</code> 选项 。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/yourname</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">E-Mail:</span> <span class="string">mailto:yourname@gmail.com</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="阅读全文按钮样式"><a href="#阅读全文按钮样式" class="headerlink" title="阅读全文按钮样式"></a>阅读全文按钮样式</h4><p>next 在需要显示摘要的地方加上 <code>&lt;!--more--&gt;</code> ，就不会显示全文，在 <code>hexo/source/_data/styles.styl</code> 中写入下面内容，修改默认的 Read More 按钮样式。样式来源：<a href="http://lyxf.live/posts/2063/">点击此处查看</a> 。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// [Read More]按钮样式</span><br><span class="line"><span class="selector-class">.post-button</span> <span class="selector-class">.btn</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#555</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0px</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">0px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.35</span>);</span><br><span class="line">    <span class="attribute">border</span>: none <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">transition-property</span>: unset;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-button</span> <span class="selector-class">.btn</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>) <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0px</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">0px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.35</span>);</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">90deg</span>, #a166ab <span class="number">0%</span>, #ef4e7b <span class="number">25%</span>, #f37055 <span class="number">50%</span>, #ef4e7b <span class="number">75%</span>, #a166ab <span class="number">100%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="去掉顶部黑线"><a href="#去掉顶部黑线" class="headerlink" title="去掉顶部黑线"></a>去掉顶部黑线</h4><p>在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">  //去掉顶部黑线：</span><br><span class="line"><span class="selector-class">.headband</span> &#123;<span class="attribute">display</span>:none;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="选中颜色"><a href="#选中颜色" class="headerlink" title="选中颜色"></a>选中颜色</h4><p>修改选择文字的颜色，在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 修改选中字符的颜色</span><br><span class="line"><span class="comment">/* webkit, opera, IE9 */</span></span><br><span class="line"><span class="selector-pseudo">::selection</span> &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#06d633</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#f7f7f7</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* firefox */</span></span><br><span class="line"><span class="selector-pseudo">::-moz-selection</span> &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#06d633</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#f7f7f7</span>;    </span><br><span class="line">&#125;</span><br><span class="line">// 代码块选中颜色</span><br><span class="line"><span class="selector-class">.highlight</span> *<span class="selector-pseudo">::selection</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#06d633</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置标题栏背景图片"><a href="#设置标题栏背景图片" class="headerlink" title="设置标题栏背景图片"></a>设置标题栏背景图片</h4><p>在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 标题栏背景图片</span><br><span class="line"><span class="selector-class">.site-brand-container</span> &#123; </span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(/images/log-small.png);</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="标签页面样式"><a href="#标签页面样式" class="headerlink" title="标签页面样式"></a>标签页面样式</h4><p>在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.tag-cloud</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="number">#6f42c1</span>, <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="number">#d9534f</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">2px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">193</span>,<span class="number">66</span>,<span class="number">92</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代码行美化"><a href="#代码行美化" class="headerlink" title="代码行美化"></a>代码行美化</h4><p>在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 代码行样式</span><br><span class="line"><span class="selector-tag">code</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#555</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="近期文章"><a href="#近期文章" class="headerlink" title="近期文章"></a>近期文章</h4><p>在<code>hexo/source/_data/sidebar.swig</code> 文件中(没有则新建)，并且做以下更改：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.recent_posts %&#125;</span><br><span class="line">    &lt;div class&#x3D;&quot;links-of-blogroll motion-element &#123;&#123; &quot;links-of-blogroll-&quot; + theme.recent_posts_layout  &#125;&#125;&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;links-of-blogroll-title&quot;&gt;</span><br><span class="line">        &lt;!-- modify icon to fire by szw --&gt;</span><br><span class="line">        &lt;i class&#x3D;&quot;fa fa-history fa-&#123;&#123; theme.recent_posts_icon | lower &#125;&#125;&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">        &#123;&#123; theme.recent_posts_title &#125;&#125;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;ul class&#x3D;&quot;links-of-blogroll-list&quot;&gt;</span><br><span class="line">        &#123;% set posts &#x3D; site.posts.sort(&#39;-date&#39;).toArray() %&#125;</span><br><span class="line">        &#123;% for post in posts.slice(&#39;0&#39;, &#39;5&#39;) %&#125;</span><br><span class="line">          &lt;li&gt;</span><br><span class="line">            &lt;a href&#x3D;&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot; title&#x3D;&quot;&#123;&#123; post.title &#125;&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;&#123;&#123; post.title &#125;&#125;&lt;&#x2F;a&gt;</span><br><span class="line">          &lt;&#x2F;li&gt;</span><br><span class="line">        &#123;% endfor %&#125;</span><br><span class="line">      &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在主题的<code>_config.yml</code> 中添加了几个变量，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">recent_posts_title: 近期文章</span><br><span class="line">recent_posts_layout: block</span><br><span class="line">recent_posts: true</span><br></pre></td></tr></table></figure>
+
+<p>然后在 NexT 的配置文件 <code>next.yml</code> 中取消 <code>sidebar.swig</code> 的注释：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar: source&#x2F;_data&#x2F;sidebar.swig</span><br></pre></td></tr></table></figure>
+
+<h4 id="Hexo-页面静态资源压缩插件"><a href="#Hexo-页面静态资源压缩插件" class="headerlink" title="Hexo 页面静态资源压缩插件"></a>Hexo 页面静态资源压缩插件</h4><p>我们自己添加的 css 和 js 文件为了可读性，往往会有很多换行和空格，这些对于浏览器来说是没有用的，甚至还会降低渲染页面的速度。同时，由于 Markdown 转成 html 的 bug，会导致页面存在大量的空白，我们可以通过查看页面源代码发现这些大量的空白符，这也会造成页面渲染的性能问题。</p>
+<p>因此，我们需要对页面的静态资源进行压缩，包括 css、js 和 html 等文件。</p>
+<p>我们可以使用 <code>hexo-neat</code> 插件进行压缩。<code>hexo-neat</code> 配置简单，无需额外命令，我们只需使用原本的调试、部署命令就可以自动完成静态资源的压缩。</p>
+<p>安装 hexo-neat 插件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat --save</span><br></pre></td></tr></table></figure>
+
+<p>然后我们需要在<strong>站点</strong>配置文件<code>_config.yml</code> 中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 博文压缩</span><br><span class="line">neat_enable: true</span><br><span class="line"># 压缩html</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line"># 压缩css  </span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.css&#39;</span><br><span class="line"># 压缩js</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.js&#39;</span><br><span class="line">    - &#39;**&#x2F;jquery.fancybox.pack.js&#39;</span><br><span class="line">    - &#39;**&#x2F;index.js&#39;</span><br><span class="line">    - &#39;**&#x2F;fireworks.js&#39;</span><br></pre></td></tr></table></figure>
+
+<h4 id="文章末尾添加本文结束分割线"><a href="#文章末尾添加本文结束分割线" class="headerlink" title="文章末尾添加本文结束分割线"></a>文章末尾添加本文结束分割线</h4><p>新建 source/_data/post-body-end.swig 文件，添加内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">   &#123;% if not is_index %&#125;</span><br><span class="line">      &lt;div style&#x3D;&quot;text-align:center;color: #ccc;font-size:14px;&quot;&gt;-------------本文结束&lt;i class&#x3D;&quot;fa fa-paw&quot;&gt;&lt;&#x2F;i&gt;感谢您的阅读-------------&lt;&#x2F;div&gt;</span><br><span class="line">   &#123;% endif %&#125;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在next.yml中，去掉注释 <code>postBodyEnd: source/_data/post-body-end.swig</code></p>
+<h4 id="打字特效、鼠标点击特效"><a href="#打字特效、鼠标点击特效" class="headerlink" title="打字特效、鼠标点击特效"></a>打字特效、鼠标点击特效</h4><p>在 hexo/source/_data/文件夹下新建 body-end.swig 放入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;# 鼠标点击特效 #&#125;</span><br><span class="line">&#123;% if theme.cursor_effect &#x3D;&#x3D; &quot;fireworks&quot; %&#125;</span><br><span class="line">  &lt;script async src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;fireworks.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% elseif theme.cursor_effect &#x3D;&#x3D; &quot;explosion&quot; %&#125;</span><br><span class="line">  &lt;canvas class&#x3D;&quot;fireworks&quot; style&#x3D;&quot;position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;&quot; &gt;&lt;&#x2F;canvas&gt;</span><br><span class="line">  &lt;script src&#x3D;&quot;&#x2F;&#x2F;cdn.bootcss.com&#x2F;animejs&#x2F;2.2.0&#x2F;anime.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &lt;script async src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;explosion.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% elseif theme.cursor_effect &#x3D;&#x3D; &quot;love&quot; %&#125;</span><br><span class="line">  &lt;script async src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;love.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% elseif theme.cursor_effect &#x3D;&#x3D; &quot;text&quot; %&#125;</span><br><span class="line">  &lt;script async src&#x3D;&quot;&#x2F;js&#x2F;cursor&#x2F;text.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br><span class="line"></span><br><span class="line">&#123;# 打字特效 #&#125;</span><br><span class="line">&#123;% if theme.typing_effect %&#125;</span><br><span class="line">  &lt;script src&#x3D;&quot;&#x2F;js&#x2F;activate-power-mode.min.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">   POWERMODE.colorful &#x3D; &#123;&#123; theme.typing_effect.colorful &#125;&#125;;</span><br><span class="line">   POWERMODE.shake &#x3D; &#123;&#123; theme.typing_effect.shake &#125;&#125;;</span><br><span class="line">   document.body.addEventListener(&#39;input&#39;, POWERMODE);</span><br><span class="line">  &lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在 NexT 的配置文件 next.yml 中取消 body-end.swig 的注释：<code>bodyEnd: source/_data/body-end.swig</code>然后我们在 next.yml 中增加如下配置项：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 鼠标点击特效</span><br><span class="line"># mouse click effect: fireworks | explosion | love | text</span><br><span class="line">cursor_effect: fireworks</span><br><span class="line"></span><br><span class="line"># 打字特效</span><br><span class="line"># typing effect</span><br><span class="line">typing_effect:</span><br><span class="line">colorful: true # 礼花特效</span><br><span class="line">shake: false   # 震动特效</span><br></pre></td></tr></table></figure>
+
+<p>注意：上面所有特效的 JS 代码文件都放在站点的 source 目录下（即 hexo/source/js/）而不是主题目录下，如果没有 js 目录，则新建一个。特效js源码地址：<a href="https://tding.top/archives/58cff12b.html">Hexo-NexT 添加打字特效、鼠标点击特效</a></p>
+<p><strong><font color="red">特别注意：</font></strong></p>
+<p>我弄好后，有报错，hexo把带有“&lt;” 符号的代码生成了html标签，所以需要把loop方法的for循环改为foreach循环，还有里面的if判断也需要调整。</p>
+<h4 id="友链添加"><a href="#友链添加" class="headerlink" title="友链添加"></a>友链添加</h4><p>新建 links 页面，输入放置友链的 html 元素：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page links</span><br></pre></td></tr></table></figure>
+
+<p>这样会在 <code>/source/</code> 下创建 <code>links/index.md</code>。在文档的 <code>front matter</code> 添加 <code>type: links</code>，编辑好自己需要的友链页面内容，然后输入放置友链的 html 元素。示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 友链</span><br><span class="line">type: links</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&lt;style&gt;.links-content&#123;margin-top:1rem&#125;.link-navigation::after&#123;content:&quot; &quot;;display:block;clear:both&#125;.card&#123;width:130px;font-size:1rem;padding:0;border-radius:4px;transition-duration:.15s;margin-bottom:1rem;display:block;float:left;box-shadow:0 2px 6px 0 rgba(0,0,0,.12);background:#f5f5f5&#125;.card&#123;margin-left:16px&#125;@media(max-width:567px)&#123;.card&#123;margin-left:16px;width:calc((100% - 16px)&#x2F;2)&#125;.card:nth-child(2n+1)&#123;margin-left:0&#125;.card:not(:nth-child(2n+1))&#123;margin-left:16px&#125;&#125;@media(min-width:567px)&#123;.card&#123;margin-left:16px;width:calc((100% - 32px)&#x2F;3)&#125;.card:nth-child(3n+1)&#123;margin-left:0&#125;.card:not(:nth-child(3n+1))&#123;margin-left:16px&#125;&#125;@media(min-width:768px)&#123;.card&#123;margin-left:16px;width:calc((100% - 48px)&#x2F;4)&#125;.card:nth-child(4n+1)&#123;margin-left:0&#125;.card:not(:nth-child(4n+1))&#123;margin-left:16px&#125;&#125;@media(min-width:1200px)&#123;.card&#123;margin-left:16px;width:calc((100% - 64px)&#x2F;5)&#125;.card:nth-child(5n+1)&#123;margin-left:0&#125;.card:not(:nth-child(5n+1))&#123;margin-left:16px&#125;&#125;.card:hover&#123;transform:scale(1.1);box-shadow:0 2px 6px 0 rgba(0,0,0,.12),0 0 6px 0 rgba(0,0,0,.04)&#125;.card .thumb&#123;width:100%;height:0;padding-bottom:100%;background-size:100% 100%!important&#125;.posts-expand .post-body img&#123;margin:0;padding:0;border:0&#125;.card .card-header&#123;display:block;text-align:center;padding:1rem .25rem;font-weight:500;color:#333;white-space:normal&#125;.card .card-header a&#123;font-style:normal;color:#2bbc8a;font-weight:700;text-decoration:none;border:0&#125;.card .card-header a:hover&#123;color:#d480aa;text-decoration:none;border:0&#125;&lt;&#x2F;style&gt;&lt;div&gt;&lt;div class&#x3D;&quot;links-content&quot;&gt;&lt;div class&#x3D;&quot;link-navigation&quot; id&#x3D;&quot;links1&quot;&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">------</span><br><span class="line"></span><br><span class="line">&lt;div style&#x3D;&quot;text-align:center;&quot;&gt;&lt;span class&#x3D;&quot;with-love&quot; id&#x3D;&quot;animate1&quot;&gt;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-heart&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">  &lt;&#x2F;span&gt;留言添加友链&lt;span class&#x3D;&quot;with-love&quot; id&#x3D;&quot;animate2&quot;&gt;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-heart&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">  &lt;&#x2F;span&gt;&lt;&#x2F;div&gt;  </span><br><span class="line">------</span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">## 友链格式</span><br><span class="line">- 网站名称：旧时烟雨</span><br><span class="line">- 网站地址：[https:&#x2F;&#x2F;lhyxcqc.gitee.io](https:&#x2F;&#x2F;lhyxcqc.gitee.io)</span><br><span class="line">- 网站描述：谁能书阁下，白首太玄经</span><br><span class="line">- 网站Logo&#x2F;头像：[https:&#x2F;&#x2F;lhyxcqc.gitee.io&#x2F;tuku&#x2F;jiushiyanyu.gif](https:&#x2F;&#x2F;lhyxcqc.gitee.io&#x2F;tuku&#x2F;jiushiyanyu.gif)</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>侧边栏添加友链页面链接,主题配置文件<code>_config.yml</code> 中添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br><span class="line">  links: &#x2F;links || fa fa-link</span><br></pre></td></tr></table></figure>
+
+<p>在页面目录 <code>/source/links/</code> 中添加 <code>linklist.json</code>，示例：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[&#123;</span><br><span class="line">		&quot;nickname&quot;: &quot;小丁的个人博客&quot;,</span><br><span class="line">		&quot;avatar&quot;: &quot;https:&#x2F;&#x2F;tding.top&#x2F;images&#x2F;avatar.webp&quot;,</span><br><span class="line">		&quot;site&quot;: &quot;https:&#x2F;&#x2F;tding.top&quot;</span><br><span class="line">	&#125;,</span><br><span class="line">	&#123;</span><br><span class="line">		&quot;nickname&quot;: &quot;旧时烟雨&quot;,</span><br><span class="line">		&quot;avatar&quot;: &quot;https:&#x2F;&#x2F;lhyxcqc.gitee.io&#x2F;tuku&#x2F;jiushiyanyu.gif&quot;,</span><br><span class="line">		&quot;site&quot;: &quot;https:&#x2F;&#x2F;lhyxcqc.gitee.io&quot;</span><br><span class="line">	&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>在自定义文件 <code>body-end.swig</code> 中添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;# 友链设置 #&#125;</span><br><span class="line">&#123;% if page.type &#x3D;&#x3D;&#x3D; &#39;links&#39; %&#125;</span><br><span class="line">  &lt;script src&#x3D;&quot;&#x2F;js&#x2F;link.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&#123;% else %&#125;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>link.js</code> 内容如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">link = &#123;</span><br><span class="line">  init: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> that = <span class="built_in">this</span>;</span><br><span class="line">      <span class="comment">//这里设置的是刚才的 linklist.json 文件路径</span></span><br><span class="line">      $.getJSON(<span class="string">&quot;/links/linklist.json&quot;</span>,</span><br><span class="line">      <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">          that.render(data);</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  render: <span class="function"><span class="keyword">function</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> html, nickname, avatar, site, li = <span class="string">&quot;&quot;</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; data.length; i++) &#123;</span><br><span class="line">          nickname = data[i].nickname;</span><br><span class="line">          avatar = data[i].avatar;</span><br><span class="line">          site = data[i].site;</span><br><span class="line">          li += <span class="string">&#x27;&lt;div class=&quot;card&quot;&gt;&#x27;</span> + <span class="string">&#x27;&lt;a href=&quot;&#x27;</span> + site + <span class="string">&#x27;&quot; target=&quot;_blank&quot;&gt;&#x27;</span> + <span class="string">&#x27;&lt;div class=&quot;thumb&quot; style=&quot;background: url( &#x27;</span> + avatar + <span class="string">&#x27;);&quot;&gt;&#x27;</span> + <span class="string">&#x27;&lt;/div&gt;&#x27;</span> + <span class="string">&#x27;&lt;/a&gt;&#x27;</span> + <span class="string">&#x27;&lt;div class=&quot;card-header&quot;&gt;&#x27;</span> + <span class="string">&#x27;&lt;div&gt;&lt;a href=&quot;&#x27;</span> + site + <span class="string">&#x27;&quot; target=&quot;_blank&quot;&gt;&#x27;</span> + nickname + <span class="string">&#x27;&lt;/a&gt;&lt;/div&gt;&#x27;</span> + <span class="string">&#x27;&lt;/div&gt;&#x27;</span> + <span class="string">&#x27;&lt;/div&gt;&#x27;</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      $(<span class="string">&quot;.link-navigation&quot;</span>).append(li);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">link.init();</span><br></pre></td></tr></table></figure>
+
+<h4 id="中文翻译languages-yml"><a href="#中文翻译languages-yml" class="headerlink" title="中文翻译languages.yml"></a>中文翻译<code>languages.yml</code></h4><p>通过在 <code>hexo/source/_data/</code> 下新建数据文件 <code>languages.yml</code>，配置如下：    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zh-CN: </span><br><span class="line">  menu:</span><br><span class="line">    home: 首页</span><br><span class="line">    archives: 归档</span><br><span class="line">    categories: 分类</span><br><span class="line">    tags: 标签</span><br><span class="line">    about: 关于</span><br><span class="line">    links: 友情链接</span><br><span class="line">    search: 搜索</span><br><span class="line">    schedule: 日程表</span><br><span class="line">    sitemap: 站点地图</span><br><span class="line">    commonweal: 公益 404</span><br><span class="line"></span><br><span class="line">  reward:</span><br><span class="line">    donate: &lt;i class&#x3D;&quot;fa fa-qrcode fa-2x&quot; style&#x3D;&quot;line-height:35px;&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    wechatpay: 微信支付</span><br><span class="line">    alipay: 支付宝</span><br><span class="line">    bitcoin: 比特币</span><br></pre></td></tr></table></figure>
+
+<h4 id="置顶文章标志"><a href="#置顶文章标志" class="headerlink" title="置顶文章标志"></a>置顶文章标志</h4><p>首先我们需要安装 <code>hexo-generator-index-pin-top</code> 这个插件:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+
+<p>然后将以下代码放入 <code>hexo/source/_data/post-meta.swig</code> 文件</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if post.top %&#125;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;i class&#x3D;&quot;fa fa-thumbtack&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">    &lt;font color&#x3D;7D26CD&gt;置顶&lt;&#x2F;font&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;post-meta-divider&quot;&gt;|&lt;&#x2F;span&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在 NexT 的配置文件 <code>next.yml</code> 中取消 <code>post-meta.swig</code> 的注释：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">post-meta: source&#x2F;_data&#x2F;post-meta.swig</span><br></pre></td></tr></table></figure>
+
+<p>然后在需要置顶的文章的 <code>Front-matter</code> 中加上 <code>top: true</code> 或者 <code>top: 任意数字</code>，比如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: hexo配置</span><br><span class="line">tags: hexo</span><br><span class="line">categories: hexo配置</span><br><span class="line">abbrlink: 7e380af2</span><br><span class="line">date: 2020-09-13 13:20:03</span><br><span class="line">top: 100</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：top 中数字越大，文章越靠前</strong>。                </p>
+<h4 id="canvas-粒子时钟引入"><a href="#canvas-粒子时钟引入" class="headerlink" title="canvas 粒子时钟引入"></a>canvas 粒子时钟引入</h4><p>只需要把粒子时钟的 js 代码直接放入到 <code>hexo/source/_data/sidebar.swig</code> 文件即可。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;&quot;&gt;</span><br><span class="line">  &lt;canvas id&#x3D;&quot;canvas&quot; style&#x3D;&quot;width:60%;&quot;&gt;当前浏览器不支持canvas，请更换浏览器后再试&lt;&#x2F;canvas&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">(function()&#123;</span><br><span class="line"></span><br><span class="line">   var digit&#x3D;</span><br><span class="line">    [</span><br><span class="line">        [</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,1,1,0,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,0,1,1,0],</span><br><span class="line">            [0,0,1,1,1,0,0]</span><br><span class="line">        ],&#x2F;&#x2F;0</span><br><span class="line">        [</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,1,1,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [1,1,1,1,1,1,1]</span><br><span class="line">        ],&#x2F;&#x2F;1</span><br><span class="line">        [</span><br><span class="line">            [0,1,1,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,1,1,0,0,0,0],</span><br><span class="line">            [1,1,0,0,0,0,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,1,1,1,1,1]</span><br><span class="line">        ],&#x2F;&#x2F;2</span><br><span class="line">        [</span><br><span class="line">            [1,1,1,1,1,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0]</span><br><span class="line">        ],&#x2F;&#x2F;3</span><br><span class="line">        [</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,1,0],</span><br><span class="line">            [0,0,1,1,1,1,0],</span><br><span class="line">            [0,1,1,0,1,1,0],</span><br><span class="line">            [1,1,0,0,1,1,0],</span><br><span class="line">            [1,1,1,1,1,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,1,1]</span><br><span class="line">        ],&#x2F;&#x2F;4</span><br><span class="line">        [</span><br><span class="line">            [1,1,1,1,1,1,1],</span><br><span class="line">            [1,1,0,0,0,0,0],</span><br><span class="line">            [1,1,0,0,0,0,0],</span><br><span class="line">            [1,1,1,1,1,1,0],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0]</span><br><span class="line">        ],&#x2F;&#x2F;5</span><br><span class="line">        [</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,1,1,0,0,0,0],</span><br><span class="line">            [1,1,0,0,0,0,0],</span><br><span class="line">            [1,1,0,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0]</span><br><span class="line">        ],&#x2F;&#x2F;6</span><br><span class="line">        [</span><br><span class="line">            [1,1,1,1,1,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0],</span><br><span class="line">            [0,0,1,1,0,0,0]</span><br><span class="line">        ],&#x2F;&#x2F;7</span><br><span class="line">        [</span><br><span class="line">            [0,1,1,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,1,1,0]</span><br><span class="line">        ],&#x2F;&#x2F;8</span><br><span class="line">        [</span><br><span class="line">            [0,1,1,1,1,1,0],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [1,1,0,0,0,1,1],</span><br><span class="line">            [0,1,1,1,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,0,1,1],</span><br><span class="line">            [0,0,0,0,1,1,0],</span><br><span class="line">            [0,0,0,1,1,0,0],</span><br><span class="line">            [0,1,1,0,0,0,0]</span><br><span class="line">        ],&#x2F;&#x2F;9</span><br><span class="line">        [</span><br><span class="line">            [0,0,0,0,0,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,0,0,0,0,0],</span><br><span class="line">            [0,0,0,0,0,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,1,1,1,0,0],</span><br><span class="line">            [0,0,0,0,0,0,0]</span><br><span class="line">        ]&#x2F;&#x2F;:</span><br><span class="line">    ];</span><br><span class="line"></span><br><span class="line">var canvas &#x3D; document.getElementById(&#39;canvas&#39;);</span><br><span class="line"></span><br><span class="line">if(canvas.getContext)&#123;</span><br><span class="line">    var cxt &#x3D; canvas.getContext(&#39;2d&#39;);</span><br><span class="line">    &#x2F;&#x2F;声明canvas的宽高</span><br><span class="line">    var H &#x3D; 100,W &#x3D; 700;</span><br><span class="line">    canvas.height &#x3D; H;</span><br><span class="line">    canvas.width &#x3D; W;</span><br><span class="line">    cxt.fillStyle &#x3D; &#39;#f00&#39;;</span><br><span class="line">    cxt.fillRect(10,10,50,50);</span><br><span class="line"></span><br><span class="line">    &#x2F;&#x2F;存储时间数据</span><br><span class="line">    var data &#x3D; [];</span><br><span class="line">    &#x2F;&#x2F;存储运动的小球</span><br><span class="line">    var balls &#x3D; [];</span><br><span class="line">    &#x2F;&#x2F;设置粒子半径</span><br><span class="line">    var R &#x3D; canvas.height&#x2F;20-1;</span><br><span class="line">    (function()&#123;</span><br><span class="line">        var temp &#x3D; &#x2F;(\d)(\d):(\d)(\d):(\d)(\d)&#x2F;.exec(new Date());</span><br><span class="line">        &#x2F;&#x2F;存储时间数字，由十位小时、个位小时、冒号、十位分钟、个位分钟、冒号、十位秒钟、个位秒钟这7个数字组成</span><br><span class="line">        data.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);</span><br><span class="line">    &#125;)();</span><br><span class="line"></span><br><span class="line">    &#x2F;*生成点阵数字*&#x2F;</span><br><span class="line">    function renderDigit(index,num)&#123;</span><br><span class="line">        for(var i &#x3D; 0; i &lt; digit[num].length; i++)&#123;</span><br><span class="line">            for(var j &#x3D; 0; j &lt; digit[num][i].length; j++)&#123;</span><br><span class="line">                if(digit[num][i][j] &#x3D;&#x3D; 1)&#123;</span><br><span class="line">                    cxt.beginPath();</span><br><span class="line">                    cxt.arc(14*(R+2)*index + j*2*(R+1)+(R+1),i*2*(R+1)+(R+1),R,0,2*Math.PI);</span><br><span class="line">                    cxt.closePath();</span><br><span class="line">                    cxt.fill();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*更新时钟*&#x2F;</span><br><span class="line">    function updateDigitTime()&#123;</span><br><span class="line">        var changeNumArray &#x3D; [];</span><br><span class="line">        var temp &#x3D; &#x2F;(\d)(\d):(\d)(\d):(\d)(\d)&#x2F;.exec(new Date());</span><br><span class="line">        var NewData &#x3D; [];</span><br><span class="line">        NewData.push(temp[1],temp[2],10,temp[3],temp[4],10,temp[5],temp[6]);</span><br><span class="line">        for(var i &#x3D; data.length-1; i &gt;&#x3D;0 ; i--)&#123;</span><br><span class="line">            &#x2F;&#x2F;时间发生变化</span><br><span class="line">            if(NewData[i] !&#x3D;&#x3D; data[i])&#123;</span><br><span class="line">                &#x2F;&#x2F;将变化的数字值和在data数组中的索引存储在changeNumArray数组中</span><br><span class="line">                changeNumArray.push(i+&#39;_&#39;+(Number(data[i])+1)%10);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;增加小球</span><br><span class="line">        for(var i &#x3D; 0; i&lt; changeNumArray.length; i++)&#123;</span><br><span class="line">            addBalls.apply(this,changeNumArray[i].split(&#39;_&#39;));</span><br><span class="line">        &#125;</span><br><span class="line">        data &#x3D; NewData.concat();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*更新小球状态*&#x2F;</span><br><span class="line">    function updateBalls()&#123;</span><br><span class="line">        for(var i &#x3D; 0; i &lt; balls.length; i++)&#123;</span><br><span class="line">            balls[i].stepY +&#x3D; balls[i].disY;</span><br><span class="line">            balls[i].x +&#x3D; balls[i].stepX;</span><br><span class="line">            balls[i].y +&#x3D; balls[i].stepY;</span><br><span class="line">            if(balls[i].x &gt; W + R || balls[i].y &gt; H + R)&#123;</span><br><span class="line">                balls.splice(i,1);</span><br><span class="line">                i--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*增加要运动的小球*&#x2F;</span><br><span class="line">    function addBalls(index,num)&#123;</span><br><span class="line">        var numArray &#x3D; [1,2,3];</span><br><span class="line">        var colorArray &#x3D;  [&quot;#3BE&quot;,&quot;#09C&quot;,&quot;#A6C&quot;,&quot;#93C&quot;,&quot;#9C0&quot;,&quot;#690&quot;,&quot;#FB3&quot;,&quot;#F80&quot;,&quot;#F44&quot;,&quot;#C00&quot;];</span><br><span class="line">        for(var i &#x3D; 0; i &lt; digit[num].length; i++)&#123;</span><br><span class="line">            for(var j &#x3D; 0; j &lt; digit[num][i].length; j++)&#123;</span><br><span class="line">                if(digit[num][i][j] &#x3D;&#x3D; 1)&#123;</span><br><span class="line">                    var ball &#x3D; &#123;</span><br><span class="line">                        x:14*(R+2)*index + j*2*(R+1)+(R+1),</span><br><span class="line">                        y:i*2*(R+1)+(R+1),</span><br><span class="line">                        stepX:Math.floor(Math.random() * 4 -2),</span><br><span class="line">                        stepY:-2*numArray[Math.floor(Math.random()*numArray.length)],</span><br><span class="line">                        color:colorArray[Math.floor(Math.random()*colorArray.length)],</span><br><span class="line">                        disY:1</span><br><span class="line">                    &#125;;</span><br><span class="line">                    balls.push(ball);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#x2F;*渲染*&#x2F;</span><br><span class="line">    function render()&#123;</span><br><span class="line">        &#x2F;&#x2F;重置画布宽度，达到清空画布的效果</span><br><span class="line">        canvas.height &#x3D; 100;</span><br><span class="line">        &#x2F;&#x2F;渲染时钟</span><br><span class="line">        for(var i &#x3D; 0; i &lt; data.length; i++)&#123;</span><br><span class="line">            renderDigit(i,data[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        &#x2F;&#x2F;渲染小球</span><br><span class="line">        for(var i &#x3D; 0; i &lt; balls.length; i++)&#123;</span><br><span class="line">            cxt.beginPath();</span><br><span class="line">            cxt.arc(balls[i].x,balls[i].y,R,0,2*Math.PI);</span><br><span class="line">            cxt.fillStyle &#x3D; balls[i].color;</span><br><span class="line">            cxt.closePath();</span><br><span class="line">            cxt.fill();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    clearInterval(oTimer);</span><br><span class="line">    var oTimer &#x3D; setInterval(function()&#123;</span><br><span class="line">        &#x2F;&#x2F;更新时钟</span><br><span class="line">        updateDigitTime();</span><br><span class="line">        &#x2F;&#x2F;更新小球状态</span><br><span class="line">        updateBalls();</span><br><span class="line">        &#x2F;&#x2F;渲染</span><br><span class="line">        render();</span><br><span class="line">    &#125;,50);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;)();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>/themes/next/source/css/_custom/custom.styl</code> 添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 粒子时钟样式</span><br><span class="line">.site-overview &#123;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line">canvas#canvas &#123;</span><br><span class="line">  margin-top: 20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Hexo-部署插件"><a href="#Hexo-部署插件" class="headerlink" title="Hexo 部署插件"></a>Hexo 部署插件</h4><p>地址:<a href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后修改站点配置文件<code>_config.yml</code> 中的配置：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:dta0502&#x2F;dta0502.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>然后输入命令 <code>hexo d</code> 就可部署到github,gitee同理</p>
 ]]></content>
       <categories>
-        <category>Markdown学习</category>
+        <category>Hexo+Next部署</category>
       </categories>
       <tags>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>windows10下升级node.js</title>
-    <url>/posts/d9d9debd.html</url>
-    <content><![CDATA[<p>最近升级了hexo5.1版本，但node.js版本太低，各种报错。。。</p>
-<p>所以网上找了很多升级node.js版本的方法，都不行。</p>
-<p>最后看了 <a href="https://www.cnblogs.com/lijjj/p/12097234.html">https://www.cnblogs.com/lijjj/p/12097234.html</a> 这篇文章：</p>
-<a id="more"></a>
-
-<p>第一步：node -v查看node.js版本</p>
-<p>第二步:   npm -v 查看npm包管理器的版本</p>
-<p>第三步：打开cmd查看你之前node版本安装的路径，where node</p>
-<p>第四步：直接去<a href="https://nodejs.org/zh-cn/">官网</a>下载与你电脑系统（32位还是64位）对应的最新的mis版本,安装在上述路径中覆盖即可。</p>
-<p>第五步：node -v,发现更新到最新版本了。</p>
-<p>然后ok了。</p>
-]]></content>
-      <categories>
-        <category>nodejs升级</category>
-      </categories>
-      <tags>
-        <tag>node.js</tag>
+        <tag>Hexo</tag>
+        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
@@ -211,7 +324,7 @@
 
 <h4 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h4><p>​    frp下载地址：<a href="https://github.com/fatedier/frp/releases">https://github.com/fatedier/frp/releases</a></p>
 <p>​    下载后有frps开头的是服务端文件，frpc是客户端文件，如下：</p>
-<p>​    <img src="https://lhyxcqc.gitee.io/tuku/mdImages/frp/frp%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.png"></p>
+<p>​    <img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/frp/frp%E6%96%87%E4%BB%B6%E5%A4%B9%E8%AF%B4%E6%98%8E.png"></p>
 <h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><h5 id="1-服务端配置"><a href="#1-服务端配置" class="headerlink" title="1.服务端配置"></a>1.服务端配置</h5><p>frps.ini</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port &#x3D; 7000</span><br></pre></td></tr></table></figure>
 
@@ -246,385 +359,63 @@
       </tags>
   </entry>
   <entry>
-    <title>C++基本语法</title>
-    <url>/posts/3d38490d.html</url>
-    <content><![CDATA[<h3 id="C-基本语法"><a href="#C-基本语法" class="headerlink" title="C++ 基本语法"></a>C++ 基本语法</h3><p>C++ 程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。现在让我们简要地看一下什么是类、对象，方法、即时变量。  </p>
-<a id="more"></a>
-
-<ul>
-<li><strong>对象</strong> - 对象具有状态和行为。例如：一只狗的状态 - 颜色、名称、品种，行为 - 摇动、叫唤、吃。对象是类的实例。</li>
-<li><strong>类</strong> - 类可以定义为描述对象行为/状态的模板/蓝图。</li>
-<li><strong>方法</strong> - 从基本上说，一个方法表示一种行为。一个类可以包含多个方法。可以在方法中写入逻辑、操作数据以及执行所有的动作。</li>
-<li>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</li>
-</ul>
-<h3 id="C-程序结构"><a href="#C-程序结构" class="headerlink" title="C++ 程序结构"></a>C++ 程序结构</h3><p>让我们看一段简单的代码，可以输出单词 Hello World。</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">// main() 是程序开始执行的地方</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Hello World&quot;</span>; <span class="comment">// 输出 Hello World</span></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>CSS学习</title>
+    <url>/posts/238675c9.html</url>
+    <content><![CDATA[<p>怎么让两个Div并排显示：</p>
+<p>一、使用display的inline属性</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;aaa&lt;&#x2F;div&gt;</span><br><span class="line">&lt;div style&#x3D;&quot;width:300px;height:auto;float:left;display:inline;&quot;&gt;bbb&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
 
 
-<p>接下来我们讲解一下上面这段程序：</p>
-<ul>
-<li>C++ 语言定义了一些头文件，这些头文件包含了程序中必需的或有用的信息。上面这段程序中，包含了头文件 <iostream>。</iostream></li>
-<li>下一行 using namespace std; 告诉编译器使用 std 命名空间。命名空间是 C++ 中一个相对新的概念。</li>
-<li>下一行 // main() 是程序开始执行的地方 是一个单行注释。单行注释以 // 开头，在行末结束。</li>
-<li>下一行 int main() 是主函数，程序从这里开始执行。</li>
-<li>下一行 cout &lt;&lt; “Hello World”; 会在屏幕上显示消息 “Hello World”。</li>
-<li>下一行 return 0; 终止 main( )函数，并向调用进程返回值 0。</li>
-</ul>
-<h3 id="编译-amp-执行-C-程序"><a href="#编译-amp-执行-C-程序" class="headerlink" title="编译 &amp; 执行 C++ 程序"></a>编译 &amp; 执行 C++ 程序</h3><p>接下来让我们看看如何把源代码保存在一个文件中，以及如何编译并运行它。下面是简单的步骤：   </p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">$ g++ hello.cpp</span><br><span class="line">$ ./a.out</span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure>
-<hr>
-<p>请确保您的路径中已包含 g++ 编译器，并确保在包含源文件 hello.cpp 的目录中运行它。</p>
-<p>您也可以使用 makefile 来编译 C/C++ 程序。</p>
-<p>在 C++ 中，分号是语句结束符。也就是说，每个语句必须以分号结束。它表明一个逻辑实体的结束。</p>
-<p>例如，下面是三个不同的语句  ：    </p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">x = y;</span><br><span class="line">y = y+<span class="number">1</span>;</span><br><span class="line">add(x, y);</span><br></pre></td></tr></table></figure>
-<p>等同于<br><code>x = y; y = y+1; add(x, y);</code></p>
-<h3 id="C-标识符"><a href="#C-标识符" class="headerlink" title="C++ 标识符"></a>C++ 标识符</h3><p>C++ 标识符是用来标识变量、函数、类、模块，或任何其他用户自定义项目的名称。一个标识符以字母 A-Z 或 a-z 或下划线 _ 开始，后跟零个或多个字母、下划线和数字（0-9）。<br>C++ 标识符内不允许出现标点字符，比如 @、&amp; 和 %。C++ 是区分大小写的编程语言。因此，在 C++ 中，Manpower 和 manpower 是两个不同的标识符。<br>下面列出几个有效的标识符：</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">mohd       zara    abc   move_name  a_123</span><br><span class="line">myname50   _temp   j     a23b9      retVal  </span><br></pre></td></tr></table></figure>
-<h3 id="C-关键字"><a href="#C-关键字" class="headerlink" title="C++ 关键字"></a>C++ 关键字</h3><p>下表列出了 C++ 中的保留字。这些保留字不能作为常量名、变量名或其他标识符名称。</p>
+
 ]]></content>
       <categories>
-        <category>C++学习</category>
+        <category>CSS学习</category>
       </categories>
       <tags>
-        <tag>C++</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
   <entry>
-    <title>C++环境配置</title>
-    <url>/posts/21965769.html</url>
-    <content><![CDATA[<h1 id="C-环境配置"><a href="#C-环境配置" class="headerlink" title="C++环境配置"></a>C++环境配置</h1><hr>
-<h2 id="本地环境设置"><a href="#本地环境设置" class="headerlink" title="本地环境设置"></a>本地环境设置</h2><p>如果您想要设置 C++ 语言环境，您需要确保电脑上有以下两款可用的软件，文本编辑器和 C++ 编译器。</p>
+    <title>windows10下升级node.js</title>
+    <url>/posts/d9d9debd.html</url>
+    <content><![CDATA[<p>最近升级了hexo5.1版本，但node.js版本太低，各种报错。。。</p>
+<p>所以网上找了很多升级node.js版本的方法，都不行。</p>
+<p>最后看了 <a href="https://www.cnblogs.com/lijjj/p/12097234.html">https://www.cnblogs.com/lijjj/p/12097234.html</a> 这篇文章：</p>
 <a id="more"></a>
 
-<hr>
-<h2 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h2><p>这将用于输入您的程序。文本编辑器包括 Windows Notepad、OS Edit command、Brief、Epsilon、EMACS 和 vim/vi。</p>
-<p>文本编辑器的名称和版本在不同的操作系统上可能会有所不同。例如，Notepad 通常用于 Windows 操作系统上，vim/vi 可用于 Windows 和 Linux/UNIX 操作系统上。</p>
-<p>通过编辑器创建的文件通常称为源文件，源文件包含程序源代码。C++ 程序的源文件通常使用扩展名 .cpp、.cp 或 .c。</p>
-<p>在开始编程之前，请确保您有一个文本编辑器，且有足够的经验来编写一个计算机程序，然后把它保存在一个文件中，编译并执行它。  </p>
-<hr>
-<h2 id="C-编译器"><a href="#C-编译器" class="headerlink" title="C++ 编译器"></a>C++ 编译器</h2><p>写在源文件中的源代码是人类可读的源。它需要”编译”，转为机器语言，这样 CPU 可以按给定指令执行程序。</p>
-<p>C++ 编译器用于把源代码编译成最终的可执行程序。</p>
-<p>大多数的 C++ 编译器并不在乎源文件的扩展名，但是如果您未指定扩展名，则默认使用 .cpp。</p>
-<p>最常用的免费可用的编译器是 GNU 的 C/C++ 编译器，如果您使用的是 HP 或 Solaris，则可以使用各自操作系统上的编译器。</p>
-<p>以下部分将指导您如何在不同的操作系统上安装 GNU 的 C/C++ 编译器。这里同时提到 C/C++，主要是因为 GNU 的 gcc 编译器适合于 C 和 C++ 编程语言。</p>
-<h2 id="安装-GNU-的-C-C-编译器"><a href="#安装-GNU-的-C-C-编译器" class="headerlink" title="安装 GNU 的 C/C++ 编译器"></a>安装 GNU 的 C/C++ 编译器</h2><h3 id="UNIX-Linux-上的安装"><a href="#UNIX-Linux-上的安装" class="headerlink" title="UNIX/Linux 上的安装"></a>UNIX/Linux 上的安装</h3><p>如果您使用的是 Linux 或 UNIX，请在命令行使用下面的命令来检查您的系统上是否安装了 GCC：  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ -v</span><br></pre></td></tr></table></figure>
-
-<p>如果您的计算机上已经安装了 GNU 编译器，则会显示如下消息：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Using built-in specs.</span><br><span class="line">Target: i386-redhat-linux</span><br><span class="line">Configured with: ..&#x2F;configure --prefix&#x3D;&#x2F;usr .......</span><br><span class="line">Thread model: posix</span><br><span class="line">gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)</span><br></pre></td></tr></table></figure>
-
-<p>如果未安装 GCC，那么请按照 <a href="http://gcc.gnu.org/install/">http://gcc.gnu.org/install/</a> 上的详细说明安装 GCC。</p>
-<h3 id="Mac-OS-X-上的安装"><a href="#Mac-OS-X-上的安装" class="headerlink" title="Mac OS X 上的安装"></a>Mac OS X 上的安装</h3><p>如果您使用的是 Mac OS X，最快捷的获取 GCC 的方法是从苹果的网站上下载 Xcode 开发环境，并按照安装说明进行安装。一旦安装上 Xcode，您就能使用 GNU 编译器。</p>
-<p>Xcode 目前可从 <a href="https://developer.apple.com/download">https://developer.apple.com/download</a> 上下载，需要使用 apple ID 登录 。</p>
-<h3 id="Windows-上的安装"><a href="#Windows-上的安装" class="headerlink" title="Windows 上的安装"></a>Windows 上的安装</h3><p>为了在 Windows 上安装 GCC，您需要安装 MinGW。为了安装 MinGW，请访问 MinGW 的主页 <a href="http://www.mingw.org/">www.mingw.org</a>，进入 MinGW 下载页面，下载最新版本的 MinGW 安装程序，命名格式为 MinGW-<version>.exe。</version></p>
-<p>当安装 MinGW 时，您至少要安装 gcc-core、gcc-g++、binutils 和 MinGW runtime，但是一般情况下都会安装更多其他的项。</p>
-<p>添加您安装的 MinGW 的 bin 子目录到您的 PATH 环境变量中，这样您就可以在命令行中通过简单的名称来指定这些工具。</p>
-<p>当完成安装时，您可以从 Windows 命令行上运行 gcc、g++、ar、ranlib、dlltool 和其他一些 GNU 工具。</p>
-<hr>
-<h2 id="使用-Visual-Studio-Graphical-Interface-编译"><a href="#使用-Visual-Studio-Graphical-Interface-编译" class="headerlink" title="使用 Visual Studio (Graphical Interface) 编译"></a>使用 Visual Studio (Graphical Interface) 编译</h2><p>1、下载及安装 <a href="https://www.visualstudio.com/">Visual Studio Community 2015</a>。<br>2、打开 Visual Studio Community<br>3、点击 File -&gt; New -&gt; Project<br><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/vsAddNewProject.png"><br>4、左侧列表选择 Templates -&gt; Visual C++ -&gt; Win32 Console Application，并设置项目名为 MyFirstProgram。<br><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/ChooseVC++Template.png"><br>5、点击 OK。<br>6、在以下窗口中点击 Next<br><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/Win32ApplicationNext.png"><br>7、在弹出的窗口中选择 Empty project 选项后，点击 Finish 按钮：<br>8、右击文件夹 Source File 并点击 Add –&gt; New Item… :<br><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/AddNewItem.png"><br>9、选择 C++ File 然后设置文件名为 main.cpp，然后点击 Add：<br><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/ChooseVC++File.png"><br>10、拷贝以下代码到 main.cpp 中：  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    std::cout &lt;&lt; &quot;Hello World!\n&quot;;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>界面如下所示：<br><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/10%E7%95%8C%E9%9D%A2.png"><br>11、点击菜单上的 Debug -&gt; Start Without Debugging (或按下 ctrl + F5) :<br><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/11%E8%BF%90%E8%A1%8C.png"><br>12、完成以上操作后，你可以看到以下输出：<br><img src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/12%E8%BE%93%E5%87%BA%E7%AA%97%E5%8F%A3.png"></p>
-<hr>
-<h2 id="g-应用说明"><a href="#g-应用说明" class="headerlink" title="g++ 应用说明"></a>g++ 应用说明</h2><p>程序 g++ 是将 gcc 默认语言设为 C++ 的一个特殊的版本，链接时它自动使用 C++ 标准库而不用 C 标准库。通过遵循源码的命名规范并指定对应库的名字，用 gcc 来编译链接 C++ 程序是可行的，如下例所示：  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ gcc main.cpp -lstdc++ -o main</span><br></pre></td></tr></table></figure>
-<p>下面是一个保存在文件 helloworld.cpp 中一个简单的 C++ 程序的代码：  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>最简单的编译方式：  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ helloworld.cpp</span><br></pre></td></tr></table></figure>
-<p>由于命令行中未指定可执行程序的文件名，编译器采用默认的 a.out。程序可以这样来运行：  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;a.out</span><br><span class="line">Hello, world!</span><br></pre></td></tr></table></figure>
-<p>通常我们使用 -o 选项指定可执行程序的文件名，以下实例生成一个 helloworld 的可执行文件：  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ helloworld.cpp -o helloworld</span><br></pre></td></tr></table></figure>
-<p>执行 helloworld:  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;helloworld</span><br><span class="line">Hello, world!</span><br></pre></td></tr></table></figure>
-<p>如果是多个 C++ 代码文件，如 runoob1.cpp、runoob2.cpp，编译命令如下：  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ runoob1.cpp runoob2.cpp -o runoob</span><br></pre></td></tr></table></figure>
-<p>生成一个 runoob 可执行文件。<br>g++ 有些系统默认是使用 C++98，我们可以指定使用 C++11 来编译 main.cpp 文件：  </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">g++ -g -Wall -std&#x3D;c++11 main.cpp</span><br></pre></td></tr></table></figure>
-<h2 id="g-常用命令选项"><a href="#g-常用命令选项" class="headerlink" title="g++ 常用命令选项"></a>g++ 常用命令选项</h2><table>
-<thead>
-<tr>
-<th>选项</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-ansi</td>
-<td>只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。</td>
-</tr>
-<tr>
-<td>-c</td>
-<td>只编译并生成目标文件。</td>
-</tr>
-<tr>
-<td>-DMACRO</td>
-<td>以字符串”1”定义 MACRO 宏。</td>
-</tr>
-<tr>
-<td>-DMACRO=DEFN</td>
-<td>以字符串”DEFN”定义 MACRO 宏。</td>
-</tr>
-<tr>
-<td>-E</td>
-<td>只运行 C 预编译器。</td>
-</tr>
-<tr>
-<td>-g</td>
-<td>生成调试信息。GNU 调试器可利用该信息。</td>
-</tr>
-<tr>
-<td>-IDIRECTORY</td>
-<td>指定额外的头文件搜索路径DIRECTORY。</td>
-</tr>
-<tr>
-<td>-LDIRECTORY</td>
-<td>指定额外的函数库搜索路径DIRECTORY。</td>
-</tr>
-<tr>
-<td>-lLIBRARY</td>
-<td>连接时搜索指定的函数库LIBRARY。</td>
-</tr>
-<tr>
-<td>-m486</td>
-<td>针对 486 进行代码优化。</td>
-</tr>
-<tr>
-<td>-o    FILE</td>
-<td>生成指定的输出文件。用在生成可执行文件时。</td>
-</tr>
-<tr>
-<td>-O0</td>
-<td>不进行优化处理。</td>
-</tr>
-<tr>
-<td>-O</td>
-<td>或 -O1 优化生成代码。</td>
-</tr>
-<tr>
-<td>-O2</td>
-<td>进一步优化。</td>
-</tr>
-<tr>
-<td>-O3</td>
-<td>比 -O2 更进一步优化，包括 inline 函数。</td>
-</tr>
-<tr>
-<td>-shared</td>
-<td>生成共享目标文件。通常用在建立共享库时。</td>
-</tr>
-<tr>
-<td>-static</td>
-<td>禁止使用共享连接。</td>
-</tr>
-<tr>
-<td>-UMACRO</td>
-<td>取消对 MACRO 宏的定义。</td>
-</tr>
-<tr>
-<td>-w</td>
-<td>不生成任何警告信息。</td>
-</tr>
-<tr>
-<td>-Wall</td>
-<td>生成所有警告信息。</td>
-</tr>
-</tbody></table>
+<p>第一步：node -v查看node.js版本</p>
+<p>第二步:   npm -v 查看npm包管理器的版本</p>
+<p>第三步：打开cmd查看你之前node版本安装的路径，where node</p>
+<p>第四步：直接去<a href="https://nodejs.org/zh-cn/">官网</a>下载与你电脑系统（32位还是64位）对应的最新的mis版本,安装在上述路径中覆盖即可。</p>
+<p>第五步：node -v,发现更新到最新版本了。</p>
+<p>然后ok了。</p>
 ]]></content>
       <categories>
-        <category>C++学习</category>
+        <category>nodejs升级</category>
       </categories>
       <tags>
-        <tag>C++</tag>
+        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
-    <title>C#特性学习之一</title>
-    <url>/posts/b26f4754.html</url>
-    <content><![CDATA[<blockquote>
-<h3 id="C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"><a href="#C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber" class="headerlink" title="C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"></a><strong>C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber</strong></h3></blockquote>
-<p>在开发中经常会写个公有静态类记录日志，如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;      </span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes the error.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message)  </span><br><span class="line">&#123;                                </span><br><span class="line">    _log4Net.Error(message);     </span><br><span class="line">&#125; </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-<p>如果想区分调用来源就比较麻烦了。在.Net 4.5中引入了三个Attribute：CallerMemberName、CallerFilePath和CallerLineNumber 。在编译器的配合下，分别可以获取到调用函数（准确讲应该是成员）名称，调用文件及调用行号。这时可以把方法改成：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes an error level logging message.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message,</span><br><span class="line">[CallerMemberName] string memberName &#x3D; &quot;&quot;,</span><br><span class="line">[CallerFilePath] string sourceFilePath &#x3D; &quot;&quot;,</span><br><span class="line">[CallerLineNumber] int sourceLineNumber &#x3D; 0)</span><br><span class="line">&#123;</span><br><span class="line">    _log4Net.ErrorFormat(&quot;文件:&#123;0&#125; 行号:&#123;1&#125; 方法名:&#123;2&#125;,消息:&#123;3&#125;&quot;, sourceFilePath, sourceLineNumber, memberName, message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这样就可以区分调用来源了。另外，在构造函数，析构函数、属性等特殊的地方调用CallerMemberName属性所标记的函数时，获取的值有所不同，其取值如下表所示：</p>
-<table>
-<thead>
-<tr>
-<th>调用的地方</th>
-<th>CallerMemberName获取的结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>方法、属性或事件</td>
-<td>方法，属性或事件的名称</td>
-</tr>
-<tr>
-<td>构造函数</td>
-<td>字符串 “.ctor”</td>
-</tr>
-<tr>
-<td>静态构造函数</td>
-<td>字符串 “.cctor”</td>
-</tr>
-<tr>
-<td>析构函数</td>
-<td>该字符串 “Finalize”</td>
-</tr>
-<tr>
-<td>用户定义的运算符或转换</td>
-<td>生成的名称成员，例如， “op_Addition”。</td>
-</tr>
-<tr>
-<td>特性构造函数</td>
-<td>特性所应用的成员的名称</td>
-</tr>
-</tbody></table>
-<p>参考链接：<br><a href="https://www.cnblogs.com/TianFang/p/3381484.html">使用CallerMemberName简化InotifyPropertyChanged的实现</a><br><a href="https://www.cnblogs.com/TianFang/archive/2012/08/19/2646146.html">C# 5.0中新增特性</a></p>
-<p>原文：<br><a href="https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&utm_medium=referral">https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
-]]></content>
-      <categories>
-        <category>csharp学习</category>
-      </categories>
-      <tags>
-        <tag>csharp</tag>
-        <tag>csharp特性</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++简介</title>
-    <url>/posts/920fd15b.html</url>
-    <content><![CDATA[<p>C++ 是一种静态类型的、编译式的、通用的、大小写敏感的、不规则的编程语言，支持过程化编程、面向对象编程和泛型编程。  </p>
-<p>C++ 被认为是一种中级语言，它综合了高级语言和低级语言的特点。  </p>
+    <title>Hello World</title>
+    <url>/posts/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <a id="more"></a>
 
-<p>C++ 是由 Bjarne Stroustrup 于 1979 年在新泽西州美利山贝尔实验室开始设计开发的。C++ 进一步扩充和完善了 C 语言，最初命名为带类的C，后来在 1983 年更名为 C++。  </p>
-<p>C++ 是 C 的一个超集，事实上，任何合法的 C 程序都是合法的 C++ 程序。<br>注意：使用静态类型的编程语言是在编译时执行类型检查，而不是在运行时执行类型检查。</p>
-<h1 id="面向对象程序设计"><a href="#面向对象程序设计" class="headerlink" title="面向对象程序设计"></a>面向对象程序设计</h1><p>C++ 完全支持面向对象的程序设计，包括面向对象开发的四大特性：  </p>
-<ul>
-<li>封装</li>
-<li>抽象</li>
-<li>继承</li>
-<li>多态</li>
-</ul>
-<h1 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h1><p>标准的 C++ 由三个重要部分组成：  </p>
-<ul>
-<li>核心语言，提供了所有构件块，包括变量、数据类型和常量，等等。</li>
-<li>C++ 标准库，提供了大量的函数，用于操作文件、字符串等。</li>
-<li>标准模板库（STL），提供了大量的方法，用于操作数据结构等。</li>
-</ul>
-<h1 id="ANSI-标准"><a href="#ANSI-标准" class="headerlink" title="ANSI 标准"></a>ANSI 标准</h1><p>ANSI 标准是为了确保 C++ 的便携性 —— 您所编写的代码在 Mac、UNIX、Windows、Alpha 计算机上都能通过编译。</p>
-<p>由于 ANSI 标准已稳定使用了很长的时间，所有主要的 C++ 编译器的制造商都支持 ANSI 标准。</p>
-<h1 id="学习-C"><a href="#学习-C" class="headerlink" title="学习 C++"></a>学习 C++</h1><p>学习 C++，关键是要理解概念，而不应过于深究语言的技术细节。</p>
-<p>学习程序设计语言的目的是为了成为一个更好的程序员，也就是说，是为了能更有效率地设计和实现新系统，以及维护旧系统。</p>
-<p>C++ 支持多种编程风格。您可以使用 Fortran、C、Smalltalk 等任意一种语言的编程风格来编写代码。每种风格都能有效地保证运行时间效率和空间效率。</p>
-<h1 id="C-的使用"><a href="#C-的使用" class="headerlink" title="C++ 的使用"></a>C++ 的使用</h1><p>基本上每个应用程序领域的程序员都有使用 C++。</p>
-<p>C++ 通常用于编写设备驱动程序和其他要求实时性的直接操作硬件的软件。</p>
-<p>C++ 广泛用于教学和研究。</p>
-<p>任何一个使用苹果电脑或 Windows PC 机的用户都在间接地使用 C++，因为这些系统的主要用户接口是使用 C++ 编写的。</p>
-<h1 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h1><table>
-<thead>
-<tr>
-<th>发布时间</th>
-<th>通称</th>
-<th>备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>2017</td>
-<td>C++17</td>
-<td>第五个C++标准</td>
-</tr>
-<tr>
-<td>2017</td>
-<td>coroutines TS</td>
-<td>协程库扩展</td>
-</tr>
-<tr>
-<td>2017</td>
-<td>ranges TS</td>
-<td>提供范围机制</td>
-</tr>
-<tr>
-<td>2017</td>
-<td>library fundamentals TS</td>
-<td>标准库扩展</td>
-</tr>
-<tr>
-<td>2016</td>
-<td>concurrency TS</td>
-<td>用于并发计算的扩展</td>
-</tr>
-<tr>
-<td>2015</td>
-<td>concepts TS</td>
-<td>概念库，用于优化编译期信息</td>
-</tr>
-<tr>
-<td>2015</td>
-<td>TM TS</td>
-<td>事务性内存操作</td>
-</tr>
-<tr>
-<td>2015</td>
-<td>parallelism TS</td>
-<td>用于并行计算的扩展</td>
-</tr>
-<tr>
-<td>2015</td>
-<td>filesystem TS</td>
-<td>文件系统</td>
-</tr>
-<tr>
-<td>2014</td>
-<td>C++14</td>
-<td>第四个C++标准</td>
-</tr>
-<tr>
-<td>2011</td>
-<td>-</td>
-<td>十进制浮点数扩展</td>
-</tr>
-<tr>
-<td>2011</td>
-<td>C++11</td>
-<td>第三个C++标准</td>
-</tr>
-<tr>
-<td>2010</td>
-<td>-</td>
-<td>数学函数扩展</td>
-</tr>
-<tr>
-<td>2007</td>
-<td>C++TR1</td>
-<td>C++技术报告：库扩展</td>
-</tr>
-<tr>
-<td>2006</td>
-<td>-</td>
-<td>C++性能技术报告</td>
-</tr>
-<tr>
-<td>2003</td>
-<td>C++03</td>
-<td>第二个C++标准</td>
-</tr>
-<tr>
-<td>1998</td>
-<td>C++98</td>
-<td>第一个C++标准</td>
-</tr>
-</tbody></table>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-      <categories>
-        <category>C++学习</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-      </tags>
   </entry>
   <entry>
     <title>HTML转义字符</title>
@@ -2177,259 +1968,523 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo+Next主题安装美化到部署(gitee或github)</title>
-    <url>/posts/f1ef64f7.html</url>
-    <content><![CDATA[<p>本篇文章是针对 7.8.0 版本的安装部署笔记，具体效果可以查看我的博客 <a href="https://lhyxcqc.gitee.io/">旧时烟雨</a></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://tding.top/">小丁的个人博客</a>  <a href="https://blog.csdn.net/tuckEnough/article/details/107383201">hexo 主题 next7.8 版本配置美化</a>   <a href="https://blog.csdn.net/qq_35396510/article/details/105953460">hexo 主题 next7.8 版本配置美化</a></p>
-<h3 id="Hexo介绍："><a href="#Hexo介绍：" class="headerlink" title="Hexo介绍："></a>Hexo介绍：</h3><ul>
-<li>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="http://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</li>
-<li>文档： <a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a> 可以理解为是基于node.js制作的一个博客工具。</li>
-<li>通过 Hexo 你可以轻松地使用 Markdown 编写文章，除了 Markdown 本身的语法之外，还可以使用 Hexo 提供的 <a href="https://hexo.io/zh-cn/docs/tag-plugins.html">标签插件</a> 来快速的插入特定形式的内容。在这篇文章中，假定你已经成功安装了 Hexo，并使用 Hexo 提供的命令创建了一个站点。</li>
-</ul>
+    <title>C++基本语法</title>
+    <url>/posts/3d38490d.html</url>
+    <content><![CDATA[<h3 id="C-基本语法"><a href="#C-基本语法" class="headerlink" title="C++ 基本语法"></a>C++ 基本语法</h3><p>C++ 程序可以定义为对象的集合，这些对象通过调用彼此的方法进行交互。现在让我们简要地看一下什么是类、对象，方法、即时变量。  </p>
 <a id="more"></a>
 
-<h3 id="环境："><a href="#环境：" class="headerlink" title="环境："></a>环境：</h3><p>我的环境是：以下环境如果没有需要安装</p>
 <ul>
-<li>Node: v12.18.3</li>
-<li>npm: 6.14.8</li>
-<li>Hexo: 5.1</li>
-<li>Next: 7.8</li>
-<li>Git: git version 2.19.1.windows.1</li>
+<li><strong>对象</strong> - 对象具有状态和行为。例如：一只狗的状态 - 颜色、名称、品种，行为 - 摇动、叫唤、吃。对象是类的实例。</li>
+<li><strong>类</strong> - 类可以定义为描述对象行为/状态的模板/蓝图。</li>
+<li><strong>方法</strong> - 从基本上说，一个方法表示一种行为。一个类可以包含多个方法。可以在方法中写入逻辑、操作数据以及执行所有的动作。</li>
+<li>即时变量 - 每个对象都有其独特的即时变量。对象的状态是由这些即时变量的值创建的。</li>
 </ul>
-<p>特别说明：<font color="red">我的环境除了Git外，都是最新的环境(时间：2020/09/08)</font></p>
-<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<h3 id="C-程序结构"><a href="#C-程序结构" class="headerlink" title="C++ 程序结构"></a>C++ 程序结构</h3><p>让我们看一段简单的代码，可以输出单词 Hello World。</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="comment">// main() 是程序开始执行的地方</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;Hello World&quot;</span>; <span class="comment">// 输出 Hello World</span></span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 
-<p>新建完成后，指定文件夹的目录如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-
-<h4 id="config-yml"><a href="#config-yml" class="headerlink" title="_config.yml"></a>_config.yml</h4><p>网站的 <a href="https://hexo.io/zh-cn/docs/configuration">配置</a> 信息，您可以在此配置大部分的参数。</p>
-<h4 id="source"><a href="#source" class="headerlink" title="source"></a>source</h4><p>资源文件夹是存放用户资源的地方。除 <code>_posts</code> 文件夹之外，开头命名为 <code>_</code> (下划线)的文件 / 文件夹和隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 <code>public</code> 文件夹，而其他文件会被拷贝过去。</p>
-<h4 id="themes"><a href="#themes" class="headerlink" title="themes"></a>themes</h4><p><a href="https://hexo.io/zh-cn/docs/themes">主题</a> 文件夹。Hexo 会根据主题来生成静态页面。</p>
-<h3 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 进入你的博客目录</span><br><span class="line">cd blog</span><br><span class="line"></span><br><span class="line"># 将仓库复制到博客目录的 themes&#x2F;next 文件夹中</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p>下载完成之后，可以在博客的 <code>themes</code> 文件夹中看到多了一个名为 <code>next</code> 的目录，这个目录就是主题仓库。</p>
-<h3 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h3><h4 id="next-yml"><a href="#next-yml" class="headerlink" title="next.yml"></a>next.yml</h4><p>自从 NexT-7.3.0 开始，官方推荐使用数据文件将配置和主题分离，这样可以在不修改主题源码的情况下完成主题的配置，便于后续 next 版本更新，我目前使用的Next 7.8.0。</p>
-<p>我们将所有的主题配置都放在 <code>hexo/source/_data/next.yml</code> 中，所有的修改都将在这个文件中进行，不修改主题配置文件 <code>next/_config.yml</code> 。</p>
-<p>具体步骤：</p>
+<p>接下来我们讲解一下上面这段程序：</p>
 <ul>
-<li>在   <code>hexo/source/_data</code> 目录下新建 <code>next.yml</code> 文件，如果 <code>_data</code> 目录不存在，则创建 <code>_data</code> 目录；</li>
-<li>将主题配置文件 <code>next/_config.yml</code> 所有内容复制到 <code>hexo/source/_data/next.yml</code> 文件中；</li>
-<li>将 <code>hexo/source/_data/next.yml</code> 文件中 <code>override</code> 选项设置为 <code>true</code> 。</li>
+<li>C++ 语言定义了一些头文件，这些头文件包含了程序中必需的或有用的信息。上面这段程序中，包含了头文件 <iostream>。</iostream></li>
+<li>下一行 using namespace std; 告诉编译器使用 std 命名空间。命名空间是 C++ 中一个相对新的概念。</li>
+<li>下一行 // main() 是程序开始执行的地方 是一个单行注释。单行注释以 // 开头，在行末结束。</li>
+<li>下一行 int main() 是主函数，程序从这里开始执行。</li>
+<li>下一行 cout &lt;&lt; “Hello World”; 会在屏幕上显示消息 “Hello World”。</li>
+<li>下一行 return 0; 终止 main( )函数，并向调用进程返回值 0。</li>
 </ul>
-<h4 id="使用主题"><a href="#使用主题" class="headerlink" title="使用主题"></a>使用主题</h4><p>在站点配置文件 <code>hexo/_config.yml</code> 中，通过改变 <code>theme</code> 选项的值来选择主题。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 选择 next 主题</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
-
-<p>在 <code>next.yml</code> 中通过改变 <code>scheme</code> 来选择主题样式。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
-
-<p>预览，输入下面命令后，在 <code>http://localhost:4000/</code> 查看效果。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-
-<h5 id="hexo-clean"><a href="#hexo-clean" class="headerlink" title="hexo clean"></a>hexo clean</h5><ul>
-<li>清除缓存文件 db.json 和已生成的静态文件 public 。</li>
-<li>网站显示异常时可以执行这条命令试试</li>
-</ul>
-<h5 id="hexo-g"><a href="#hexo-g" class="headerlink" title="hexo g"></a>hexo g</h5><p>生成网站静态文件到默认设置的 public 文件夹。</p>
-<ul>
-<li>便于查看网站生成的静态文件或者手动部署网站；</li>
-<li>如果使用自动部署，不需要先执行该命令；</li>
-<li><code>hexo g</code> 是<code>hexo generate</code> 的缩写，命令效果一致。</li>
-</ul>
-<h5 id="hexo-s"><a href="#hexo-s" class="headerlink" title="hexo s"></a>hexo s</h5><ul>
-<li>启动本地服务器，用于预览主题。默认地址： <a href="http://localhost:4000/">http://localhost:4000/</a></li>
-<li><code>hexo s</code> 是 <code>hexo server</code> 的缩写，命令效果一致。</li>
-<li>预览的同时可以修改文章内容或主题代码，保存后刷新页面即可。</li>
-<li>对 Hexo 根目录 <code>_config.yml</code> 的修改，需要重启本地服务器后才能预览效果。</li>
-</ul>
-<h4 id="设置博客文字描述和语言"><a href="#设置博客文字描述和语言" class="headerlink" title="设置博客文字描述和语言"></a>设置博客文字描述和语言</h4><p>站点配置文件 <code>hexo/_config.yml</code> 修改 <code>site</code> 。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: orduster 旧时烟雨 # 网站的标题</span><br><span class="line">subtitle: &#39;&#39; # 子标题</span><br><span class="line">description: &#39;&#39; </span><br><span class="line">keywords: # 网站关键字</span><br><span class="line">author: lhy # 网站作者</span><br><span class="line">language: zh-CN # 网站采用语言，要跟&#x2F;theme&#x2F;***&#x2F;languages&#x2F;**.yml下的文件名对应</span><br><span class="line">timezone: &#39;&#39; # 网站的时区</span><br></pre></td></tr></table></figure>
-
-<h3 id="主题美化"><a href="#主题美化" class="headerlink" title="主题美化"></a>主题美化</h3><h4 id="增加关于、标签、分类页面"><a href="#增加关于、标签、分类页面" class="headerlink" title="增加关于、标签、分类页面"></a>增加关于、标签、分类页面</h4><p>主题配置文件 <code>next.yml</code> 修改 <code>menu</code>，将 <code>about</code>、<code>tags</code>、<code>categories</code> 的注释去除。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: &#x2F; || fa fa-home</span><br><span class="line">  about: &#x2F;about&#x2F; || fa fa-user</span><br><span class="line">  tags: &#x2F;tags&#x2F; || fa fa-tags</span><br><span class="line">  categories: &#x2F;categories&#x2F; || fa fa-th</span><br><span class="line">  archives: &#x2F;archives&#x2F; || fa fa-archive</span><br></pre></td></tr></table></figure>
-
-<p>执行下面命令新建相关文件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new page &quot;about&quot;</span><br><span class="line">hexo new page &quot;tags&quot;</span><br><span class="line">hexo new page &quot;categories&quot;</span><br></pre></td></tr></table></figure>
-
-<p>修改生成页面所在位置和相关配置。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">source\about\index.md</span><br><span class="line">source\tags\index.md</span><br><span class="line">source\categories\index.md</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 关于</span><br><span class="line">type: &quot;about&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 标签</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 分类</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<h4 id="显示本地图片"><a href="#显示本地图片" class="headerlink" title="显示本地图片"></a>显示本地图片</h4><p>特别说明：<font color="red">如果有图床或者公共的图片存储库，可以不用配置这个，没太大必要。</font></p>
-<p>安装 <code>hexo-asset-image</code> 插件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install https:&#x2F;&#x2F;github.com&#x2F;CodeFalling&#x2F;hexo-asset-image --save </span><br></pre></td></tr></table></figure>
-
-<p>站点配置文件 <code>hexo/_config.yml</code> 中设置 <code>post_asset_folder</code> 的值为 <code>true</code> ，这样新建文章时，hexo 会自动建立一个与文章同名的目录，可以将这篇文章所有的图片放入。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 文章资源文件夹</span><br><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
-
-<p>运行 <code>hexo n &quot;xxxxx&quot;</code> /source/_posts文件夹内会生成一个同名的文件夹xxxxx</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 使用这种方式引用图片</span><br><span class="line">![](文件夹名&#x2F;图片名称)</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加图片放大预览功能"><a href="#添加图片放大预览功能" class="headerlink" title="添加图片放大预览功能"></a>添加图片放大预览功能</h4><p><code>next.yml</code> 文件 <code>fancybox</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">fancybox: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="设置博客文章持久化链接"><a href="#设置博客文章持久化链接" class="headerlink" title="设置博客文章持久化链接"></a>设置博客文章持久化链接</h4><p>安装 <code>hexo-abbrlink</code> 插件 。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
-
-<p>站点配置文件 <code>hexo/_config.yml</code> 修改 <code>permalink</code> 选项，添加下面内容。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># permalink: :year&#x2F;:month&#x2F;:day&#x2F;:title&#x2F;</span><br><span class="line"># permalink_defaults:</span><br><span class="line">permalink: posts&#x2F;:abbrlink.html</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  # 算法：crc16(default) and crc32</span><br><span class="line">  rep: hex    # 进制：dec(default) and hex</span><br></pre></td></tr></table></figure>
-
-<h4 id="添加搜索功能"><a href="#添加搜索功能" class="headerlink" title="添加搜索功能"></a>添加搜索功能</h4><p>安装 <code>exo-generator-searchdb</code> 插件 。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
-
-<p>主题配置文件 <code>next.yml</code> 添加 <code>search</code> 选项，修改 <code>local_search</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br><span class="line">  trigger: auto</span><br><span class="line">  # Show top n results per article, show all results by setting to -1</span><br><span class="line">  top_n_per_article: 1</span><br><span class="line">  # Unescape html strings to the readable one.</span><br><span class="line">  unescape: false</span><br><span class="line">  # Preload the search data when the page loads.</span><br><span class="line">  preload: false</span><br></pre></td></tr></table></figure>
-
-<h4 id="回到顶部按钮"><a href="#回到顶部按钮" class="headerlink" title="回到顶部按钮"></a>回到顶部按钮</h4><p>修改主题配置文件 <code>next.yml</code> <code>back2top</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">back2top:</span><br><span class="line">  enable: true</span><br><span class="line">  # 将返回按钮设置在侧边栏</span><br><span class="line">  sidebar: false</span><br><span class="line">  # 按钮上显示进度百分比</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="设置字数统计和预计阅读时间"><a href="#设置字数统计和预计阅读时间" class="headerlink" title="设置字数统计和预计阅读时间"></a>设置字数统计和预计阅读时间</h4><p>安装 <code>hexo-symbols-count-time</code> 插件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-symbols-count-time --save</span><br></pre></td></tr></table></figure>
-
-<p>编辑站点配置文件 <code>hexo/_config.yml</code>，添加如下内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true </span><br><span class="line">  time: true </span><br><span class="line">  total_symbols: true </span><br><span class="line">  total_time: true </span><br></pre></td></tr></table></figure>
-
-<p>修改主题配置文件 <code>next.yml</code> 中 <code>symbols_count_time</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true </span><br><span class="line">  item_text_post: true </span><br><span class="line">  item_text_total: true </span><br><span class="line">  awl: 2</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure>
-
-<h4 id="标签云特效"><a href="#标签云特效" class="headerlink" title="标签云特效"></a>标签云特效</h4><p>安装 <code>hexo-tag-cloud</code> 插件。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-tag-cloud@^2.0.* --save</span><br></pre></td></tr></table></figure>
-
-<p>在 <code>hexo/source/_data</code> 目录下新建 <code>sidebar.swig</code> 文件，输入下面内容。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if site.tags.length &gt; 1 %&#125;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcloud.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcanvas.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;widget-wrap&quot;&gt;</span><br><span class="line">    &lt;h3 class&#x3D;&quot;widget-title&quot;&gt;标签云&lt;&#x2F;h3&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;myCanvasContainer&quot; class&#x3D;&quot;widget tagcloud&quot;&gt;</span><br><span class="line">        &lt;canvas width&#x3D;&quot;250&quot; height&#x3D;&quot;250&quot; id&#x3D;&quot;resCanvas&quot; style&#x3D;&quot;width&#x3D;100%&quot;&gt;</span><br><span class="line">            &#123;&#123; list_tags() &#125;&#125;</span><br><span class="line">        &lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>主题配置文件 <code>next.yml</code> 去除 <code>sidebar.swig</code> 的注释。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar: source&#x2F;_data&#x2F;sidebar.swig</span><br></pre></td></tr></table></figure>
-
-<p>主题配置文件 <code>next.yml</code> 添加下面内容。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 标签云</span><br><span class="line">tag_cloud:</span><br><span class="line">    textFont: Trebuchet MS, Helvetica</span><br><span class="line">    textColor: &#39;#333&#39;</span><br><span class="line">    textHeight: 25</span><br><span class="line">    outlineColor: &#39;#E2E1D1&#39;</span><br><span class="line">    maxSpeed: 0.1</span><br></pre></td></tr></table></figure>
-
-<h4 id="设置代码块复制和代码高亮"><a href="#设置代码块复制和代码高亮" class="headerlink" title="设置代码块复制和代码高亮"></a>设置代码块复制和代码高亮</h4><p>主题配置文件 <code>next.yml</code> 中修改 <code>codeblock</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">codeblock:</span><br><span class="line">  # 代码高亮</span><br><span class="line">  highlight_theme: night bright</span><br><span class="line">  # 复制</span><br><span class="line">  copy_button:</span><br><span class="line">    enable: true</span><br><span class="line">    # 显示文本复制结果</span><br><span class="line">    show_result: true</span><br><span class="line">    # 可以选择的样式: default | flat | mac</span><br><span class="line">    style: mac</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改文章内链接文本样式"><a href="#修改文章内链接文本样式" class="headerlink" title="修改文章内链接文本样式"></a>修改文章内链接文本样式</h4><p>在 <code>hexo/source/_data</code> 目录下新建 <code>styles.styl</code> 文件，填入下面内容。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 修改链接样式</span><br><span class="line">.post-body p a&#123;</span><br><span class="line">  color: #0593d3;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #ff106c;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a, span.exturl &#123;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #ff106c;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>主题配置文件 <code>next.yml</code> 去除 <code>styles.styl</code> 的注释。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">style: source&#x2F;_data&#x2F;styles.styl</span><br></pre></td></tr></table></figure>
-
-<h4 id="在文章底部增加版权信息"><a href="#在文章底部增加版权信息" class="headerlink" title="在文章底部增加版权信息"></a>在文章底部增加版权信息</h4><p>主题配置文件 <code>next.yml</code> 修改 <code>creative_commons</code> 选项。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">creative_commons:</span><br><span class="line">  license: by-nc-sa</span><br><span class="line">  sidebar: false # 不显示在侧边栏</span><br><span class="line">  post: true</span><br><span class="line">  language:</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改文章底部-tag-图标"><a href="#修改文章底部-tag-图标" class="headerlink" title="修改文章底部 tag 图标"></a>修改文章底部 tag 图标</h4><p>主题配置文件 <code>next.yml</code>，打开底部标签 。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">tag_icon: true</span><br></pre></td></tr></table></figure>
-
-<h4 id="目录设置"><a href="#目录设置" class="headerlink" title="目录设置"></a>目录设置</h4><p>主题配置文件 <code>next.yml</code>，修改 <code>toc</code> 属性。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">toc:</span><br><span class="line">  enable: true</span><br><span class="line">  # 自动编号</span><br><span class="line">  number: false</span><br><span class="line">  # 超出宽度跨行</span><br><span class="line">  wrap: true</span><br><span class="line">  # 展开所有</span><br><span class="line">  expand_all: true</span><br><span class="line">  # 最大标题深度</span><br><span class="line">  max_depth: 6</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改主题页面布局为圆角"><a href="#修改主题页面布局为圆角" class="headerlink" title="修改主题页面布局为圆角"></a>修改主题页面布局为圆角</h4><p>在 <code>hexo/source/_data</code> 目录下新建 <code>variables.styl</code> 文件，填写下面内容。</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">// 圆角设置</span><br><span class="line">$border-radius-inner     = 20px 20px 20px 20px;</span><br><span class="line">$border-radius           = 20px;</span><br></pre></td></tr></table></figure>
-
-<p>主题配置文件 <code>next.yml</code> 去除 <code>variables.styl</code> 的注释。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">variable: source&#x2F;_data&#x2F;variables.styl</span><br></pre></td></tr></table></figure>
-
-<h4 id="隐藏底部的强力驱动"><a href="#隐藏底部的强力驱动" class="headerlink" title="隐藏底部的强力驱动"></a>隐藏底部的强力驱动</h4><p>主题配置文件 <code>next.yml</code> 修改 <code>footer</code> 选项下的 <code>powered</code> 。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">footer:</span></span><br><span class="line">  <span class="comment"># Powered by Hexo &amp; NexT</span></span><br><span class="line">  <span class="attr">powered:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="文章加密"><a href="#文章加密" class="headerlink" title="文章加密"></a>文章加密</h4><p><font color="#666fff">目前我还没用过这个</font></p>
-<p>安装 <code>hexo-blog-encrypt</code> 插件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-blog-encrypt --save</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
-
-<p>在需要加密的文章中添加下面内容。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">password: 123456</span><br><span class="line">abstract: 加密文章，请输入密码 123456 查看</span><br><span class="line">message: 请输入密码</span><br></pre></td></tr></table></figure>
-
-<h4 id="提示块-note"><a href="#提示块-note" class="headerlink" title="提示块 - note"></a>提示块 - note</h4><p>主题配置文件 <code>next.yml</code> 中 <code>note</code> 选项。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">note:</span></span><br><span class="line">  <span class="attr">style:</span> <span class="string">simple</span></span><br><span class="line">  <span class="comment"># 是否显示图标</span></span><br><span class="line">  <span class="attr">icons:</span> <span class="literal">true</span> </span><br><span class="line">  <span class="attr">light_bg_offset:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="设置博客背景图片"><a href="#设置博客背景图片" class="headerlink" title="设置博客背景图片"></a>设置博客背景图片</h4><p>新建 <code>hexo/source/images</code> 目录，将想要设置的背景图片放入，除了设置背景图片，还需要设置博客文章博客文章透明度才能看到背景图片。</p>
-<p>在 <code>hexo/source/_data/style.styl</code> 文件中写入下面代码。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 设置背景图片</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">url</span>(/images/background.png);</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    background-attachment:fixed; //不重复</span><br><span class="line">    background-size: cover;      //填充</span><br><span class="line">    <span class="selector-tag">background-position</span><span class="selector-pseudo">:50</span>% 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>background:url 为图片路径，也可以直接使用链接。</li>
-<li>background-repeat：若果背景图片不能全屏，那么是否平铺显示，充满屏幕</li>
-<li>background-attachment：背景是否随着网页上下滚动而滚动，fixed 为固定</li>
-<li>background-size：图片展示大小，这里设置 100%，100% 的意义为：如果背景图片不能全屏，那么是否通过拉伸的方式将背景强制拉伸至全屏显示。</li>
-</ul>
-<h4 id="设置博客文章透明度"><a href="#设置博客文章透明度" class="headerlink" title="设置博客文章透明度"></a>设置博客文章透明度</h4><p>next 主题的博客文章都是不透明的，这样即使设置了背景图片也无法看到，在 <code>hexo/source/_data/styles.styl</code> 中写入下面内容，使博客文章透明化。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">//博客内容透明化</span><br><span class="line">//文章内容的透明度设置</span><br><span class="line"><span class="selector-class">.content-wrap</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br><span class="line">//侧边框的透明度设置</span><br><span class="line"><span class="selector-class">.sidebar</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br><span class="line">//菜单栏的透明度设置</span><br><span class="line"><span class="selector-class">.header-inner</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">255</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.9</span>);</span><br><span class="line">&#125;</span><br><span class="line">//搜索框（local-search）的透明度设置</span><br><span class="line"><span class="selector-class">.popup</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>注意：<br>其中 header-inner 不能使用 opacity 进行配置。因为 header-inner 包含 header.swig 中的所有内容。若使用 opacity 进行配置，子结点会出很多问题。</p>
-<h4 id="顶部阅读进度条"><a href="#顶部阅读进度条" class="headerlink" title="顶部阅读进度条"></a>顶部阅读进度条</h4><p>主题配置文件 <code>next.yml</code> 中修改 <code>reading_progress</code> 选项。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">reading_progress:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 显示在顶部</span></span><br><span class="line">  <span class="attr">position:</span> <span class="string">top</span></span><br><span class="line">  <span class="attr">color:</span> <span class="string">&quot;#06d633&quot;</span></span><br><span class="line">  <span class="attr">height:</span> <span class="string">3px</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="文章阴影"><a href="#文章阴影" class="headerlink" title="文章阴影"></a>文章阴影</h4><p>在 <code>hexo/source/_data/styles.styl</code> 中添加下面内容。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 文章阴影</span><br><span class="line"><span class="selector-class">.post</span> &#123;</span><br><span class="line">   <span class="attribute">margin-top</span>: <span class="number">50px</span>;</span><br><span class="line">   <span class="attribute">margin-bottom</span>: <span class="number">50px</span>;</span><br><span class="line">   <span class="attribute">padding</span>: <span class="number">25px</span>;</span><br><span class="line">   <span class="attribute">-webkit-box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">202</span>, <span class="number">203</span>, <span class="number">203</span>, .<span class="number">5</span>);</span><br><span class="line">   <span class="attribute">-moz-box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="built_in">rgba</span>(<span class="number">202</span>, <span class="number">203</span>, <span class="number">204</span>, .<span class="number">5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="修改分类页面样式"><a href="#修改分类页面样式" class="headerlink" title="修改分类页面样式"></a>修改分类页面样式</h4><p><font color="#ffdd00">我觉得有点丑，，，没有设置</font></p>
-<p>在 <code>hexo/source/_data/styles.styl</code> 添加下面内容。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 分类&amp;&amp;标签 页面样式</span><br><span class="line"><span class="selector-class">.post-block</span><span class="selector-class">.page</span> &#123;</span><br><span class="line">    <span class="attribute">margin-top</span>: <span class="number">40px</span>;</span><br><span class="line">&#125;</span><br><span class="line">// 分类页面page</span><br><span class="line"><span class="selector-class">.category-all-page</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0px</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">0px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="number">#797D7F</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">20px</span> <span class="number">30px</span> <span class="number">60px</span> <span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">25px</span> <span class="number">25px</span> <span class="number">25px</span> <span class="number">25px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-all-title</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: Impact;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">24px</span>;</span><br><span class="line">    <span class="attribute">color</span>: aqua;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: auto;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">3px</span> solid <span class="number">#222</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-all</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">    <span class="attribute">list-style</span>: none<span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span><span class="selector-pseudo">:last-child</span> &#123;</span><br><span class="line">    <span class="attribute">border-right</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">    <span class="attribute">text-decoration</span>: none;</span><br><span class="line">    <span class="attribute">color</span>: chartreuse;</span><br><span class="line">    <span class="attribute">font-family</span>: Helvetica, Verdana, sans-serif;</span><br><span class="line">    // text-transform: uppercase;</span><br><span class="line">    <span class="selector-tag">-webkit-transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">    <span class="selector-tag">-moz-transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">    <span class="selector-tag">-o-transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">    <span class="selector-tag">-ms-transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">    <span class="selector-tag">transition</span>: <span class="selector-tag">all</span> 0<span class="selector-class">.5s</span> <span class="selector-tag">ease</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.category-list</span> <span class="selector-tag">li</span><span class="selector-class">.active</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">    <span class="attribute">color</span>: black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="设置头像和图标"><a href="#设置头像和图标" class="headerlink" title="设置头像和图标"></a>设置头像和图标</h4><p>将需要设置的头像和图标放入到 <code>hexo/source/images</code> 文件中，然后修改主题配置文件 <code>next.yml</code> 中 <code>avatar</code> 和 <code>favicon</code> 选项。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/avatar.png</span></span><br><span class="line">  <span class="comment"># 圆角显示，如果图片长宽比例差距过大，显示的是椭圆</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 方形显示</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 填写自己的图片</span><br><span class="line">favicon:</span><br><span class="line">  small: &#x2F;images&#x2F;favicon.ico</span><br><span class="line">  medium: &#x2F;images&#x2F;favicon.ico</span><br><span class="line">  apple_touch_icon: &#x2F;images&#x2F;favicon.ico</span><br><span class="line">  safari_pinned_tab: &#x2F;images&#x2F;favicon.ico</span><br></pre></td></tr></table></figure>
-
-<h4 id="侧边栏社交链接"><a href="#侧边栏社交链接" class="headerlink" title="侧边栏社交链接"></a>侧边栏社交链接</h4><p>修改主题配置文件 <code>next.yml</code> 中 <code>social</code> 选项 。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">social:</span></span><br><span class="line">  <span class="attr">GitHub:</span> <span class="string">https://github.com/yourname</span> <span class="string">||</span> <span class="string">fab</span> <span class="string">fa-github</span></span><br><span class="line">  <span class="attr">E-Mail:</span> <span class="string">mailto:yourname@gmail.com</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-envelope</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="阅读全文按钮样式"><a href="#阅读全文按钮样式" class="headerlink" title="阅读全文按钮样式"></a>阅读全文按钮样式</h4><p>next 在需要显示摘要的地方加上 <code>&lt;!--more--&gt;</code> ，就不会显示全文，在 <code>hexo/source/_data/styles.styl</code> 中写入下面内容，修改默认的 Read More 按钮样式。样式来源：<a href="http://lyxf.live/posts/2063/">点击此处查看</a> 。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// [Read More]按钮样式</span><br><span class="line"><span class="selector-class">.post-button</span> <span class="selector-class">.btn</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#555</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>);</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0px</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">0px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.35</span>);</span><br><span class="line">    <span class="attribute">border</span>: none <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">transition-property</span>: unset;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span> <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.post-button</span> <span class="selector-class">.btn</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: <span class="built_in">rgb</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>) <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">3px</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0px</span> <span class="number">0px</span> <span class="number">10px</span> <span class="number">0px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.35</span>);</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(<span class="number">90deg</span>, #a166ab <span class="number">0%</span>, #ef4e7b <span class="number">25%</span>, #f37055 <span class="number">50%</span>, #ef4e7b <span class="number">75%</span>, #a166ab <span class="number">100%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="去掉顶部黑线"><a href="#去掉顶部黑线" class="headerlink" title="去掉顶部黑线"></a>去掉顶部黑线</h4><p>在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">  //去掉顶部黑线：</span><br><span class="line"><span class="selector-class">.headband</span> &#123;<span class="attribute">display</span>:none;&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="选中颜色"><a href="#选中颜色" class="headerlink" title="选中颜色"></a>选中颜色</h4><p>修改选择文字的颜色，在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 修改选中字符的颜色</span><br><span class="line"><span class="comment">/* webkit, opera, IE9 */</span></span><br><span class="line"><span class="selector-pseudo">::selection</span> &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#06d633</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#f7f7f7</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* firefox */</span></span><br><span class="line"><span class="selector-pseudo">::-moz-selection</span> &#123; </span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#06d633</span>;</span><br><span class="line">    <span class="attribute">color</span>: <span class="number">#f7f7f7</span>;    </span><br><span class="line">&#125;</span><br><span class="line">// 代码块选中颜色</span><br><span class="line"><span class="selector-class">.highlight</span> *<span class="selector-pseudo">::selection</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#06d633</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="设置标题栏背景图片"><a href="#设置标题栏背景图片" class="headerlink" title="设置标题栏背景图片"></a>设置标题栏背景图片</h4><p>在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 标题栏背景图片</span><br><span class="line"><span class="selector-class">.site-brand-container</span> &#123; </span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(/images/log-small.png);</span><br><span class="line">  <span class="attribute">background-size</span>: <span class="number">100%</span> <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.9</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="标签页面样式"><a href="#标签页面样式" class="headerlink" title="标签页面样式"></a>标签页面样式</h4><p>在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.tag-cloud</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">1px</span> <span class="number">3px</span> <span class="number">#6f42c1</span>, <span class="number">0</span> <span class="number">1px</span> <span class="number">2px</span> <span class="number">#d9534f</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">2px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">193</span>,<span class="number">66</span>,<span class="number">92</span>,<span class="number">0</span>);</span><br><span class="line">    <span class="attribute">border-bottom</span>: none;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="代码行美化"><a href="#代码行美化" class="headerlink" title="代码行美化"></a>代码行美化</h4><p>在 <code>hexo/source/_data/styles.styl</code> 文件加入下面样式。</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// 代码行样式</span><br><span class="line"><span class="selector-tag">code</span>&#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#555</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#fff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="近期文章"><a href="#近期文章" class="headerlink" title="近期文章"></a>近期文章</h4><p>在<code>hexo/source/_data/sidebar.swig</code> 文件中(没有则新建)，并且做以下更改：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.recent_posts %&#125;</span><br><span class="line">    &lt;div class&#x3D;&quot;links-of-blogroll motion-element &#123;&#123; &quot;links-of-blogroll-&quot; + theme.recent_posts_layout  &#125;&#125;&quot;&gt;</span><br><span class="line">      &lt;div class&#x3D;&quot;links-of-blogroll-title&quot;&gt;</span><br><span class="line">        &lt;!-- modify icon to fire by szw --&gt;</span><br><span class="line">        &lt;i class&#x3D;&quot;fa fa-history fa-&#123;&#123; theme.recent_posts_icon | lower &#125;&#125;&quot; aria-hidden&#x3D;&quot;true&quot;&gt;&lt;&#x2F;i&gt;</span><br><span class="line">        &#123;&#123; theme.recent_posts_title &#125;&#125;</span><br><span class="line">      &lt;&#x2F;div&gt;</span><br><span class="line">      &lt;ul class&#x3D;&quot;links-of-blogroll-list&quot;&gt;</span><br><span class="line">        &#123;% set posts &#x3D; site.posts.sort(&#39;-date&#39;).toArray() %&#125;</span><br><span class="line">        &#123;% for post in posts.slice(&#39;0&#39;, &#39;5&#39;) %&#125;</span><br><span class="line">          &lt;li&gt;</span><br><span class="line">            &lt;a href&#x3D;&quot;&#123;&#123; url_for(post.path) &#125;&#125;&quot; title&#x3D;&quot;&#123;&#123; post.title &#125;&#125;&quot; target&#x3D;&quot;_blank&quot;&gt;&#123;&#123; post.title &#125;&#125;&lt;&#x2F;a&gt;</span><br><span class="line">          &lt;&#x2F;li&gt;</span><br><span class="line">        &#123;% endfor %&#125;</span><br><span class="line">      &lt;&#x2F;ul&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在主题的<code>_config.yml</code> 中添加了几个变量，如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">recent_posts_title: 近期文章</span><br><span class="line">recent_posts_layout: block</span><br><span class="line">recent_posts: true</span><br></pre></td></tr></table></figure>
-
-<p>然后在 NexT 的配置文件 <code>next.yml</code> 中取消 <code>sidebar.swig</code> 的注释：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sidebar: source&#x2F;_data&#x2F;sidebar.swig</span><br></pre></td></tr></table></figure>
-
-<h4 id="Hexo-页面静态资源压缩插件"><a href="#Hexo-页面静态资源压缩插件" class="headerlink" title="Hexo 页面静态资源压缩插件"></a>Hexo 页面静态资源压缩插件</h4><p>我们自己添加的 css 和 js 文件为了可读性，往往会有很多换行和空格，这些对于浏览器来说是没有用的，甚至还会降低渲染页面的速度。同时，由于 Markdown 转成 html 的 bug，会导致页面存在大量的空白，我们可以通过查看页面源代码发现这些大量的空白符，这也会造成页面渲染的性能问题。</p>
-<p>因此，我们需要对页面的静态资源进行压缩，包括 css、js 和 html 等文件。</p>
-<p>我们可以使用 <code>hexo-neat</code> 插件进行压缩。<code>hexo-neat</code> 配置简单，无需额外命令，我们只需使用原本的调试、部署命令就可以自动完成静态资源的压缩。</p>
-<p>安装 hexo-neat 插件</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-neat --save</span><br></pre></td></tr></table></figure>
-
-<p>然后我们需要在<strong>站点</strong>配置文件<code>_config.yml</code> 中添加以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 博文压缩</span><br><span class="line">neat_enable: true</span><br><span class="line"># 压缩html</span><br><span class="line">neat_html:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line"># 压缩css  </span><br><span class="line">neat_css:</span><br><span class="line">  enable: true</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.css&#39;</span><br><span class="line"># 压缩js</span><br><span class="line">neat_js:</span><br><span class="line">  enable: true</span><br><span class="line">  mangle: true</span><br><span class="line">  output:</span><br><span class="line">  compress:</span><br><span class="line">  exclude:</span><br><span class="line">    - &#39;**&#x2F;*.min.js&#39;</span><br><span class="line">    - &#39;**&#x2F;jquery.fancybox.pack.js&#39;</span><br><span class="line">    - &#39;**&#x2F;index.js&#39;</span><br><span class="line">    - &#39;**&#x2F;fireworks.js&#39;</span><br></pre></td></tr></table></figure>
-
-<h4 id="Hexo-部署插件"><a href="#Hexo-部署插件" class="headerlink" title="Hexo 部署插件"></a>Hexo 部署插件</h4><p>地址:<a href="https://github.com/hexojs/hexo-deployer-git">hexo-deployer-git</a></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>然后修改站点配置文件<code>_config.yml</code> 中的配置：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:dta0502&#x2F;dta0502.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>然后输入命令 <code>hexo d</code> 就可部署到github,gitee同理</p>
+<h3 id="编译-amp-执行-C-程序"><a href="#编译-amp-执行-C-程序" class="headerlink" title="编译 &amp; 执行 C++ 程序"></a>编译 &amp; 执行 C++ 程序</h3><p>接下来让我们看看如何把源代码保存在一个文件中，以及如何编译并运行它。下面是简单的步骤：   </p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">$ g++ hello.cpp</span><br><span class="line">$ ./a.out</span><br><span class="line">Hello World</span><br></pre></td></tr></table></figure>
+<hr>
+<p>请确保您的路径中已包含 g++ 编译器，并确保在包含源文件 hello.cpp 的目录中运行它。</p>
+<p>您也可以使用 makefile 来编译 C/C++ 程序。</p>
+<p>在 C++ 中，分号是语句结束符。也就是说，每个语句必须以分号结束。它表明一个逻辑实体的结束。</p>
+<p>例如，下面是三个不同的语句  ：    </p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">x = y;</span><br><span class="line">y = y+<span class="number">1</span>;</span><br><span class="line">add(x, y);</span><br></pre></td></tr></table></figure>
+<p>等同于<br><code>x = y; y = y+1; add(x, y);</code></p>
+<h3 id="C-标识符"><a href="#C-标识符" class="headerlink" title="C++ 标识符"></a>C++ 标识符</h3><p>C++ 标识符是用来标识变量、函数、类、模块，或任何其他用户自定义项目的名称。一个标识符以字母 A-Z 或 a-z 或下划线 _ 开始，后跟零个或多个字母、下划线和数字（0-9）。<br>C++ 标识符内不允许出现标点字符，比如 @、&amp; 和 %。C++ 是区分大小写的编程语言。因此，在 C++ 中，Manpower 和 manpower 是两个不同的标识符。<br>下面列出几个有效的标识符：</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">mohd       zara    abc   move_name  a_123</span><br><span class="line">myname50   _temp   j     a23b9      retVal  </span><br></pre></td></tr></table></figure>
+<h3 id="C-关键字"><a href="#C-关键字" class="headerlink" title="C++ 关键字"></a>C++ 关键字</h3><p>下表列出了 C++ 中的保留字。这些保留字不能作为常量名、变量名或其他标识符名称。</p>
 ]]></content>
       <categories>
-        <category>Hexo+Next部署</category>
+        <category>C++学习</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>Next</tag>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++环境配置</title>
+    <url>/posts/21965769.html</url>
+    <content><![CDATA[<h1 id="C-环境配置"><a href="#C-环境配置" class="headerlink" title="C++环境配置"></a>C++环境配置</h1><hr>
+<h2 id="本地环境设置"><a href="#本地环境设置" class="headerlink" title="本地环境设置"></a>本地环境设置</h2><p>如果您想要设置 C++ 语言环境，您需要确保电脑上有以下两款可用的软件，文本编辑器和 C++ 编译器。</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h2><p>这将用于输入您的程序。文本编辑器包括 Windows Notepad、OS Edit command、Brief、Epsilon、EMACS 和 vim/vi。</p>
+<p>文本编辑器的名称和版本在不同的操作系统上可能会有所不同。例如，Notepad 通常用于 Windows 操作系统上，vim/vi 可用于 Windows 和 Linux/UNIX 操作系统上。</p>
+<p>通过编辑器创建的文件通常称为源文件，源文件包含程序源代码。C++ 程序的源文件通常使用扩展名 .cpp、.cp 或 .c。</p>
+<p>在开始编程之前，请确保您有一个文本编辑器，且有足够的经验来编写一个计算机程序，然后把它保存在一个文件中，编译并执行它。  </p>
+<hr>
+<h2 id="C-编译器"><a href="#C-编译器" class="headerlink" title="C++ 编译器"></a>C++ 编译器</h2><p>写在源文件中的源代码是人类可读的源。它需要”编译”，转为机器语言，这样 CPU 可以按给定指令执行程序。</p>
+<p>C++ 编译器用于把源代码编译成最终的可执行程序。</p>
+<p>大多数的 C++ 编译器并不在乎源文件的扩展名，但是如果您未指定扩展名，则默认使用 .cpp。</p>
+<p>最常用的免费可用的编译器是 GNU 的 C/C++ 编译器，如果您使用的是 HP 或 Solaris，则可以使用各自操作系统上的编译器。</p>
+<p>以下部分将指导您如何在不同的操作系统上安装 GNU 的 C/C++ 编译器。这里同时提到 C/C++，主要是因为 GNU 的 gcc 编译器适合于 C 和 C++ 编程语言。</p>
+<h2 id="安装-GNU-的-C-C-编译器"><a href="#安装-GNU-的-C-C-编译器" class="headerlink" title="安装 GNU 的 C/C++ 编译器"></a>安装 GNU 的 C/C++ 编译器</h2><h3 id="UNIX-Linux-上的安装"><a href="#UNIX-Linux-上的安装" class="headerlink" title="UNIX/Linux 上的安装"></a>UNIX/Linux 上的安装</h3><p>如果您使用的是 Linux 或 UNIX，请在命令行使用下面的命令来检查您的系统上是否安装了 GCC：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ -v</span><br></pre></td></tr></table></figure>
+
+<p>如果您的计算机上已经安装了 GNU 编译器，则会显示如下消息：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Using built-in specs.</span><br><span class="line">Target: i386-redhat-linux</span><br><span class="line">Configured with: ..&#x2F;configure --prefix&#x3D;&#x2F;usr .......</span><br><span class="line">Thread model: posix</span><br><span class="line">gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)</span><br></pre></td></tr></table></figure>
+
+<p>如果未安装 GCC，那么请按照 <a href="http://gcc.gnu.org/install/">http://gcc.gnu.org/install/</a> 上的详细说明安装 GCC。</p>
+<h3 id="Mac-OS-X-上的安装"><a href="#Mac-OS-X-上的安装" class="headerlink" title="Mac OS X 上的安装"></a>Mac OS X 上的安装</h3><p>如果您使用的是 Mac OS X，最快捷的获取 GCC 的方法是从苹果的网站上下载 Xcode 开发环境，并按照安装说明进行安装。一旦安装上 Xcode，您就能使用 GNU 编译器。</p>
+<p>Xcode 目前可从 <a href="https://developer.apple.com/download">https://developer.apple.com/download</a> 上下载，需要使用 apple ID 登录 。</p>
+<h3 id="Windows-上的安装"><a href="#Windows-上的安装" class="headerlink" title="Windows 上的安装"></a>Windows 上的安装</h3><p>为了在 Windows 上安装 GCC，您需要安装 MinGW。为了安装 MinGW，请访问 MinGW 的主页 <a href="http://www.mingw.org/">www.mingw.org</a>，进入 MinGW 下载页面，下载最新版本的 MinGW 安装程序，命名格式为 MinGW-<version>.exe。</version></p>
+<p>当安装 MinGW 时，您至少要安装 gcc-core、gcc-g++、binutils 和 MinGW runtime，但是一般情况下都会安装更多其他的项。</p>
+<p>添加您安装的 MinGW 的 bin 子目录到您的 PATH 环境变量中，这样您就可以在命令行中通过简单的名称来指定这些工具。</p>
+<p>当完成安装时，您可以从 Windows 命令行上运行 gcc、g++、ar、ranlib、dlltool 和其他一些 GNU 工具。</p>
+<hr>
+<h2 id="使用-Visual-Studio-Graphical-Interface-编译"><a href="#使用-Visual-Studio-Graphical-Interface-编译" class="headerlink" title="使用 Visual Studio (Graphical Interface) 编译"></a>使用 Visual Studio (Graphical Interface) 编译</h2><p>1、下载及安装 <a href="https://www.visualstudio.com/">Visual Studio Community 2015</a>。<br>2、打开 Visual Studio Community<br>3、点击 File -&gt; New -&gt; Project<br><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/vsAddNewProject.png"><br>4、左侧列表选择 Templates -&gt; Visual C++ -&gt; Win32 Console Application，并设置项目名为 MyFirstProgram。<br><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/ChooseVC++Template.png"><br>5、点击 OK。<br>6、在以下窗口中点击 Next<br><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/Win32ApplicationNext.png"><br>7、在弹出的窗口中选择 Empty project 选项后，点击 Finish 按钮：<br>8、右击文件夹 Source File 并点击 Add –&gt; New Item… :<br><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/AddNewItem.png"><br>9、选择 C++ File 然后设置文件名为 main.cpp，然后点击 Add：<br><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/ChooseVC++File.png"><br>10、拷贝以下代码到 main.cpp 中：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    std::cout &lt;&lt; &quot;Hello World!\n&quot;;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>界面如下所示：<br><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/10%E7%95%8C%E9%9D%A2.png"><br>11、点击菜单上的 Debug -&gt; Start Without Debugging (或按下 ctrl + F5) :<br><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/11%E8%BF%90%E8%A1%8C.png"><br>12、完成以上操作后，你可以看到以下输出：<br><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CPlusPlus/12%E8%BE%93%E5%87%BA%E7%AA%97%E5%8F%A3.png"></p>
+<hr>
+<h2 id="g-应用说明"><a href="#g-应用说明" class="headerlink" title="g++ 应用说明"></a>g++ 应用说明</h2><p>程序 g++ 是将 gcc 默认语言设为 C++ 的一个特殊的版本，链接时它自动使用 C++ 标准库而不用 C 标准库。通过遵循源码的命名规范并指定对应库的名字，用 gcc 来编译链接 C++ 程序是可行的，如下例所示：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ gcc main.cpp -lstdc++ -o main</span><br></pre></td></tr></table></figure>
+<p>下面是一个保存在文件 helloworld.cpp 中一个简单的 C++ 程序的代码：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    cout &lt;&lt; &quot;Hello, world!&quot; &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最简单的编译方式：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ helloworld.cpp</span><br></pre></td></tr></table></figure>
+<p>由于命令行中未指定可执行程序的文件名，编译器采用默认的 a.out。程序可以这样来运行：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;a.out</span><br><span class="line">Hello, world!</span><br></pre></td></tr></table></figure>
+<p>通常我们使用 -o 选项指定可执行程序的文件名，以下实例生成一个 helloworld 的可执行文件：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ helloworld.cpp -o helloworld</span><br></pre></td></tr></table></figure>
+<p>执行 helloworld:  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ .&#x2F;helloworld</span><br><span class="line">Hello, world!</span><br></pre></td></tr></table></figure>
+<p>如果是多个 C++ 代码文件，如 runoob1.cpp、runoob2.cpp，编译命令如下：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ g++ runoob1.cpp runoob2.cpp -o runoob</span><br></pre></td></tr></table></figure>
+<p>生成一个 runoob 可执行文件。<br>g++ 有些系统默认是使用 C++98，我们可以指定使用 C++11 来编译 main.cpp 文件：  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">g++ -g -Wall -std&#x3D;c++11 main.cpp</span><br></pre></td></tr></table></figure>
+<h2 id="g-常用命令选项"><a href="#g-常用命令选项" class="headerlink" title="g++ 常用命令选项"></a>g++ 常用命令选项</h2><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-ansi</td>
+<td>只支持 ANSI 标准的 C 语法。这一选项将禁止 GNU C 的某些特色， 例如 asm 或 typeof 关键词。</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>只编译并生成目标文件。</td>
+</tr>
+<tr>
+<td>-DMACRO</td>
+<td>以字符串”1”定义 MACRO 宏。</td>
+</tr>
+<tr>
+<td>-DMACRO=DEFN</td>
+<td>以字符串”DEFN”定义 MACRO 宏。</td>
+</tr>
+<tr>
+<td>-E</td>
+<td>只运行 C 预编译器。</td>
+</tr>
+<tr>
+<td>-g</td>
+<td>生成调试信息。GNU 调试器可利用该信息。</td>
+</tr>
+<tr>
+<td>-IDIRECTORY</td>
+<td>指定额外的头文件搜索路径DIRECTORY。</td>
+</tr>
+<tr>
+<td>-LDIRECTORY</td>
+<td>指定额外的函数库搜索路径DIRECTORY。</td>
+</tr>
+<tr>
+<td>-lLIBRARY</td>
+<td>连接时搜索指定的函数库LIBRARY。</td>
+</tr>
+<tr>
+<td>-m486</td>
+<td>针对 486 进行代码优化。</td>
+</tr>
+<tr>
+<td>-o    FILE</td>
+<td>生成指定的输出文件。用在生成可执行文件时。</td>
+</tr>
+<tr>
+<td>-O0</td>
+<td>不进行优化处理。</td>
+</tr>
+<tr>
+<td>-O</td>
+<td>或 -O1 优化生成代码。</td>
+</tr>
+<tr>
+<td>-O2</td>
+<td>进一步优化。</td>
+</tr>
+<tr>
+<td>-O3</td>
+<td>比 -O2 更进一步优化，包括 inline 函数。</td>
+</tr>
+<tr>
+<td>-shared</td>
+<td>生成共享目标文件。通常用在建立共享库时。</td>
+</tr>
+<tr>
+<td>-static</td>
+<td>禁止使用共享连接。</td>
+</tr>
+<tr>
+<td>-UMACRO</td>
+<td>取消对 MACRO 宏的定义。</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>不生成任何警告信息。</td>
+</tr>
+<tr>
+<td>-Wall</td>
+<td>生成所有警告信息。</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>C++学习</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown Pad2使用教程详细版</title>
+    <url>/posts/5e08edd2.html</url>
+    <content><![CDATA[<h2 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h2><p>一级标题一个#号，二级标题两个#号，依次类推…直到六级标题，没有七级标题！</p>
+<h2 id="有序列表-amp-无序列表"><a href="#有序列表-amp-无序列表" class="headerlink" title="有序列表&amp;无序列表"></a>有序列表&amp;无序列表</h2><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>“1.”加空格再输入内容，英文输入状态，同时注意每一点后加上两个空格再换行否则列表不自动换行  </p>
+<ol>
+<li>第一条</li>
+<li>第二条</li>
+<li>第三条</li>
+</ol>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>减号“-”或者星号“*”加上空格输入内容即为无序列表  </p>
+<ul>
+<li>减号第一条</li>
+<li>减号第二条</li>
+<li>减号第三条</li>
+</ul>
+<ul>
+<li>星号第一条 </li>
+<li>星号第二条 </li>
+<li>星号第三条</li>
+</ul>
+<h2 id="引用文章等"><a href="#引用文章等" class="headerlink" title="引用文章等"></a>引用文章等</h2><p>在每一行前面加上大于号“&gt;”英文状态下输入  </p>
+<blockquote>
+<p>有些人活着<br>但他已经死了<br>有些人死了<br>但他依旧活着</p>
+</blockquote>
+<p>其实只需要输入一个“&gt;”即可，换行的时候会自动添加。也就是说只要中间不跳行，换行时会自动给你加上大于号，但一旦隔行了就跳出引用模式了，即引用的中间不允许有空行</p>
+<h2 id="加粗"><a href="#加粗" class="headerlink" title="加粗"></a>加粗</h2><p>文本的前后各加上两个星号“<strong>”且与文本之间不能有空格<br>预览效果如下：<br>**加粗</strong></p>
+<h2 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h2><p>文本的前后各加上一个星号<br>预览效果：<br><em>斜体</em></p>
+<h2 id="添加图片和链接"><a href="#添加图片和链接" class="headerlink" title="添加图片和链接"></a>添加图片和链接</h2><p>如果是图片的话就要将图片的本地文件放到与该md文件相同的路径下，且填写文件的相对路径<br>如果是网页链接就直接贴上网页链接，http一定要有</p>
+<h3 id="图片："><a href="#图片：" class="headerlink" title="图片："></a>图片：</h3><p>感叹号+方括号+圆括号。方括号里随便填啥不会显示出来，圆括号里填写图片文件的相对路径或者如果是网页连接的话可以填写网页链接，因为存为本地文件较为方便，本人选择采用前者。注意文件名最好不要带中文，好像不行。还有，如果创作的文章需要发布到网上，需要将图片上传才可以！</p>
+<p><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/markdownImageLinks.jpg">  </p>
+<p>本地文件  </p>
+<p><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6.png"></p>
+<p>网页提取</p>
+<p><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E7%BD%91%E9%A1%B5%E6%8F%90%E5%8F%96.png"></p>
+<h3 id="网页："><a href="#网页：" class="headerlink" title="网页："></a>网页：</h3><p>方括号+圆括号。方括号里填写的会呈灰色的显示出来，链接就粘贴在圆括号里。<br>预览效果：</p>
+<h4 id="文件相对路径法："><a href="#文件相对路径法：" class="headerlink" title="文件相对路径法："></a>文件相对路径法：</h4><p><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E6%96%87%E4%BB%B6%E7%9B%B8%E5%AF%B9%E8%B7%AF%E5%BE%84%E6%B3%95.png"></p>
+<p>前面是英文输入状态下的“./”后面加上属性里面复制过来的文件名包括后缀名<br>同时刚刚get获取网页图片地址的方法，右键网页图片属性复制全部地址</p>
+<h4 id="网页地址法："><a href="#网页地址法：" class="headerlink" title="网页地址法："></a>网页地址法：</h4><p><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/Markdown/%E7%BD%91%E9%A1%B5%E5%9C%B0%E5%9D%80%E6%B3%95.png"></p>
+<h4 id="添加网页链接："><a href="#添加网页链接：" class="headerlink" title="添加网页链接："></a>添加网页链接：</h4><p>比插入图片少一个感叹号即可<br><a href="http://markdownpad.com/">markdown pad官网</a></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>前后各加上三个反引号，就是数字1前面那个键<br>预览效果：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">list_1 = [<span class="number">1</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">9</span>]</span><br><span class="line">  list_1 = set(list_1)</span><br><span class="line">  list_2 = set([<span class="number">2</span>, <span class="number">6</span>, <span class="number">0</span>, <span class="number">66</span>, <span class="number">22</span>, <span class="number">8</span>, <span class="number">4</span>])</span><br><span class="line">  print(list_1, list_2)</span><br><span class="line">  <span class="comment">#求交集</span></span><br><span class="line">  print(list_1.intersection(list_2))</span><br><span class="line">  <span class="comment">#求并集</span></span><br><span class="line">  print(list_1.union(list_2))</span><br><span class="line">  <span class="comment">#求差集（你有我无或你无我有）</span></span><br><span class="line">  print(list_1.difference(list_2))</span><br><span class="line">  print(list_2.difference(list_1))</span><br></pre></td></tr></table></figure>
+
+<p>如果不行则需要设置其他模式才能实现代码样式，操作如下：tools-&gt;options-&gt;markdown-&gt;markdown processor-&gt;commonmark。至此OK！或者设置为GitHub离线格式也行。</p>
+<h2 id="分割横线"><a href="#分割横线" class="headerlink" title="分割横线"></a>分割横线</h2><p>三个星就行<br>预览效果：</p>
+<hr>
+<h2 id="给字体加颜色"><a href="#给字体加颜色" class="headerlink" title="给字体加颜色"></a>给字体加颜色</h2><p>1、颜色名称要加英文双引号，如下：  </p>
+<p><font color="red">颜色</font></p>
+<p><code>&lt;font color=&quot;red&quot;&gt;颜色&lt;/font&gt;</code></p>
+<p>color=“对应颜色的英文名”</p>
+<p>2、如果是通过十六进制获取的，十六进制数前要加#，如下：  </p>
+<p><font color="#7ASDF342">颜色</font></p>
+<p><code>&lt;font color=&quot;#7ASDF342&quot;&gt;颜色&lt;/font&gt;</code></p>
+<p>3、&lt; /font &gt; 不要忘记写</p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ul>
+<li><p>Ctrl + I ： 斜体</p>
+</li>
+<li><p>Ctrl + B ： 粗体</p>
+</li>
+<li><p>Ctrl + G ： 图片</p>
+</li>
+<li><p>Ctrl + Q ： 引用</p>
+</li>
+<li><p>Ctrl + 1 ： 标题 1</p>
+</li>
+<li><p>Ctrl + 2 ： 标题 2</p>
+</li>
+<li><p>Ctrl + 3 ： 标题 3</p>
+</li>
+<li><p>Ctrl + K ： 代码块</p>
+</li>
+<li><p>Ctrl + L ： 超链接</p>
+</li>
+<li><p>Ctrl + T ： 时间戳</p>
+</li>
+<li><p>Ctrl + U ： 无序列表</p>
+</li>
+<li><p>Ctrl + Shift + O ： 有序列表</p>
+</li>
+<li><p>Ctrl + R ： 水平标尺</p>
+</li>
+<li><p>F4 ： 启用水平布局/竖直预览</p>
+</li>
+<li><p>F5 ： 启用/关闭实时预览</p>
+</li>
+<li><p>F6 ： 在浏览器中预览</p>
+<p><strong>关于快捷键的一些说明:</strong></p>
+</li>
+</ul>
+<ol>
+<li>这里的插入图片快捷键只适用于插入网页链接，下面选项optional可选填，指的就是方括号里的内容</li>
+<li>三级以后标题之后的快捷键不适用</li>
+<li>代码块的快捷键只是缩进了一个tab距离，三个反引号并不会自动添加，不好用</li>
+<li>时间戳在markdown模式下正常显示，在GitHub离线模式下显示有bug</li>
+<li>以上的快捷键或者是各种操作在不同的模式下可能显示都会有所差异，出现时可适当尝试选择。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Markdown学习</category>
+      </categories>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++简介</title>
+    <url>/posts/920fd15b.html</url>
+    <content><![CDATA[<p>C++ 是一种静态类型的、编译式的、通用的、大小写敏感的、不规则的编程语言，支持过程化编程、面向对象编程和泛型编程。  </p>
+<p>C++ 被认为是一种中级语言，它综合了高级语言和低级语言的特点。  </p>
+<a id="more"></a>
+
+<p>C++ 是由 Bjarne Stroustrup 于 1979 年在新泽西州美利山贝尔实验室开始设计开发的。C++ 进一步扩充和完善了 C 语言，最初命名为带类的C，后来在 1983 年更名为 C++。  </p>
+<p>C++ 是 C 的一个超集，事实上，任何合法的 C 程序都是合法的 C++ 程序。<br>注意：使用静态类型的编程语言是在编译时执行类型检查，而不是在运行时执行类型检查。</p>
+<h1 id="面向对象程序设计"><a href="#面向对象程序设计" class="headerlink" title="面向对象程序设计"></a>面向对象程序设计</h1><p>C++ 完全支持面向对象的程序设计，包括面向对象开发的四大特性：  </p>
+<ul>
+<li>封装</li>
+<li>抽象</li>
+<li>继承</li>
+<li>多态</li>
+</ul>
+<h1 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h1><p>标准的 C++ 由三个重要部分组成：  </p>
+<ul>
+<li>核心语言，提供了所有构件块，包括变量、数据类型和常量，等等。</li>
+<li>C++ 标准库，提供了大量的函数，用于操作文件、字符串等。</li>
+<li>标准模板库（STL），提供了大量的方法，用于操作数据结构等。</li>
+</ul>
+<h1 id="ANSI-标准"><a href="#ANSI-标准" class="headerlink" title="ANSI 标准"></a>ANSI 标准</h1><p>ANSI 标准是为了确保 C++ 的便携性 —— 您所编写的代码在 Mac、UNIX、Windows、Alpha 计算机上都能通过编译。</p>
+<p>由于 ANSI 标准已稳定使用了很长的时间，所有主要的 C++ 编译器的制造商都支持 ANSI 标准。</p>
+<h1 id="学习-C"><a href="#学习-C" class="headerlink" title="学习 C++"></a>学习 C++</h1><p>学习 C++，关键是要理解概念，而不应过于深究语言的技术细节。</p>
+<p>学习程序设计语言的目的是为了成为一个更好的程序员，也就是说，是为了能更有效率地设计和实现新系统，以及维护旧系统。</p>
+<p>C++ 支持多种编程风格。您可以使用 Fortran、C、Smalltalk 等任意一种语言的编程风格来编写代码。每种风格都能有效地保证运行时间效率和空间效率。</p>
+<h1 id="C-的使用"><a href="#C-的使用" class="headerlink" title="C++ 的使用"></a>C++ 的使用</h1><p>基本上每个应用程序领域的程序员都有使用 C++。</p>
+<p>C++ 通常用于编写设备驱动程序和其他要求实时性的直接操作硬件的软件。</p>
+<p>C++ 广泛用于教学和研究。</p>
+<p>任何一个使用苹果电脑或 Windows PC 机的用户都在间接地使用 C++，因为这些系统的主要用户接口是使用 C++ 编写的。</p>
+<h1 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h1><table>
+<thead>
+<tr>
+<th>发布时间</th>
+<th>通称</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2017</td>
+<td>C++17</td>
+<td>第五个C++标准</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>coroutines TS</td>
+<td>协程库扩展</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>ranges TS</td>
+<td>提供范围机制</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>library fundamentals TS</td>
+<td>标准库扩展</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>concurrency TS</td>
+<td>用于并发计算的扩展</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>concepts TS</td>
+<td>概念库，用于优化编译期信息</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>TM TS</td>
+<td>事务性内存操作</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>parallelism TS</td>
+<td>用于并行计算的扩展</td>
+</tr>
+<tr>
+<td>2015</td>
+<td>filesystem TS</td>
+<td>文件系统</td>
+</tr>
+<tr>
+<td>2014</td>
+<td>C++14</td>
+<td>第四个C++标准</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>-</td>
+<td>十进制浮点数扩展</td>
+</tr>
+<tr>
+<td>2011</td>
+<td>C++11</td>
+<td>第三个C++标准</td>
+</tr>
+<tr>
+<td>2010</td>
+<td>-</td>
+<td>数学函数扩展</td>
+</tr>
+<tr>
+<td>2007</td>
+<td>C++TR1</td>
+<td>C++技术报告：库扩展</td>
+</tr>
+<tr>
+<td>2006</td>
+<td>-</td>
+<td>C++性能技术报告</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>C++03</td>
+<td>第二个C++标准</td>
+</tr>
+<tr>
+<td>1998</td>
+<td>C++98</td>
+<td>第一个C++标准</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>C++学习</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C#中Math.Round()实现中国式四舍五入</title>
+    <url>/posts/fe4f126f.html</url>
+    <content><![CDATA[<h2 id="C-中Math-Round-实现中国式四舍五入"><a href="#C-中Math-Round-实现中国式四舍五入" class="headerlink" title="C#中Math.Round()实现中国式四舍五入"></a>C#中Math.Round()实现中国式四舍五入</h2><p><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round.png"></p>
+<p>C#中的Math.Round()并不是使用的”四舍五入”法。其实在VB、VBScript、C#、J#、T-SQL中Round函数都是采用Banker’s rounding（银行家算法），即：四舍六入五取偶。事实上这也是IEEE的规范，因此所有符合IEEE标准的语言都应该采用这样的算法。<br>.NET 2.0 开始，Math.Round 方法提供了一个枚举选项 MidpointRounding.AwayFromZero 可以用来实现传统意义上的”四舍五入”。即： Math.Round(4.5, MidpointRounding.AwayFromZero) = 5。  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Round(Decimal)</span><br><span class="line">Round(Double)</span><br><span class="line">Round(Decimal, Int32)</span><br><span class="line">Round(Decimal, MidpointRounding)</span><br><span class="line">Round(Double, Int32)</span><br><span class="line">Round(Double, MidpointRounding)</span><br><span class="line">Round(Decimal, Int32, MidpointRounding)</span><br><span class="line">Round(Double, Int32, MidpointRounding)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>如：</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(0.6) &#x2F;&#x2F;result:1</span><br><span class="line">Math.Round(0.5) &#x2F;&#x2F;result:0</span><br><span class="line">Math.Round(1.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(2.5) &#x2F;&#x2F;result:2</span><br><span class="line">Math.Round(3.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(4.5) &#x2F;&#x2F;result:4</span><br><span class="line">Math.Round(5.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(6.5) &#x2F;&#x2F;result:6</span><br><span class="line">Math.Round(7.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(8.5) &#x2F;&#x2F;result:8</span><br><span class="line">Math.Round(9.5) &#x2F;&#x2F;result:10</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>使用MidpointRounding.AwayFromZero重载后对比：</strong>    </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Math.Round(0.4, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:0</span><br><span class="line"></span><br><span class="line">Math.Round(0.6, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(0.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:1</span><br><span class="line"></span><br><span class="line">Math.Round(1.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:2</span><br><span class="line"></span><br><span class="line">Math.Round(2.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:3</span><br><span class="line"></span><br><span class="line">Math.Round(3.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:4</span><br><span class="line"></span><br><span class="line">Math.Round(4.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:5</span><br><span class="line"></span><br><span class="line">Math.Round(5.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:6</span><br><span class="line"></span><br><span class="line">Math.Round(6.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:7</span><br><span class="line"></span><br><span class="line">Math.Round(7.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:8</span><br><span class="line"></span><br><span class="line">Math.Round(8.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:9</span><br><span class="line"></span><br><span class="line">Math.Round(9.5, MidpointRounding.AwayFromZero); &#x2F;&#x2F; result:10</span><br></pre></td></tr></table></figure>
+
+
+
+<p>但是悲剧的是，如果用这个计算小数的话，就不灵了！！！<br>必须用第七个重载方法，  </p>
+<p><code>decimal Round(decimal d, int decimals, MidpointRounding mode)</code></p>
+<p>这样计算出来的小数才是真正的中国式四舍五入！！  </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">?Math.Round(526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round(526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2)</span><br><span class="line">526.92</span><br><span class="line"></span><br><span class="line">?Math.Round((decimal)526.925, 2,MidpointRounding.AwayFromZero)</span><br><span class="line">526.93</span><br></pre></td></tr></table></figure>
+
+
+<p><img data-src="https://lhyxcqc.gitee.io/tuku/mdImages/CSharp/CSharpMath.Round2.png">  </p>
+<p>原文:<br><a href="https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html">https://www.cnblogs.com/fanyong/archive/2013/05/30/chinese_round.html</a></p>
+]]></content>
+      <categories>
+        <category>csharp学习</category>
+      </categories>
+      <tags>
+        <tag>csharp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C#特性学习之一</title>
+    <url>/posts/b26f4754.html</url>
+    <content><![CDATA[<blockquote>
+<h3 id="C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"><a href="#C-特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber" class="headerlink" title="C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber"></a><strong>C# 特性学习之一、CallerMemberName、CallerFilePath和CallerLineNumber</strong></h3></blockquote>
+<p>在开发中经常会写个公有静态类记录日志，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;      </span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes the error.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message)  </span><br><span class="line">&#123;                                </span><br><span class="line">    _log4Net.Error(message);     </span><br><span class="line">&#125; </span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<p>如果想区分调用来源就比较麻烦了。在.Net 4.5中引入了三个Attribute：CallerMemberName、CallerFilePath和CallerLineNumber 。在编译器的配合下，分别可以获取到调用函数（准确讲应该是成员）名称，调用文件及调用行号。这时可以把方法改成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;&#x2F; &lt;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; Writes an error level logging message.</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;&#x2F;summary&gt;</span><br><span class="line">&#x2F;&#x2F;&#x2F; &lt;param name&#x3D;&quot;message&quot;&gt;The message to be written.&lt;&#x2F;param&gt;</span><br><span class="line">public void WriteError(object message,</span><br><span class="line">[CallerMemberName] string memberName &#x3D; &quot;&quot;,</span><br><span class="line">[CallerFilePath] string sourceFilePath &#x3D; &quot;&quot;,</span><br><span class="line">[CallerLineNumber] int sourceLineNumber &#x3D; 0)</span><br><span class="line">&#123;</span><br><span class="line">    _log4Net.ErrorFormat(&quot;文件:&#123;0&#125; 行号:&#123;1&#125; 方法名:&#123;2&#125;,消息:&#123;3&#125;&quot;, sourceFilePath, sourceLineNumber, memberName, message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样就可以区分调用来源了。另外，在构造函数，析构函数、属性等特殊的地方调用CallerMemberName属性所标记的函数时，获取的值有所不同，其取值如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>调用的地方</th>
+<th>CallerMemberName获取的结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>方法、属性或事件</td>
+<td>方法，属性或事件的名称</td>
+</tr>
+<tr>
+<td>构造函数</td>
+<td>字符串 “.ctor”</td>
+</tr>
+<tr>
+<td>静态构造函数</td>
+<td>字符串 “.cctor”</td>
+</tr>
+<tr>
+<td>析构函数</td>
+<td>该字符串 “Finalize”</td>
+</tr>
+<tr>
+<td>用户定义的运算符或转换</td>
+<td>生成的名称成员，例如， “op_Addition”。</td>
+</tr>
+<tr>
+<td>特性构造函数</td>
+<td>特性所应用的成员的名称</td>
+</tr>
+</tbody></table>
+<p>参考链接：<br><a href="https://www.cnblogs.com/TianFang/p/3381484.html">使用CallerMemberName简化InotifyPropertyChanged的实现</a><br><a href="https://www.cnblogs.com/TianFang/archive/2012/08/19/2646146.html">C# 5.0中新增特性</a></p>
+<p>原文：<br><a href="https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&utm_medium=referral">https://www.cnblogs.com/zeroes/p/6031651.html?utm_source=itdadao&amp;utm_medium=referral</a></p>
+]]></content>
+      <categories>
+        <category>csharp学习</category>
+      </categories>
+      <tags>
+        <tag>csharp</tag>
+        <tag>csharp特性</tag>
       </tags>
   </entry>
 </search>
